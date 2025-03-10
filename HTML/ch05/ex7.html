@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>개인 정보 입력</legend>
+      <p>이름 : <input type="text" name="user" placeholder="이름을 입력하세요"></p>
+      <p>학교 : <input type="text" name="school"></p>
+      <p>여성<input type="radio" checked> 남성<input type="radio"></p>
+      <input type="checkbox" name="subject">html<br>
+      <input type="checkbox" name="subject">css<br>
+      <input type="checkbox" name="subject">java<br>
+      <input type="checkbox" name="subject">jquery<br>
+      <br>
+      <select name="subject">
+        <option value="1" disabled>1</option>
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+        <option value="4">4</option>
+      </select>
+        <label>선택
+          <select name="num">
+            <optgroup label="234">
+              <option value="1">1</option>
+              <option value="1">1</option>
+              <option value="1">1</option>
+              <option value="1">1</option>
+              <option value="1">1</option>
+              <option value="1">1</option>
+            </optgroup>
+          </select>
+        </label>
+        <br>
+        <label>전공분야
+          <input type="text" list="majorlist" name="major">
+          <datalist id="majorlist">
+            <option value="한글">가나다</option>
+            <option value="한글">가나다</option>
+            <option value="한글">가나다</option>
+            <option value="한글">가나다</option>
+            <option value="한글">가나다</option>
+            <option value="한글">가나다</option>
+          </datalist>
+        </label>
+
+
+    </fieldset>
+  </form>
+  <p><b>볼드체로 표시</b></p>
+  <p><em>텍스트 강조 표시</em></p>
+  <p><strong>텍스트 중요표시</strong></p>
+  <p><ins>텍스트 아래 밑줄 표시</ins></p>
+  <p><del>텍스트 가운데 선 처리</del></p>
+  <p><mark>하이라이트 표시</mark></p>
+  <p><i>이탤릭체로 표시</i></p>
+</body>
+</html>
