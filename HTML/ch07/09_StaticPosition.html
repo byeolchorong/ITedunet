@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정적 위치 설정으로 요소 배치하기</title>
+<style>
+  body {
+    font-weight: bold;
+    font-size: 12pt;
+  }
+  .sp1 {
+    position: static;
+    top: 100px; /* 적용되지않음 */
+    background-color: cyan;
+    width: 400px;
+    height: 50px;
+  }
+  .sp2 {
+    position: static;
+    left: 30px; /* 적용되지않음 */
+    background-color: orange;
+    width: 400px;
+    height: 50px;
+  }
+  .sp3 {
+    background-color: lightgreen;
+    width: 400px;
+    height: 50px;
+  }
+</style>
+</head>
+    <!-- position:sticky; -->
+    <!-- 가장 가까운 스크롤 가능한 부모/조상 요소의 스크롤 위치를기준으로 고정됨 -->
+    <!-- 조상 : overflow: hidden, scrool,auto; -->
+<body>
+  <h1>positioning style1</h1>
+  <p class="sp1">정적 위치 설정 적용1</p>
+  <div class="sp2">정적 위치 설정 적용2</div>
+  <p class="sp3">정적 위치 설정 적용3</p>
+</body>
+</html>
