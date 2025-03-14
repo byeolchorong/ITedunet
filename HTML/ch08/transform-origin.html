@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      width: 300px;
+      border: 10px double lightblue;
+      transition: 1s;
+      transform: rotate(35deg);
+      backface-visibility: visible;
+      transform-origin: 15% 225%;
+    }
+    img:hover {
+      backface-visibility: hidden;
+      transform-origin: 50% 42%;
+      transform: perspective(2px);
+    }
+  </style>
+</head>
+<body>
+  <div>
+
+    <img src="../ch07/btob.jpg" alt="">
+  </div>
+</body>
+</html>
