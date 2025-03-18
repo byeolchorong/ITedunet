@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+/* header start */
+/* 
+1. 큰 정렬(가로/세로) 필요한가 ?
+  display : flex;
+  justify-content: space-between;
+  align-items: center;
+
+2. 세부정렬이 필요한가?
+  margin, padding, transform : translate();
+
+3. 크기
+4. 요소위에 요소 띄워야하는가?
+  누구 기준? position: relative;
+  띄우려면? position: absolute;
+  top, left, right, bottom;
+*/
+/* .container{
+  width: 70%;
+  margin: 0 auto;
+} */
+
+.top-bar {
+  background-color: black;
+  color: lightgray;
+}
+
+.top-bar .container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+}
+
+/* .top-bar-content {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid gray;
+  font-size: 16px;
+} */
+
+.top-bar ul{
+  display: flex;
+}
+
+.top-bar ul li {
+  border: 1px solid gray;
+  padding: 10px 25px;
+}
+
+.wrap-menu {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap-top-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap-top-left img {
+  margin: 30px 50px 30px 0;
+}
+
+.wrap-top-nav{
+  display: flex;
+}
+
+.wrap-top-nav li {
+  /* background-color: red; */
+  /* margin: 15px; */
+  padding: 15px;
+}
+
+.homecolor {
+  color: #6c7ae0;
+}
+
+.top-icon {
+  margin: 15px;
+}
+
+.slide {
+  background-image: url(../../HTML/make/img/main.jpg);
+  width: 1920px;
+  height: 930px;
+  background-repeat: no-repeat;
+}
+
+.slide-content {
+
+}
+
+.slide div p {
+  font-size: 25px;
+}
+
+.slide div h1 {
+  font-size: 50px;
+}
+
+.slide a {
+  background-color: #717fe0;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+#category .container {
+  display: flex;
+}
