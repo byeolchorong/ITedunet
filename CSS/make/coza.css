@@ -95,32 +95,208 @@
   margin: 15px;
 }
 
+/* main
+  1. 큰 정렬
+  2. 세부 정렬
+  3. 크기
+  4. 띄우기
+ */
+
 .slide {
   background-image: url(../../HTML/make/img/main.jpg);
-  width: 1920px;
+  width: 100%;
   height: 930px;
   background-repeat: no-repeat;
 }
 
-.slide-content {
-
+.text-box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15%;
 }
 
 .slide div p {
+  margin: 0 0 10px 0;
   font-size: 25px;
 }
 
 .slide div h1 {
   font-size: 50px;
+  margin: 0 0 40px 0;
 }
 
 .slide a {
+  display: inline-block;
   background-color: #717fe0;
   color: white;
   padding: 10px 30px;
   border-radius: 20px;
 }
 
-#category .container {
+#category.container {
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  margin: 50px 250px;
+}
+
+/* sile쪽 다시 확인해보기 */
+/* .slide {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  border-radius: 20px;
+} */
+
+.categoryimg1 {
+  background-image: url(../../HTML/make/img/women.jpg);
+  width: 430px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  border: 1px solid lightgray;
+  padding: 30px;
+  margin: 15px;
+}
+
+.categoryimg2 {
+  background-image: url(../../HTML/make/img/Men.jpg);
+  width: 430px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  border: 1px solid lightgray;
+  padding: 30px;
+  margin: 15px;
+}
+
+.categoryimg3 {
+  background-image: url(../../HTML/make/img/Accessories.jpg);
+  width: 430px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  border: 1px solid lightgray;
+  padding: 30px;
+  margin: 15px;
+}
+
+.categoryimg1:hover, .categoryimg2:hover, .categoryimg3:hover {
+  opacity: 0.6;
+  width: 430px;
+  height: 300px;
+}
+ /*  */
+
+.view-name {
+  margin: 100px 300px 50px 280px
+}
+.view-name h2 {
+  font-size: 25pt;
+}
+.view-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.view-nav-left {
   display: flex;
 }
+.view-nav-left li {
+  padding: 20px 20px 20px 0;
+}
+.view-nav-right a {
+  padding: 10px 25px;
+  background-color: white;
+  border: 1px solid lightgray;
+  color: gray;
+}
+
+.overview div{
+  color: gray;
+}
+.overview {
+  display: flex;
+  width: 1500px;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  margin: 0 250px 100px 250px;
+}
+
+.overview-img {
+  padding: 0 20px;
+}
+
+.foot-button {
+  width: 10%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: 1px solid #e6e6e6;
+  background-color: #e6e6e6;
+}
+
+.foot {
+  padding: 0 0 100px 0;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 250px;
+}
+
+.category1 ul li a, .category2 ul li a {
+  color: grey;
+  font-size: small;
+}
+
+.category3 div {
+  color: gray;
+}
+
+.visa {
+  text-align: center;
+  color: lightgray;
+}
+
+.visa div {
+  padding: 10px;
+}
+
+.visa div .color {
+  color: lightpink;
+}
+
+.category4 form [type="submit"] {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 30px;
+  background-color: #717fe0;
+  border-radius: 20px;
+}
+
+.category4 form [type="email"]{
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+
+  background-color: #222;
+  border-bottom: 1px solid white;
+  border-right: none;
+  outline: none;
+}
+
