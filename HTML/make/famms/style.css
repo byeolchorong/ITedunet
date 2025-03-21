@@ -1,0 +1,271 @@
+
+:root {
+  --main-color : #f7444e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* header top 영역 start */
+.h-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* header top img 사이즈 */
+.h-top img {
+  width: 250px;
+  height: 43px;
+  margin: 15px 20px 15px 20px;
+}
+
+/* header top nav 영역 */
+
+header nav > ul {
+  display: flex;
+  padding: 5px;
+  margin: 10px
+}
+
+header nav > ul > li{
+  font-weight: bold;
+  font-size: 13pt;
+}
+
+header nav > ul a {
+  padding: 20px;
+}
+
+
+/* header nav 색상입히기 */
+header nav li:first-child {
+  color: var(--main-color);
+}
+
+header nav li:hover, header nav i:hover {
+  color: var(--main-color);
+}
+
+/* header top end */
+
+
+/* header slide 영역 start */
+.h-slide {
+  position: relative;
+}
+.h-slide img {
+  width: 1900px;
+}
+
+/* text-box img 중간으로 넣기 */
+.text-box {
+  width: 30%;
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  left: 20%;
+}
+
+/* text-box font */
+.text-box h1 {
+  font-size: 55pt;
+}
+
+.text-box h1:first-child {
+  color: var(--main-color);
+  margin: 0 0 -30px 0;
+}
+
+.text-box p {
+  font-size: 13pt;
+  margin: 20px 0 50px 0;
+}
+
+.text-box a {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  font-size: 13pt;
+  padding: 12px 40px;
+}
+
+.text-box input {
+  margin-top: 70px;
+}
+
+.text-box label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 10px;
+}
+
+.text-box input[id="slide01"]:checked ~ .text-box label {
+  width: 30px;
+  height: 30px;
+  color: #f7444e;
+}
+
+
+
+/* header slide 영역 end */
+
+
+/* why shop with us 영역 start */
+.why-shop-title{
+  font-size: 45pt;
+  text-align: center;
+  margin: 50px 0;
+}
+.why-shop-title span {
+  border-bottom: 5px solid var(--main-color);
+  padding-bottom: 10px;
+}
+
+.why-shop-imgs {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+
+}
+.why-shop-img {
+  background-color: #002c3e;
+  color: white;
+  padding: 50px 60px;
+  border-radius: 5px;
+}
+
+.why-shop-img img {
+  width: 55;
+  height: 55px;
+}
+.why-shop-img h1 {
+  padding: 10px;
+}
+
+/* why shop with us 영역 end */
+
+/* New Arrivals 영역 start */
+.new-arrivals {
+  position: relative;
+  margin: 60px 0 0 0;
+}
+
+.new-arrivals img {
+  width: 100%;
+}
+
+.new-text-box {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  left: 50%;
+}
+
+.new-text-box h1 {
+  font-size: 48pt;
+  color: #002c3e;
+  margin: 10px;
+}
+
+.new-text-box div {
+  margin: 0 0  50px 0;
+}
+
+.new-text-box a{
+  background-color: var(--main-color);
+  color: white;
+  font-size: 13pt;
+  padding: 12px 45px;
+}
+
+/* New Arrivals 영역 end */
+
+/* our products 영역 start */
+
+/* our products title */
+.title-color {
+  display: flex;
+  justify-content: center;
+  font-size: 45pt;
+  margin: 50px;
+}
+.title-color p {
+  color: #f7444e;
+}
+
+.title-color p span {
+  border-bottom: 4px solid #f7444e;
+  padding-bottom: 8px;
+}
+
+/* our products contents */
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contents .card {
+  flex: 0 1 calc(33% - 20px); 
+  margin: 10px;
+  padding: 50px;
+  text-align: center;
+  background-color: rgb(247, 248, 249);
+  border: 1px solid rgb(255, 255, 255);
+  border-width: 10px;
+  box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, .2);
+}
+
+.contents .card div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contents img{
+  padding: 10px;
+  width: 140px;
+  height: 170px;
+}
+
+.contents span {
+  font-weight: bold;
+  font-size: 13pt;
+  padding-top: 20px;
+}
+
+.contents a {
+  margin: 50px;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 13pt;
+  padding: 12px 45px;
+}
+
+.subscribe p {
+  text-align: center;
+  background-color: #d4ced0;
+}
+.subscribe p:first-child{
+  color: #002c3e;
+  font-size: 30pt;
+  padding: 50px 0 0 0;
+}
+
+.subscribe p:nth-child(2) {
+  padding: 20px;
+}
