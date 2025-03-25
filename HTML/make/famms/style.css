@@ -47,23 +47,45 @@ header nav > ul {
 header nav > ul > li{
   font-weight: bold;
   font-size: 13pt;
+  /* border: 1px solid red; */
 }
 /* a태그 패딩값주기 */
 header nav > ul a {
   padding: 20px;
 }
 /* header nav 색상입히기 */
-header nav li:first-child {
+.ul-color {
   color: var(--main-color);
 }
 /* header nav li hover 줘서 커서 가져다갔을때 색상값주기 */
-header nav li:hover, header nav i:hover {
+header nav li:hover {
   color: var(--main-color);
 }
 /* 아래화살표 글자랑 띄우기 */
 .h-top .down {
   padding-left: 5px;
 }
+
+.hover-menu {
+  position: relative;
+}
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  padding: 20px;
+  display: none;
+}
+
+.hover-menu:hover .sub-menu {
+  display: block;
+  color: white;
+  border: 1px solid var(--main-color);
+  background-color: pink;
+  box-shadow: 5px 5px 20px 0 white;
+}
+
 
 /* header top 영역 end */
 

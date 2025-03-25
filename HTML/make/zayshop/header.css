@@ -39,10 +39,11 @@
 .h-bottom img {
   width: 78px;
 }
-/* nav width넓이지정 */
+/* nav width 넓이지정 */
 .h-bottom nav {
   width: 40%;
 }
+
 
 .h-bottom nav ul{
   display: flex;
@@ -59,162 +60,9 @@
   font-size: 20px;
 }
 
-/* ! main */
-#main{
-  position: relative;
-}
-
-#main i{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-80%);
-
-  color: #222;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-#main i.left {
-  left: 20px;
-}
-
-#main i.right {
-  right: 20px;
-}
-
-#main i.left, #main i.right {
-  color: var(--main-color);
-  font-size: 45px;
-}
-
-#main i.left, #main i.right {
-  opacity: 0.5;
-}
-
-#main i.left:hover, #main i.right:hover {
-  opacity: 1;
+.h-bottom li:first-child {
   color: var(--main-color);
 }
-
-#main .text-box{
-  position: absolute;
-  width: 33%;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 18%;
-}
-
-.text-box h1 {
+.h-bottom li:hover {
   color: var(--main-color);
-  font-size: 50px;
-  font-weight: 100;
-  line-height: 1.4;
-}
-
-.text-box h3 {
-  font-size: 30px;
-  font-weight: lighter;
-  line-height: 1.7;
-}
-
-.text-box p {
-  font-size: 18px;
-  font-weight: lighter;
-  line-height: 1.5;
-}
-
-.text-box a {
-  border-bottom: 1px solid var(--main-color) ;
-  color: var(--main-color);
-}
-
-/* ! categorys */
-.category-title {
-  text-align: center;
-  width: 100%;
-}
-
-.category-title h1 {
-  font-size: 48px;
-  font-weight: 100;
-  line-height: 1.7;
-  margin-top: 20px;
-}
-
-.category-title p {
-  font-size: 18px;
-  font-weight: 300;
-  display: inline-block;
-  width: 50%;
-  margin-bottom: 80px;
-}
-
-.category {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-}
-
-.category img {
-  width: 342px;
-  border-radius: 180px;
-  border: 1px solid #dee2e6;
-}
-
-.category h5 {
-  font-size: 1.25rem;
-  line-height: 1.2;
-  margin: 16px;
-}
-
-.category-text {
-  margin-bottom: 120px;
-}
-.category a:last-child {
-  background-color: var(--main-color);
-  text-align: center;
-  padding: 6px 12px;
-  border-radius: .25rem;
-  color: white;
-  font-size: 19px;
-  font-weight: 300;
-}
-
-/* ! featured product */
-.feature {
-  background-color: #e9eef5;
-}
-
-.feature-title {
-  text-align: center;
-  padding: 50px;
-}
-
-.feature-title h1 {
-  font-size: 48px;
-  font-weight: 100;
-}
-
-.feature-title p {
-  display: inline-block;
-  width: 45%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.feature img {
-  width: 414px;
-}
-
-.feature-contents {
-  display: flex;
-  /* background-color: red; */
-}
-
-.feature-content {
-  border: 1px solid rgba(0,0,0,.125);
-}
-
-.feature-content ul {
-  display: flex;
 }
