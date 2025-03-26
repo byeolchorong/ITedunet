@@ -52,27 +52,67 @@
   <!-- main -->
   <section id="main">
     <div class="container">
+      <!-- Container content here -->
     </div>
-    <input type="radio" id="slide01" checked >
-    <input type="radio" id="slide02">
-    <input type="radio" id="slide03">
-
-    <i class="fa-solid fa-chevron-left left"></i>
-    <div class="text-box">
-      <h1><b>Zay</b> eCommerce</h1>
-      <h3>Tiny and Perfect eCommerce Template</h3>
-      <p>
-        Zay Shop is an eCommerce HTML5 CSS template with latest version of
-        Bootstrap 5 (beta 1). This template is 100% free provided by
-        <a href="#">TemplateMO</a> website.
-        Image credits go to <a href="#">Freepik Stories</a>,
-        <a href="#">Unsplash</a> and <a href="#">Icons 8.</a>
-      </p>
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+  
+    <div class="slidebox">
+      <div class="slides">
+        <!-- Slide 1 -->
+        <div class="slide">
+          <label for="slide3"><i class="fa-solid fa-chevron-left left"></i></label>
+          <div class="text-box">
+            <h1><b>Zay</b> eCommerce</h1>
+            <h3>Tiny and Perfect eCommerce Template</h3>
+            <p>Content</p>
+          </div>
+          <label for="slide2"><i class="fa-solid fa-chevron-right right"></i></label>
+          <img src="./img/banner_img_01.jpg">
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+          <label for="slide1"><i class="fa-solid fa-chevron-left left"></i></label>
+          <div class="text-box">
+            <h1>Proident occaecat</h1>
+            <h3>Aliquip ex ea commodo consequat</h3>
+            <p>Content</p>
+          </div>
+          <label for="slide3"><i class="fa-solid fa-chevron-right right"></i></label>
+          <img src="./img/banner_img_02.jpg">
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide">
+          <label for="slide2"><i class="fa-solid fa-chevron-left left"></i></label>
+          <div class="text-box">
+            <h1><b>Repr in voluptate</b></h1>
+            <h3>Ullamco laboris nisi ut</h3>
+            <p>Content</p>
+          </div>
+          <label for="slide1"><i class="fa-solid fa-chevron-right right"></i></label>
+          <img src="./img/banner_img_03.jpg">
+        </div>
+      </div>
     </div>
-    <img src="./img/banner_img_01.jpg">
-    <i class="fa-solid fa-chevron-right right"></i>
-
+  
+    <div class="navigation">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+    </div>
+  
+    <!-- <div class="arrows">
+      <label for="slide3" class="arrow" id="left1"></label>
+      <label for="slide1" class="arrow" id="left2"></label>
+      <label for="slide2" class="arrow" id="left3"></label>
+  
+      <label for="slide2" class="arrow" id="right1"></label>
+      <label for="slide3" class="arrow" id="right2"></label>
+      <label for="slide1" class="arrow" id="right3"></label>
+    </div> -->
   </section>
+  
 
   <!-- categorys -->
   <section id="categorys" class="container">
@@ -118,16 +158,16 @@
         <div class="feature-content">
           <a href="#"><img src="./img/feature_prod_01.jpg"></a>
           <div class="feature-content01">
-              <ul>
-                <li>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                </li>
-                <li class="money">$240.00</li>
-              </ul>
+            <ul>
+              <li>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </li>
+              <li class="money">$240.00</li>
+            </ul>
 
             <div>
               <h1>Gym Weight</h1>
@@ -152,7 +192,7 @@
               </li>
               <li class="money">$240.00</li>
             </ul>
-  
+
             <div>
               <h1>Cloud Nike Shoes</h1>
               <p>
@@ -176,7 +216,7 @@
               </li>
               <li class="money">$240.00</li>
             </ul>
-  
+
             <div>
               <h1>Summer Addides Shoes</h1>
               <p>
@@ -245,7 +285,7 @@
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
             <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          
+
           </div>
           <form>
             <input type="email" placeholder="Email address">

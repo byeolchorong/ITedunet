@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 
 :root {
   --main-color : #f7444e;
@@ -96,12 +100,16 @@ header nav li:hover {
 /* header slide main position을 relative로 위치설정 */
 #main {
   position: relative;
+  background-image: url(./img/main.jpg);
+  width: 1920px;
+  height: 1097px;
+  background-size: cover;
 }
 
 /* img width값 100%주면 
 #main 영역 크기만큼 설정됨 */
 #main img {
-  width: 100%;
+  width: 100vw;
 }
 /* img 중간으로 text-box 넣기 */
 /* #main 영역 28% 크기, #main영역 기준으로
@@ -143,10 +151,7 @@ color와 font 굵기와 size padding값 주기*/
   color: var(--main-color);
   border: 1px solid var(--main-color);
 }
-/* text-box input margin-top값 설정 */
-.text-box input {
-  margin-top: 70px;
-}
+
 /* 슬라이드를 위한 버튼 설정
 input:radio 버튼과 각각 연결된 label을 꾸밈
 크기 설정 및 테두리, 색상, 마진 설정
@@ -162,24 +167,26 @@ input:radio 버튼과 각각 연결된 label을 꾸밈
 /* 가운데 정렬 */
 #main .slidebtn {
   position: absolute;
-  bottom: -80px;
+  left: 388px;
+  top: 600px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 /* 라벨을 클릭하면 연결된 첫번째radio버튼이 checked됨
 해당 radio버튼이 checked됐을 때 해당 라벨의 스타일 변경
 */
-#main input[id="slide01"]:checked ~ .text-box label[for="slide01"] {
+#main input[id="slide01"]:checked ~ .slidebtn label[for="slide01"] {
   width: 20px;
   height: 20px;
   background-color: var(--main-color);
 }
-#main input[id="slide02"]:checked ~ .text-box label[for="slide02"] {
+#main input[id="slide02"]:checked ~ .slidebtn label[for="slide02"] {
   width: 20px;
   height: 20px;
   background-color: var(--main-color);
 }
-#main input[id="slide03"]:checked ~ .text-box label[for="slide03"] {
+#main input[id="slide03"]:checked ~ .slidebtn label[for="slide03"] {
   width: 20px;
   height: 20px;
   background-color: var(--main-color);
@@ -188,6 +195,38 @@ input:radio 버튼과 각각 연결된 label을 꾸밈
 #main input {
   display: none;
 }
+
+.slides {
+  display: flex;
+  width: 300vw;
+  height: 1097px;
+  position: relative;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+}
+
+#slide01:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#slide02:checked ~ .slides {
+  transform: translateX(-100vw);
+}
+
+#slide03:checked ~ .slides {
+  transform: translateX(-200vw);
+}
+
+
+
+
 /* header slide 영역 end */
 
 

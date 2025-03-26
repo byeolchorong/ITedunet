@@ -1,0 +1,100 @@
+@import url(../reset.css);
+:root {
+  --main-color : #59ab6e; 
+  --bg-color : #212934;
+  --text-color : #cfd6e1;
+}
+#main {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#main i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-80%);
+  color: #222;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#main label i.left {
+  left: 20px;
+}
+
+#main label i.right {
+  right: 20px;
+}
+
+#main .text-box {
+  position: absolute;
+  width: 33%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 18%;
+}
+
+.text-box h1 {
+  color: var(--main-color);
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 1.4;
+}
+
+.text-box h3 {
+  font-size: 30px;
+  font-weight: lighter;
+  line-height: 1.7;
+}
+
+.text-box p {
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 1.5;
+}
+
+.slidebox {
+  width: 100%;
+}
+.slides {
+  display: flex;
+  position: relative;
+  width: 300%;
+}
+.slide {
+  width: 100%;
+  position: relative;
+}
+
+#slide01:checked ~ .slidebox .slide {
+  transform: translateX(0%);
+}
+
+#slide02:checked ~ .slidebox .slide {
+  transform: translateX(-100%);
+}
+
+#slide03:checked ~ .slidebox .slide {
+  transform: translateX(-200%);
+}
+
+input {
+  display: none;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.navigation label{
+  width: 30px;
+  height: 5px;
+  background-color: var(--main-color);
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
