@@ -1,0 +1,224 @@
+:root {
+  --main-color: #ffbe33;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+body {
+  overflow-X: hidden;
+}
+
+/* header top */
+
+/* header 자리잡기 */
+header {
+  position: relative;
+}
+
+
+/* 상단바 flex 줘서 가로정렬
+justify-content줘서 양쪽정렬 */
+.h-top-menu {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+/* font변경 / font사이즈 변경 / 패딩값 */
+.h-logo {
+  font-size: 32px;
+  font-family: 'Dancing Script', cursive;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+/* 상단바 nav flex 줘서 가로정렬 */
+.h-nav ul {
+  display: flex;
+  padding: 10px;
+  margin-left: 200px;
+}
+
+/* 상단바 네비의 재료 마진과 패딩값주기 */
+.h-nav li {
+  margin-top: 20px;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+.h-nav li:first-child {
+  color: var(--main-color);
+}
+
+/* icon클래스 마진값 폰트 사이즈 변경 */
+.h-icon {
+  margin: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* a태그 배경색/테두리/폰트/패딩값 */
+.h-icon a {
+  background-color: var(--main-color);
+  border-radius: 60px;
+  padding: 8px 30px;
+  font-size: 12pt;
+  transition: all 0.3s ease;
+}
+
+/* i태그와 a태그 패딩값 */
+.h-icon i {
+  padding: 8px;
+  transition: all 0.6s ease;
+}
+
+/* li와 i태그 hover했을때 색상값주기 */
+.h-nav li:hover, .h-icon i:hover {
+  color: var(--main-color);
+}
+
+/* a태그 hover했을때 배경색상값주기 */
+.h-icon a:hover {
+  background-color: #e69c00;
+}
+
+
+
+/* main */
+/* 메인 마진 */
+#main {
+  margin: 230px auto;
+}
+
+/* 이미지 크기 / 
+포지션 지정하고 top 0으로 h-top으로 위로 올리기 
+h-top 글자 안보여서 z-index으로 값 넣어줌 */
+img {
+  width: 100%;
+  position: absolute;
+  z-index: -20;
+  top: 0;
+}
+
+/* slide의 h1 폰트 사이즈 글꼴 줄간격 */
+.slide h1 {
+  font-size: 3.5rem;
+  font-family: 'Dancing Script', cursive;
+  line-height: 2;
+}
+
+/* slide의 p태그 넓이 / 마진 
+폰트  사이즈 / 줄간격 */
+.slide p {
+  width: 27%;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* slidebox font사이즈 0으로 줘서
+간격없게만듬 */
+.slidebox {
+  width: 100%;
+}
+
+/* slides flex하고 넓이 설정 후
+움직임 확인하는 transition 설정 */
+.slides {
+  display: flex;
+  font-size: 0;
+  width: 300vw;
+  transition: all 0.5s ease;
+}
+
+/* slide 사이즈 조절 / 폰트사이즈와 색상 */
+.slide {
+  width: 100vw;
+  height: 300px;
+  font-size: 20px;
+  color: white;
+}
+
+/* slide a태그의 배경색상과
+패딩/마진값과 테두리둥글게 지정 */
+.slide a {
+  background-color: #ffbe33;
+  padding: 10px 45px;
+  margin-top: 120px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+/* slide a hover 했을때 배경색 변경 */
+.slide a:hover {
+  background-color: #e69c00;
+}
+
+
+/* nav input */
+/* nav 포지션 지정하고 flex주고 
+세로 정렬 */
+.navigation {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+/* nav label 가로로 배치하고 세로 정렬
+크기 / 마진/ 배경색 / 테두리 설정 
+transition 해서 라벨 클릭했을때 움직임 변경 */
+.navigation label {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 150px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* input id값 클릭했을때 색상과 크기 변경 */
+#main input[id="slide01"]:checked ~ .navigation label[for="slide01"],
+#main input[id="slide02"]:checked ~ .navigation label[for="slide02"],
+#main input[id="slide03"]:checked ~ .navigation label[for="slide03"]  {
+  /* width: 20px;
+  height: 20px; */
+  transform: scale(1.5);
+  background-color: var(--main-color);
+}
+
+/* slide01 체크했을때 slides 움직임 */
+#slide01:checked ~ .slidebox .slides {
+  transform: translateX(0%);
+}
+/* slide02 체크했을때 slides 움직임 */
+#slide02:checked ~ .slidebox .slides {
+  transform: translateX(-100vw);
+}
+/* slide03 체크했을때 slides 움직임 */
+#slide03:checked ~ .slidebox .slides {
+  transform: translateX(-200vw);
+}
+
+/* input 화면에서 사라지게 만들기 */
+input {
+  display: none;
+}
+/* input 화면에서 사라지게 만들기
+위와 동일하게 사용가능함 */ 
+/* #main input[type="radio"] {
+  display: none;
+} */
