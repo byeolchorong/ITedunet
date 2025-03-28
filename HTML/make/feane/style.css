@@ -71,6 +71,7 @@ justify-content줘서 양쪽정렬 */
 /* a태그 배경색/테두리/폰트/패딩값 */
 .h-icon a {
   background-color: var(--main-color);
+  display: inline-block;
   border-radius: 60px;
   padding: 8px 30px;
   font-size: 12pt;
@@ -169,7 +170,7 @@ img {
 /* nav input */
 /* nav 포지션 지정하고 flex주고 
 세로 정렬 */
-.navigation {
+.slidebtn {
   position: absolute;
   display: flex;
   align-items: center;
@@ -178,7 +179,7 @@ img {
 /* nav label 가로로 배치하고 세로 정렬
 크기 / 마진/ 배경색 / 테두리 설정 
 transition 해서 라벨 클릭했을때 움직임 변경 */
-.navigation label {
+.slidebtn label {
   display: inline-block;
   align-items: center;
   width: 10px;
@@ -191,14 +192,15 @@ transition 해서 라벨 클릭했을때 움직임 변경 */
 }
 
 /* input id값 클릭했을때 색상과 크기 변경 */
-#main input[id="slide01"]:checked ~ .navigation label[for="slide01"],
-#main input[id="slide02"]:checked ~ .navigation label[for="slide02"],
-#main input[id="slide03"]:checked ~ .navigation label[for="slide03"]  {
+#main input[id="slide01"]:checked ~ .slidebtn label[for="slide01"],
+#main input[id="slide02"]:checked ~ .slidebtn label[for="slide02"],
+#main input[id="slide03"]:checked ~ .slidebtn label[for="slide03"]  {
   /* width: 20px;
   height: 20px; */
   transform: scale(1.5);
   background-color: var(--main-color);
 }
+
 
 /* slide01 체크했을때 slides 움직임 */
 #slide01:checked ~ .slidebox .slides {
