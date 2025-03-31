@@ -1,0 +1,137 @@
+/* 헤더탑 배경색 */
+.header-top {
+  background-color: var(--bg-color);
+  padding: 10px 0;
+}
+/* 헤더 가로정렬배치 */
+.h-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* header top left */
+/* 폰트 사이즈 지정 */
+.ht-left {
+  font-size: 14px;
+}
+/* 아이콘과 텍스트 사이 간격주기  */
+.ht-left i {
+  padding-right: 3px;
+}
+/* 텍스트 사이 border
+border와 텍스트 사이 간격 */
+.ht-left span:first-child {
+  border-right:1px solid var(--line-color);
+  padding-right: 20px;
+}
+/* 텍스트 사이 border
+border와 텍스트 사이 간격 */
+.ht-left span:last-child {
+  padding-left: 20px;
+}
+
+
+/* header top right */
+/* 가로정렬 배치 */
+.ht-right {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+/* 아이콘들 패딩줘서 일정간격 띄우기  */
+.ht-icon i {
+  padding-right: 20px;
+}
+/* 텍스트 사이 border
+border와 텍스트 사이 간격 */
+.ht-language img {
+  border-left: 1px solid var(--line-color);
+  padding-left: 20px;
+  padding-right: 5px;
+}
+/* 아이콘들 패딩줘서 일정간격 띄우기  */
+.ht-language i {
+  padding-left: 5px;
+  padding-right: 20px;
+}
+/* 텍스트 사이 border
+border와 텍스트 사이 간격 */
+.ht-user i {
+  border-left: 1px solid var(--line-color);
+  padding-left: 20px;
+}
+/* 아이콘들 패딩줘서 일정간격 띄우기  */
+.ht-user i {
+  padding-right: 5px;
+}
+/* 헤더탑 언어 서브메뉴 display none해서 화면에서 없애고
+position absolute해서 위치조정하고 크기조정 */
+.sub-menu {
+  width: 4%;
+  display: none;
+  background-color: black;
+  color: white;
+  position: absolute;
+  right: 480px;
+  padding: 10px;
+}
+/* 호버했을때 서브메뉴 보여주기 */
+li:hover .sub-menu {
+  display:block;
+}
+
+
+/* header bottom */
+/* 헤더바텀 가로정렬 탑패딩 */
+.header-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+/* 네비 ul flex값 */
+.hb-nav ul{
+  display: flex;
+}
+/* 네비 li 패딩값을 줘서
+좌우 여백 주기 */
+.hb-nav li {
+  padding: 0 30px;
+  transition: all 0.5s ease;
+}
+.hb-nav li:hover {
+  color: var(--main-color);
+}
+
+/* 아이콘 가로정렬*/
+.hb-icon {
+  display: flex;
+  align-items: center;
+}
+/* 아이콘 가로값과 패딩 */
+.hb-icon i {
+  padding-top: 10px;
+  /* display: block; */
+  width: 35px;
+}
+/* span태그 사이즈조절 */
+.hb-icon i span {
+  position: relative;
+  top: -10px;
+  right: 2px;
+  font-size: 7px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  padding: 3px 5px;
+  border-radius: 100%;
+  text-align: center;
+}
+.hb-icon small {
+  color: gray;
+}
+.hb-icon b {
+  font-size: 12px;
+}

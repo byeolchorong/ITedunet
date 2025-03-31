@@ -2,377 +2,196 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="CSS/reset.css">
   <script src="https://kit.fontawesome.com/705381df09.js" crossorigin="anonymous"></script>
-  <title>organic - conan</title>
+  <title>ogani-conan</title>
 </head>
 
 <body>
+  <!-- header start -->
   <header>
-    <div class="h-t">
-    <div class="h-top container">
-      <!-- header left -->
-      <div class="h-top-text">
-        <i class="fa-solid fa-envelope"></i>
-        <div class="h-top-text01">hello@colorlib.com</div>
-        <div class="h-top-text02">Free Shipping for all Order of $99</div>
-      </div>
-
-      <!-- header right -->
-      <div class="h-top-right">
-        <!-- heder icon -->
-        <div class="h-top-icon">
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-linkedin-in"></i>
-          <i class="fa-brands fa-pinterest-p pinterest"></i>
+    <div class="header-top">
+      <div class="h-top container">
+        <!-- 헤더탑 왼쪽부분 -->
+        <div class="ht-left">
+          <span><i class="fa-solid fa-envelope"></i> hello@colorlib.com</span>
+          <span>Free Shipping for all Order of $99</span>
         </div>
 
-        <!-- dropdown -->
-        <div>
-          <ul class="t-main-menu">
-            <li>
-              <img src="img/language.png">
-              Korean
-              <span><i class="fa-solid fa-angle-down"></i></span>
-              <!-- <ul class="t-sub-menu">
-                <li>korean</li>
-                <li>english</li>
-                <li>spanish</li>
-              </ul> -->
-            </li>
-          </ul>
-        </div>
+        <!-- 헤더탑 오른쪽부분 -->
+        <div class="ht-right">
+          <!-- 헤더탑 아이콘 -->
+          <div class="ht-icon">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+          </div>
 
-        <!-- user -->
-        <div class="h-top-right-icon">
-          <i class="fa-solid fa-user user"></i>
-          <span>Login</span> 
+          <!-- 헤더탑 언어  -->
+          <div class="ht-language">
+            <ul class="main-menu">
+              <li><img src="img/language.png">English<i class="fa-solid fa-angle-down"></i>
+                <ul class="sub-menu">
+                  <li>spainsh</li>
+                  <li>english</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 헤더탑 유저로그인 -->
+          <div class="ht-user">
+            <i class="fa-solid fa-user"></i> Login
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-    <!-- header bottom -->
-    <div class="h-bottom container">
-
-      <div class="h-bottom-logo">
+    <section class="header-bottom container">
+      <div class="hb-img">
         <img src="img/logo.png">
       </div>
 
-      <div class="h-bottom-nav">
-        <ul class="b-main-menu">
+      <div class="hb-nav">
+        <ul>
           <li>HOME</li>
           <li>SHOP</li>
-          <li>PAGES
-            <!-- <ul class="b-sub-menu">
-              <li>Shop Details</li>
-              <li>Shoping Cart</li>
-              <li>Check Out</li>
-              <li>Blog Details</li>
-            </ul> -->
-          </li>
+          <li>PAGES</li>
           <li>BLOG</li>
           <li>CONTACT</li>
         </ul>
       </div>
 
-      <div class="h-bottom-icon">
-        <i class="fa-solid fa-heart"></i>
-        <i class="fa-solid fa-bag-shopping"></i>
-        <div>
-          <p>item: <b>$150.00</b></p>
-        </div>
+      <div class="hb-icon">
+        <i class="fa-solid fa-heart"><span>1</span></i>
+        <i class="fa-solid fa-bag-shopping"><span>3</span></i>
+        <span><small>item:</small><b>$150.00</b></span>
       </div>
 
-    </div>
-
+    </section>
   </header>
 
   <!-- main -->
   <section id="main" class="container">
-    <div>
-      <input type="radio" name="nav" id="menu">
 
-      <div id="tab-box">
-        <div id="tab-button">
-          <i class="fa-brands fa-instagram"></i>
-          <label for="menu">
-            <i class="fa-solid fa-bars"></i>
-            All departments
-            <i class="fa-solid fa-angle-down"></i></label>
-        </div>
-
-        <div id="tab-content">
-          <div class="all">Fresh Meat</div>
-          <div class="all">Vegetables</div>
-          <div class="all">Fruit & Nut Gifts</div>
-          <div class="all">Fresh Berries</div>
-          <div class="all">Ocean Foods</div>
-          <div class="all">Butter & Eggs</div>
-          <div class="all">Fastfood</div>
-          <div class="all">Fresh Onlion</div>
-          <div class="all">Papayaya & Crisps</div>
-          <div class="all">Oatmeal</div>
-          <div class="all">Fresh Bananas</div>
-        </div>
+    <!-- main nav -->
+    <section class="main-nav">
+      <div>
+        <ul class="main-menu">
+          <li><i class="fa-solid fa-bars"></i>All departments<i class="fa-solid fa-angle-down"></i>
+            <ul class="main-sub-menu">
+              <li>Fresh Meat</li>
+              <li>Vegetables</li>
+              <li>Fruit & Nut Gifts</li>
+              <li>Fresh Berries</li>
+              <li>Ocean Foods</li>
+              <li>Butter & Eggs</li>
+              <li>Fastfood</li>
+              <li>Fresh Onion</li>
+              <li>Papayaya & Crisps</li>
+              <li>Oatmeal</li>
+              <li>Fresh Bananas</li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </div>
+    </section>
 
-    <div class="main-search">
-      <div class="m-search">
-        <p>all categories <i class="fa-solid fa-angle-down"></i></p>
+    <section class="main-search">
+      <span>All Categories<i class="fa-solid fa-angle-down"></i></span>
+      <input type="text" placeholder="What do you need?">
+      <a href="#">SEARCH</a>
+    </section>
 
-        <form>
-          <input type="search" placeholder="What do you need?">
-          <input type="submit" value="SEARCH">
-        </form>
-      </div>
-    </div>
+    <section class="main-right">
+      <div><i class="fa-solid fa-phone phone"></i></div>
+      <div>+65 11.188.888<br>
+        support 24/7 time</div>
+    </section>
 
-    <div>
-      <i class="fa-solid fa-phone"></i>
-      +65 11.188.888 <br>
-      support 24/7 time
-    </div>
 
   </section>
 
-  <!-- IMG -->
-  <section class="banner container">
-    <div>
+
+  <section class="main-img container">
+    <div class="banner-img">
       <img src="img/hero/banner.jpg">
     </div>
-    <div>
+    <div class="banner-text">
       <p>FRUIT FRESH</p>
       <h1>Vegetable <br>
-        100% Organic
-      </h1>
+        100% Organic</h1>
+      <p class="banner-p">Free Pickup and Delivery Available</p>
+      <a href="#">SHOP NOW</a>
     </div>
+
   </section>
 
-  <!-- slide -->
-  <section class="container">
-    <input type="radio" name="slider" id="s01">
-    <input type="radio" name="slider" id="s02">
-    <input type="radio" name="slider" id="s03">
-    <input type="radio" name="slider" id="s04">
-    <input type="radio" name="slider" id="s05">
-    <!-- 보여지는 화면 -->
+
+  <!-- 슬라이더 영역 -->
+  <section id="slider" class="container">
+    <input type="radio" name="slide" id="s01" checked>
+    <input type="radio" name="slide" id="s02">
+    <input type="radio" name="slide" id="s03">
+
+    <!-- 슬라이더 보여지는화면 -->
     <div class="slidebox">
-      <!-- 슬라이더묶음 -->
+      <!-- 슬라이더 묶음 -->
       <div class="slides">
+        <!-- 슬라이드 1 -->
         <div class="slide">
           <div>
-            <div><img src="img/categories/cat-1.jpg"></div>
-            <p>FRESH FRUIT</p>
+            <img src="img/categories/cat-1.jpg">
           </div>
+          <div>FRESH FRUIT</div>
         </div>
 
+        <!-- 슬라이드 2 -->
         <div class="slide">
           <div>
-            <div><img src="img/categories/cat-2.jpg"></div>
-            <p>DRIED FRUIT</p>
+            <img src="img/categories/cat-2.jpg">
           </div>
+          <div>FRESH FRUIT</div>
         </div>
 
+        <!-- 슬라이드 3 -->
         <div class="slide">
           <div>
-            <div><img src="img/categories/cat-3.jpg"></div>
-            <p>VEGETABLES</p>
+            <img src="img/categories/cat-3.jpg">
           </div>
+          <div>FRESH FRUIT</div>
         </div>
 
+        <!-- 슬라이더 4 -->
         <div class="slide">
           <div>
-            <div><img src="img/categories/cat-4.jpg"></div>
-            <p>DRINK FRUITS</p>
+            <img src="img/categories/cat-4.jpg">
           </div>
+          <div>FRESH FRUIT</div>
         </div>
 
-        <div class="slide">
-          <div>
-            <div><img src="img/categories/cat-5.jpg"></div>
-            <p>DIRNK FRUITS</p>
+        <div class="controlbox">
+          <div class="control01">
+            <label for="s03" class="left"><i class="fa-solid fa-angle-left"></i></label>
+            <label for="s02" class="right"><i class="fa-solid fa-chevron-right"></i></label>
+          </div>
+
+          <div class="control02">
+            <label for="s01" class="left"><i class="fa-solid fa-angle-left"></i></label>
+            <label for="s03" class="right"><i class="fa-solid fa-chevron-right"></i></label>
+          </div>
+
+          <div class="control03">
+            <label for="s02" class="left"><i class="fa-solid fa-angle-left"></i></label>
+            <label for="s01" class="right"><i class="fa-solid fa-chevron-right"></i></label>
           </div>
         </div>
-
       </div>
     </div>
-
   </section>
-
-  <!-- tab -->
-  <section class="product container">
-    <div>
-      <h1>Featured Product</h1>
-    </div>
-    <input type="radio" name="tab-radio" id="menu01">
-    <input type="radio" name="tab-radio" id="menu02">
-    <input type="radio" name="tab-radio" id="menu03">
-    <input type="radio" name="tab-radio" id="menu04">
-    <input type="radio" name="tab-radio" id="menu05">
-
-    <div id="tab-box">
-      <div id="tab-button">
-        <label for="menu01" class="menu01">All</label>
-        <label for="menu02" class="menu02">Oranges</label>
-        <label for="menu03" class="menu03">Fresh Meat</label>
-        <label for="menu04" class="menu04">Vegetables</label>
-        <label for="menu05" class="menu05">Fastfood</label>
-      </div>
-      
-      <div class="tab-content">
-        
-        <div class="all fresh">
-          <div class="content-img">
-            <img src="img/featured/feature-1.jpg">
-          </div>
-
-          <div class="tab-taxt">
-            <h3>Crab Pool Security</h3>
-            <p class="tab-icon">$30.00</i></p>
-          </div>
-        </div>
-
-        <div class="all vegetables fastfood">
-          <div class="content-img">
-            <img src="img/featured/feature-2.jpg">
-          </div>
-
-          <div class="tab-taxt">
-            <h3>Crab Pool Security</h3>
-            <p class="tab-icon">$30.00</i></p>
-          </div>
-        </div>
-
-        <div class="all vegetables">
-          <div class="content-img">
-            <img src="img/featured/feature-3.jpg">
-          </div>
-
-          <div class="tab-taxt">
-            <h3>Crab Pool Security</h3>
-            <p class="tab-icon">$30.00</i></p>
-          </div>
-        </div>
-
-        <div class="all oranges fastfood">
-          <div class="content-img">
-            <img src="img/featured/feature-4.jpg">
-          </div>
-
-          <div class="tab-taxt">
-            <h3>Crab Pool Security</h3>
-            <p class="tab-icon">$30.00</i></p>
-          </div>
-        </div>
-
-        <div class="all fresh vegetables">
-          <div class="content-img">
-            <img src="img/featured/feature-5.jpg">
-          </div>
-
-          <div class="tab-taxt">
-            <h3>Crab Pool Security</h3>
-            <p class="tab-icon">$30.00</i></p>
-          </div>
-        </div>
-
-        <div class="all fresh fastfood">
-          <div class="content-img">
-            <img src="img/featured/feature-6.jpg">
-          </div>
-
-          <div class="tab-taxt">
-            <h3>Crab Pool Security</h3>
-            <p class="tab-icon">$30.00</i></p>
-          </div>
-        </div>
-
-        <div class="all fresh vegetables">
-          <div class="content-img">
-            <img src="img/featured/feature-7.jpg">
-          </div>
-
-          <div class="tab-taxt">
-            <h3>Crab Pool Security</h3>
-            <p class="tab-icon">$30.00</i></p>
-          </div>
-        </div>
-
-        <div class="all vegetables fastfood">
-          <div class="content-img">
-            <img src="img/featured/feature-8.jpg">
-          </div>
-
-          <div class="tab-taxt">
-            <h3>Crab Pool Security</h3>
-            <p class="tab-icon">$30.00</i></p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- footer -->
-  <footer>
-    <div>
-      <div>
-        <div>
-          <img src="img/logo.png">
-        </div>
-          <ul>
-            <li>Address: 60-49 Road 11378 New York</li>
-            <li>Phone: +65 11.188.888</li>
-            <li>Email: hello@colorlib.com</li>
-          </ul>
-      </div>
-
-      <div>
-        <h6>Useful Links</h6>
-        <ul>
-          <li>About Us</li>
-          <li>About Our Shop</li>
-          <li>Secure Shopping</li>
-          <li>Delivery information</li>
-          <li>Privacy Policy</li>
-          <li></li>
-        </ul>
-
-        <ul>
-          <li>Who We Are</li>
-          <li>Our Services</li>
-          <li>Projects</li>
-          <li>Contact</li>
-          <li>Innovation</li>
-          <li>Testimonials</li>
-        </ul>
-      </div>
-
-      <div>
-        <h6>Join Our Newsletter Now</h6>
-        <p>Get E-mail updates about our latest shop and special offers.</p>
-        
-        <form>
-          <input type="email" placeholder="Enter your mail">
-          <input type="submit" value="SUBSCRIBE">
-        </form>
-
-        <div>
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-pinterest-p"></i>
-        </div>
-      </div>
-
-    </div>
-  </footer>
 </body>
 
 </html>
