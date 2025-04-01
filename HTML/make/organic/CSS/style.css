@@ -21,7 +21,7 @@
   position: absolute;
   width: 264px;
   top: 163px;
-  left: 385px;
+  left: 381px;
   padding: 10px;
   border: 1px solid var(--line-color);
   line-height: 1.6;
@@ -111,41 +111,172 @@ li:hover .main-sub-menu {
   color: white;
   padding: 10px 20px;
 }
+ 
+ /* 슬라이더 배치 
+ .slides {
+  display: flex;
+  white-space: nowrap;
+  position: relative;
+}
+슬라이드 배치
+.slide {
+  display: inline-block;
+  transition: all .5s ease;
+}
+.slide h1 {
+  text-align: center;
+  font-size: 20px;
+}
+컨트롤박스 라벨 배치
+#slider .controlbox label {
+  position: absolute;
+  top: 100%;
+  transform: translateY(-600%);
+  cursor: pointer;
+  display: none;
+}
+컨트롤박스 왼쪽 화살표 값
+#slider .controlbox .left {
+  left: 350px;
+}
+컨트롤박스 오른쪽 화살표 값
+#slider .controlbox .right {
+  right: 400px;
+}
+
+슬라이더 인풋에 id s01/s02/s03 체크했을때 슬라이더박스안에있는
+컨트롤01/02/03의 라벨이 블럭
+#slider input[id="s01"]:checked ~ .slidebox .control01 label {
+  display: block;
+  background-color: red;
+}
+#slider input[id="s02"]:checked ~ .slidebox .control02 label {
+  display: block;
+  background-color: green;
+}
+#slider input[id="s03"]:checked ~ .slidebox .control03 label {
+  display: block;
+  background-color: blue;
+}
+슬라이더 라디오 버튼 숨기기
+#slider input {
+  display: none;
+} */ 
+/* 고정 슬라이더로 하려 했으나.. 실패..... */
 
 
 /* 슬라이더 영역 */
 .slidebox {
+  width: 100%;
 }
-.slides {
+#slider .slidebox .slides{
   display: flex;
-  justify-content: space-between;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
+/* 슬라이드 배치정렬 */
 .slide {
   display: inline-block;
+  /* border: 3px solid pink; */
+  position: relative;
+  text-align: center;
+  transition: all 1s ease;
 }
-#slider .controlbox label {
+.slide img {
+  width: 100%;
+}
+.slide h1 {
+  font-size: 20px;
+}
+.slide label {
   position: absolute;
-  top: 175%;
+  top: 50%;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+/* 슬라이드버튼 정렬배치 */
+#slider .slide-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+/* 버튼 라벨 크기정렬 */
+#slider .slide-btn label {
+  width: 15px;
+  height: 15px;
+  background-color: var(--main-color);
+  margin-right: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#s01:checked ~ .slidebox .slide {
+  transform: translateX(0%);
+}
+#s02:checked ~ .slidebox .slide {
+  transform: translateX(-100%);
+}
+#s03:checked ~ .slidebox .slide {
+  transform: translateX(-200%);
+}
+#s04:checked ~ .slidebox .slide {
+  transform: translateX(-300%);
+}
+#s05:checked ~ .slidebox .slide {
+  transform: translateX(-400%);
+}
+/* 라디오 버튼 숨기기 */
+#slider input{
   display: none;
 }
-#slider .controlbox .left {
-  left: 350px;
+
+
+
+
+
+/* 탭 영역 */
+/* 탭 영역 제목부 중앙배치 */
+.product {
+  padding-top: 50px;
+  line-height: 2;
+  text-align: center;
+}
+/* 네비메뉴버튼 디자인 */
+#tab-button {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  padding: 10px;
+  margin-left: 330px;
+}
+#tab-button label {
+  cursor: pointer;
+}
+/* 가로정렬 */
+.tab-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 30px;
 }
 
-#slider input[id="s01"]:checked ~ .slidebox .control01 label {
+/* 콘텐츠 영역 숨기기 */
+.all {
+  display: none;
+}
+
+/* tab content 나타내기 */
+#menu01:checked ~ #tab-box .tab-content .all,
+#menu02:checked ~ #tab-box .tab-content .oranges,
+#menu03:checked ~ #tab-box .tab-content .fresh,
+#menu04:checked ~ #tab-box .tab-content .vegetables,
+#menu05:checked ~ #tab-box .tab-content .fastfood {
   display: block;
 }
-
-#slider input[id="s02"]:checked ~ .slidebox .control02 label {
-  display: block;
+/* 라디오 버튼 숨기기 */
+.product input {
+  display: none;
 }
-
-#slider input[id="s03"]:checked ~ .slidebox .control03 label {
-  display: block;
-}
-
-
-
-
-
