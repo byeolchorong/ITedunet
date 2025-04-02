@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  var test01 = 10 > 5;  // 10은 5보다 크므로 test01은 true
+  var test02 = 10 < 5;  // 10은 5보다 작지 않으므로 test02는 false
+
+    document.write("&& : " + ( test01 && test02 ) + "<br>");
+    document.write("|| : " + ( test01 || test02 ) + "<br>");
+    document.write("! : " + !test01 + "<br>");
+
+    // 학년이 2학년 이상이고, 학생번호가 20이상인 학생이라면
+    // 운동장에 모이세요 라고 출력하는 프로그램 
+
+    var year = 3;
+    var studentNumber = 25;
+    
+    if (year >= 2 && studentNumber >= 20) {
+      document.write("운동장에 모이세용~");
+    } else {
+      document.write("교실에 있으세용~");
+    }
+    
+    // 용돈으로 1000원을 받았는데 두부 500원을 살 경우
+    // 잔돈이 얼마 남았는지 프로그램 구현하세요
+
+    var money = 1000;
+
+  </script>
+</body>
+</html>
