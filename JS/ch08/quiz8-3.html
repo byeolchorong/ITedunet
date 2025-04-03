@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // for문, while문, dowhile문, for_in문, for_of문
+    let i = 0;
+
+    let itemNames = ["사과", "바나나", "우유"];
+    let itemPrices = [1200, 800, 2500];
+    let itemQuantities = [3, 5, 2];
+
+    let totalPrice = 0;
+    let deliveryFee = 5000;
+
+    // 장바구니 목록 (itemNames) 출력하기
+
+    // for문
+    for (let i = 0, tem = itemNames.length; i < tem; i++) {
+      document.write(itemNames[i] + "<br>");
+    }
+    /*
+    // while문 
+    while (i < itemNames.length) {
+      document.write(itemNames[i] + "<br>");
+      i++;
+    }
+
+    //do while문
+    do {
+      document.write(itemNames[i] + "<br>");
+      i++;
+    } while (i < 3);
+
+    //for_in문
+    // for (let i = 0; i < itemNames.length; i++) {
+    //   alert(itemNames[i]);
+    // }
+
+    //for_out문
+    for (let i of itemNames) {
+      document.write(i);
+    }
+    */
+    // 계산 해야 할 totalPrice 계산하기 : 각자의 가격 * 각자의 수령
+
+    for (let i = 0; i < itemPrices.length; i++) {
+      totalPrice += itemPrices[i] * itemQuantities[i];
+    }
+    document.write("totalPrice : " + totalPrice );
+    
+  </script>
+</body>
+
+</html>

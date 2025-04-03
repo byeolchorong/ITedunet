@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>quiz2</title>
+</head>
+
+<body>
+  <script>
+    /*
+      문제 1)
+      미로에 들어섰습니다. 당신은 왼쪽 혹은 오른쪽으로 갈 수 있습니다. 
+
+      오른쪽 길로 갈건지 안내를 하고 "yes" 혹은 "no"의 값을 받습니다. 
+      해당 변수를 생성하세요 
+    */
+
+    /*
+    문제2)
+    만약 선택이 yes라면 상황 설명을 해줍니다. 
+    랜덤값 생성이 Math.random(); (0~1 사이의 값)일 때
+    0.5 미만이면 우연히 고블린을 만나 전투를 시작한다고 안내하고
+    0.5 이상이면 아름다운 폭포를 발견했다, 체력이 회복됩니다. 라고 안내해주세요 .
+    */
+
+    /*
+    문제 3)
+    만약 선택이 no 라면 상황 설명을 해줍니다.
+    만약 랜덤값이 0.5 미만이면 신비로운 마법사를 만났다. 아이템을 받았다는 안내를 하고 
+    0.5 이상이면 어둠 속에서 괴물을 만났습니다. 도망칩니다. 안내를 합니다. 
+    
+    */
+
+    // var choice = prompt("미로에 들어섰습니다. 당신은 왼쪽 혹은 오른쪽으로 갈 수 있습니다. 오른쪽길로 가시겠습니까?", "yes or no를 입력하세요")
+    // var randomValue = Math.random();
+
+    // 비교연산자, 논리연산자
+    // if (choice == "yes") {
+    //   if (randomValue > 0.5) {
+    //     document.write("아름다운 폭포를 발견했습니다. 체력이 회복됩니다.");
+    //   } else {
+    //     document.write("우연히 고블린을 만나 전투를 시작합니다. 화이팅!");
+    //   }
+    // } else if (choice === "no") {
+    //   if (randomValue > 0.5) {
+    //     document.write("어둠 속에서 괴물을 만났습니다. 얼른 도망치세요!!");
+    //   } else {
+    //     document.write("신비로운 마법사를 만났다. 아이템을 받았습니다.");
+    //   }
+    // }
+
+    var userInput = prompt("미로에 들어섰습니다. 당신은 왼쪽 혹은 오른쪽으로 갈 수 있습니다. 오른쪽길로 가시겠습니까?", "yes or no를 입력하세요");
+    var randomNumber;
+
+    document.write(userInput);
+    // 비교연산자, 논리연산자
+    if (userInput == "yes") {
+      // 오른쪽으로 옴 
+      document.write("당신은 오른쪽 길로 들어섰습니다. ")
+      randomNumber = Math.random(); // 0 ~ 1 사이의 실수값을 랜덤으로 가져옴
+
+      console.log("오른쪽 랜덤값 : " + randomNumber);
+      if (randomNumber >= 0.5) {
+        document.write("아름다운 폭포를 발견했습니다. 체력이 회복됩니다.");
+      } else {
+        document.write("우연히 고블린을 만나 전투를 시작합니다. 화이팅!");
+      }
+
+    } else if (userInput == "no") {
+      randomNumber = Math.random();
+      console.log("왼쪽 랜덤값 : " + randomNumber);
+      if (randomNumber >= 0.5) {
+        document.write("어둠 속에서 괴물을 만났습니다. 얼른 도망치세요!!");
+      } else {
+        document.write("신비로운 마법사를 만났다. 아이템을 받았습니다.");
+      }
+
+    } else {
+      document.write("잘못된 입력값입니다.")
+    }
+
+  </script>
+</body>
+
+</html>
