@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 전역함수 : 선언 후 호출, 선언 전 호출 : 잘 작동
+    // 함수 선언문 -> 객체 생성됨, 객체 생성이 된 주소를 담고 있는 곳 : helloworld01
+    function helloworld01() {
+      alert("Hello World 01");
+    }
+
+    // 전역함수 : 선언부가 모두 메모리 올라가고, 위에서 아래로 코드 수행 될 때 연산 (function)
+    // 함수 표현식 : -> 객체 생성됨, 객체 생성이 된 주소를 담고 있는 곳 : helloworld02
+    let helloworld02 = function() {
+      alert("HJello World 02");
+    };
+
+    helloworld01(); // 식별자 + () : 식별자 내용에 해당하는 함수를 호출하겠다
+    helloworld02(); // 식별자 + () : 식별자 내용에 해당하는 함수를 호출하겠다
+  </script>
+</body>
+</html>
