@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>removeChild</title>
+</head>
+<body>
+  <ul id="myList">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ul>
+  <p>Remove the first item from the list</p>
+  <button onclick="myFunction()">Try it</button>
+
+  <script>
+    function myFunction() {
+      let list = document.querySelector("#myList");
+      let x = list.removeChild(list.children[0]);
+    }
+  </script>
+
+</body>
+</html>

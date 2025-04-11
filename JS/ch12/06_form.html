@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="fm1">
+    <input type="text" name="fname" value="Donald"><br>
+    <input type="text" name="lname" value="Duck"><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <form id="fm2">
+    <input type="text" name="fname" value="Donald2"><br>
+    <input type="text" name="lname" value="Duck2"><br>
+    <input type="submit" value="Submit2">
+  </form>
+
+  <p>form elements</p>
+  <button onclick="myFunction()">Try it</button>
+  <p id="demo"></p>
+
+  <script>
+    function myFunction() {
+      let x = document.forms[1];
+      let text = "";
+      let i;
+      for (i = 0; i < x.length; i++) {
+        text += x.elements[i].value + "<br>";
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+  </script>
+</body>
+</html>

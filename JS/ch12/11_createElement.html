@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>createElement</title>
+</head>
+<body>
+  <p>create new button element with text</p>
+  <button onclick="myFunction()">Try it</button>
+
+  <script>
+    function myFunction() {
+      let btn = document.createElement("button");
+      let t = document.createTextNode("click me");
+      btn.appendChild(t);
+      document.body.appendChild(btn);
+    }
+  </script>
+</body>
+</html>

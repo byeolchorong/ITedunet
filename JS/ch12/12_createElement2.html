@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>createElement2</title>
+</head>
+<body>
+  <p>create new p element with text, and append it to div</p>
+  <div id="myDIV">
+    first statement.
+  </div>
+  <button onclick="myFunction()">Try it</button>
+
+  <script>
+    function myFunction() {
+      let para = document.createElement("p");
+      let t = document.createTextNode("add statements");
+      para.appendChild(t);
+      document.querySelector("#myDIV").appendChild(para);
+    }
+  </script>
+</body>
+</html>
