@@ -14,15 +14,13 @@
   <header>
     <!-- header top 영역 -->
     <div class="h-top container">
-      <img src="img/logo.png" alt="logo">
+      <img src="./img/logo.png" alt="logo">
       <nav>
         <ul>
           <li><a class="ul-color" href="#">HOME</a></li>
-          <li class="hover-menu">
-            <a href="#">PAGES</a>
-            <i class="fa-solid fa-caret-down down">
-            </i>
-            <ul class="sub-menu">
+          <li id="menuList_pages"><a href="#">PAGES</a>
+            <i class="fa-solid fa-caret-down down"></i>
+            <ul id="subList" class="display_none">
               <li>About</li>
               <li>Testimonial</li>
             </ul>
@@ -382,6 +380,8 @@
     </section>
 
   </footer>
+
+  <script src="famms.js"></script>
 </body>
 
 </html>
