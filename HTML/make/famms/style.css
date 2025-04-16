@@ -234,9 +234,10 @@ input:radio 버튼과 각각 연결된 label을 꾸밈
 .slide {
   width: 100vw;
   position: relative;
+  transition: all 1s;
 }
 
-#slide01:checked ~ .slides {
+/* #slide01:checked ~ .slides {
   transform: translateX(0%);
 }
 
@@ -246,7 +247,7 @@ input:radio 버튼과 각각 연결된 label을 꾸밈
 
 #slide03:checked ~ .slides {
   transform: translateX(-200vw);
-}
+} */
 /* header slide 영역 end */
 
 
@@ -659,7 +660,7 @@ bottom마진값 줘서 button 위로 올림 */
 .f-top input[type="email"]{
   width: 60%;
   padding: 15px;
-  margin-right: -7px;
+  margin-right: -4px;
   background-color: white;
   border: 1px solid lightgray;
 }

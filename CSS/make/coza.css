@@ -232,7 +232,14 @@
 
 .overview-img {
   padding: 0 20px;
+  display: none;
 }
+
+.overview-img.active {
+  display: block;
+}
+
+
 
 .foot-button {
   width: 10%;
