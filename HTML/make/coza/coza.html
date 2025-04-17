@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/705381df09.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../../../CSS/make/coza.css">
-  <title>coza</title>
+  <link rel="stylesheet" href="./coza.slide.css">
+  <script src="./coza.js" defer></script>
+  <title>coza-conan</title>
 </head>
 
 <body>
@@ -23,40 +24,74 @@
         </ul>
       </div>
     </div>
-
-    <div class="wrap-menu">
-      <div class="wrap-top-left"><a href=""><img src="img/logo.png"></a>
-        <nav>
-          <ul class="wrap-top-nav">
-            <li><a class="homecolor" href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div>
-        <a class="top-icon" href="#"><img src="icon/search.svg" alt="search" width="20px"></a>
-        <a class="top-icon" href="#"><img src="icon/cart.svg" alt="search" width="20px"></a>
-        <a class="top-icon" href="#"><img src="icon/heart.svg" alt="search" width="20px"></a>
-      </div>
-    </div>
   </header>
-  <!-- main -->
-  <section class="slide">
-    <div class="text-box">
+  
+      <div class="wrap-menu">
+        <div class="wrap-top-left"><a href=""><img src="img/logo.png"></a>
+          <nav>
+            <ul class="wrap-top-nav">
+              <li><a class="homecolor" href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="wrap-top-right">
+          <a class="top-icon" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a class="top-icon" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a class="top-icon" href="#"><i class="fa-solid fa-heart"></i></a>
+        </div>
+      </div>
 
-      <div>
-        <p>Men New-Season</p>
+  <!-- main -->
+  <div class="slidebox">
+    <div class="slide">
+      <div class="text-box">
+        <div>
+          <p>Women Collection 2018</p>
+        </div>
+        <div>
+          <h1>NEW SEASON</h1>
+        </div>
+        <a href="#">SHOP NOW</a>
       </div>
-      <div>
-        <h1>JACKETS & COATS</h1>
-      </div>
-      <a href="#">SHOP NOW</a>
+      <img src="./img/slide-01.jpg">
     </div>
-  </section>
+
+    <div class="slide">
+      <div class="text-box">
+        <div>
+          <p>Men New-Season</p>
+        </div>
+        <div>
+          <h1>JACKETS & COATS</h1>
+        </div>
+        <a href="#">SHOP NOW</a>
+      </div>
+      <img src="./img/slide-02.jpg">
+    </div>
+
+    <div class="slide">
+      <div class="text-box">
+        <div>
+          <p>Men Collection 2018</p>
+        </div>
+        <div>
+          <h1>NEW ARRIVALS</h1>
+        </div>
+        <a href="#">SHOP NOW</a>
+      </div>
+      <img src="./img/slide-03.jpg">
+    </div>
+
+    <div id="slidebtn">
+      <i class="fa-solid fa-chevron-left left"></i>
+      <i class="fa-solid fa-chevron-right right"></i>
+    </div>
+  </div>
 
   <section id="category" class="container">
     <div>
@@ -86,6 +121,7 @@
   <section class="view-name">
     <h2>PRODUCT OVERVIEW</h2>
     <div class="view-nav">
+
       <!-- 탭메뉴 -->
       <ul class="view-nav-left" id="tab">
         <li id="all">All Products</li>
@@ -107,7 +143,7 @@
     <div class="overview-img all women">
 
       <img src="img/women1.jpg" width="300px">
-      <div>
+      <div class="overview_content">
         <span>Esprit Ruffle Shirt</span>
         <span><i class="fa-solid fa-heart"></i></span>
       </div>
@@ -118,7 +154,7 @@
       <div>
         <img src="img/women2.jpg" width="300px">
       </div>
-      <div>
+      <div class="overview_content">
         <span>Horschel supply</span>
         <span><i class="fa-solid fa-heart"></i></span>
       </div>
@@ -129,7 +165,7 @@
       <div>
         <img src="img/Men1.jpg" width="300px">
       </div>
-      <div>
+      <div class="overview_content">
         <span>Esprit Ruffle Shirt</span>
         <span><i class="fa-solid fa-heart"></i></span>
       </div>
@@ -140,7 +176,7 @@
       <div>
         <img src="img/women3.jpg" width="300px">
       </div>
-      <div>
+      <div class="overview_content">
         <span>Classic Trench coat</span>
         <span><i class="fa-solid fa-heart"></i></span>
       </div>
@@ -151,7 +187,7 @@
       <div>
         <img src="img/women4.jpg" width="300px">
       </div>
-      <div>
+      <div class="overview_content">
         <span>Front Pocket Jumper</span>
         <span><i class="fa-solid fa-heart"></i></span>
       </div>
@@ -162,7 +198,7 @@
       <div>
         <img src="img/watches1.jpg" width="300px">
       </div>
-      <div>
+      <div class="overview_content">
         <span>Vintage Inspired Classic</span>
         <span><i class="fa-solid fa-heart"></i></span>
       </div>
@@ -173,7 +209,7 @@
       <div>
         <img src="img/women5.jpg" width="300px">
       </div>
-      <div>
+      <div class="overview_content">
         <span>Shirt in Stretch Cotton</span>
         <span<i class="fa-solid fa-heart"></i></span>
       </div>
@@ -184,7 +220,7 @@
       <div>
         <img src="img/women6.jpg" width="300px">
       </div>
-      <div>
+      <div class="overview_content">
         <span>Pieces Metallic Printed</span>
         <span><i class="fa-solid fa-heart"></i></span>
       </div>
@@ -195,7 +231,7 @@
       <div>
         <img src="img/shoes.jpg" width="300px">
       </div>
-      <div>
+      <div class="overview_content">
         <span>Converse All Star Hi Plimsolls</span>
         <span><i class="fa-solid fa-heart"></i></span>
       </div>
@@ -206,7 +242,7 @@
       <div>
         <img src="img/women7.jpg" width="300px">
       </div>
-      <div>
+      <div class="overview_content">
         <span>Femme T-Shirt in Stripe</span>
         <span><i class="fa-solid fa-heart"></i></span>
       </div>
@@ -216,7 +252,7 @@
     <div>
       <div class="overview-img all men">
         <img src="img/Men2.jpg" width="300px">
-        <div>
+        <div class="overview_content">
           <span>Herschel supply</span>
           <span><i class="fa-solid fa-heart"></i></span>
         </div>
@@ -227,7 +263,7 @@
     <div>
       <div class="overview-img all men">
         <img src="img/Men3.jpg" width="300px">
-        <div>
+        <div class="overview_content">
           <span>Herschel supply</span>
           <span><i class="fa-solid fa-heart"></i></span>
         </div>
@@ -239,7 +275,7 @@
       <div>
         <img src="img/women8.jpg" width="300px">
       </div>
-      <div>
+      <div class="overview_content">
         <span>T-shirt with Sleeve</span>
         <span><i class="fa-solid fa-heart"></i></span>
       </div>
@@ -250,7 +286,7 @@
       <div>
         <img src="img/women9.jpg" width="300px">
       </div>
-      <div>
+      <div class="overview_content">
         <span>Pretty Little Thing</span>
         <span><i class="fa-solid fa-heart"></i></span>
       </div>
@@ -261,7 +297,7 @@
       <div>
         <img src="img/watches2.jpg" width="300px">
       </div>
-      <div>
+      <div class="overview_content">
         <span>Mini silver Mesh Watch</span>
         <span><i class="fa-solid fa-heart"></i></span>
       </div>
@@ -272,7 +308,7 @@
       <div>
         <img src="img/women10.jpg" width="300px">
       </div>
-      <div>
+      <div class="overview_content">
         <span>Square Neck Back</span>
         <span><i class="fa-solid fa-heart"></i></span>
       </div>
@@ -341,8 +377,6 @@
         <div>Copyright &copy;2025 All rights reserved I made with &#10084; by <a class="color" href="#">Colorib</a>& distributed by  <a class="color" href="#">ThemeWagon</a></div>
       </div>
     </div>
-
-    <script src="./coza.js"></script>
 
   </footer>
 

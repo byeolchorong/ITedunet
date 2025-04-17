@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Open Sans", sans-serif; */
+/* font-family: "Raleway", sans-serif; */
+
+:root {
+  --main-color: #81c408;
+  --sub-color: #ffc107;
+  --bg-color: #f4f6f8;
+  --text-color: #45595B;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+.container {
+width: 70%;
+margin: 0 auto;
+}
+
+/* !header */
+/* 헤더탑 스타일 */
+#header_top {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 230px 100px;
+
+  background-color: var(--main-color);
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+}
+
+/* 헤더탑 왼쪽 스타일 */
+.h_left i {
+  padding: 0 8px;
+  color: var(--sub-color);
+}
+
+/* 헤더탑 오른쪽 */
+.h_right span {
+  padding: 0 8px;
+}
+
+/* header end */
+
+
+
+
+/* !nav */
+/* nav 전체 스타일 */
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  position: sticky;
+  padding: 20px;
+}
+#nav h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  color: var(--main-color);
+}
+/* nav 가로정렬 */
+.nav_menu {
+  display: flex;
+}
+/* nav 메뉴 마진으로 자리배치 */
+.nav_menu > li {
+  margin: 0 20px;
+}
+
+/* 아이콘 스타일 */
+.h_icon .glass {
+  border: 1px solid var(--sub-color);
+  border-radius: 50%;
+  padding: 12px;
+  margin-right: 6px;
+
+  color: var(--main-color);
+}
+.h_icon .shopping, .h_icon .user{
+  font-size: 30px;
+  padding: 10px;
+
+  color: var(--main-color);
+}
+
+#menuList_pages {
+  position: relative;
+}
+
+/* 서브메뉴 스타일 */
+#subList {
+  position: absolute;
+  top: 140%;
+  border-radius: 10px;
+  padding: 10px 30px 10px 20px;
+  line-height: 1.8;
+  background-color: var(--bg-color);
+}
+
+.display_none {
+  display: none;
+}
+
+/* ! main slide */
+#main {
+  display: flex;
+  justify-content: space-between;
+}
+/* main 왼쪽 텍스트 스타일 */
+.main_left p{
+  color: var(--sub-color);
+  font-size: 24px;
+}
+
+.main_left h1 {
+  color: var(--main-color);
+  font-size: 64px;
+}
+.main_form {
+  
+}
+
+/* 슬라이더박스 가로정렬 */
+.slidebox {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 200%;
+}
+
+.slide img {
+  width: 400px;
+}
+/* 슬라이드 내에 있는 텍스트 스타일 */
+/* .slide p {
+  position: absolute;
+  top: 190px;
+  margin-left: 240px;
+  background-color: var(--sub-color);
+  padding: 8px 24px;
+  font-size: 25px;
+  color: white;
+  border-radius: 10px;
+} */
+
+/* 슬라이드버튼 정렬 */
+/* #slidebtn {
+  position: absolute;
+  top: 190px;
+  font-size: 25px;
+} */
