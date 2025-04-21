@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/705381df09.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./dropdown.js" defer></script>
+  <script src="./slider.js" defer></script>
+  <script src="./tab.js"></script>
+  <title>Conan's favorite fruit</title>
+</head>
+<body>
+  <!-- 헤더부분 -->
+  <header>
+    <div class="header container">
+
+      <!-- 헤더탑 왼쪽 -->
+      <div class="ht_left">
+        <span><i class="fa-solid fa-location-dot"></i>123 Street, New York</span>
+        <span><i class="fa-solid fa-envelope"></i>Email@Exanple.com</span>
+      </div>
+
+      <!-- 헤더탑 오른쪽 -->
+      <div class="ht_right">
+        <span>Privacy Policy / </span>
+        <span>Terms of Use</span>
+        <span>Sales and Refunds</span>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 내비부분 -->
+  <section id="nav">
+    <div class="container">
+      <!-- 헤더바텀 왼쪽 제목부 -->
+      <div class="hb_left">
+        <h1>Fruitables</h1>
+      </div>
+      <!-- 헤더바텀 네비 드롭다운 -->
+      <div class="hb_nav">
+        <ul>
+          <li>Home</li>
+          <li>Shop</li>
+          <li>Shop Detail</li>
+          <li id="hb_mainList">Pages<i class="fa-solid fa-angle-down"></i>
+            <ul id="hb_subList" class="hb_display_none">
+              <li>a</li>
+              <li>a</li>
+              <li>a</li>
+              <li>a</li>
+              <li>a</li>
+            </ul>
+          </li>
+          <li>Contact</li>
+        </ul>
+      </div>
+
+      <!-- 헤더바텀 오른쪽 아이콘 -->
+      <div class="hb_right">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-bag-shopping"></i>
+        <i class="fa-solid fa-user"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- 메인 슬라이더 부분 -->
+  <section id="main">
+    <div class="container">
+      <!-- 메인 왼쪽 -->
+      <div class="main_left">
+        <p>100% Organic Foods</p>
+        <h1>Organic Veggies & <br>
+        Fruits Foods</h1>
+        <input type="text" placeholder="Search">
+        <input type="submit" value="Submit Now">
+      </div>
+
+      <!-- 메인오른쪽 -->
+      <div class="main_right">
+        <div class="slidebox">
+
+          <div class="slide">
+            <img src="./img/hero-img-1.png" alt="슬라이드이미지1">
+            <p>conan's fruites</p>
+          </div>
+
+          <div class="slide">
+            <img src="./img/hero-img-2.jpg" alt="슬라이드이미지2">
+            <p>conan's vesitables</p>
+          </div>
+        </div>
+
+        <div id="slidebtn">
+          <i class="fa-solid fa-angle-left left"></i>
+          <i class="fa-solid fa-chevron-right right"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

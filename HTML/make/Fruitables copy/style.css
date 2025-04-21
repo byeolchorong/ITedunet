@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Open Sans", sans-serif; */
+/* font-family: "Raleway", sans-serif; */
+
+:root {
+  --main-color: #81c408;
+  --sub-color: #ffc107;
+  --bg-color: #f4f6f8;
+  --text-color: #45595B;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+.container {
+width: 70%;
+margin: 0 auto;
+}
+/* 헤더부분 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  border-radius: 260px 120px;
+
+  background-color: var(--main-color);
+  color: white;
+  font-size: 13px;
+}
+.ht_left i {
+  color: var(--sub-color);
+  padding: 0 10px;
+}
+
+
+/* 헤더바텀 부분 */
+#nav .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.hb_left h1 {
+  font-size: 40px;
+  color: var(--main-color);
+}
+
+/* 헤더바텀 드롭다운부분 */
+.hb_nav > ul {
+  display: flex;
+}
+.hb_nav > ul > li {
+  padding-right: 30px;
+}
+
+#hb_mainList {
+  position: relative;
+}
+#hb_subList {
+  position: absolute;
+}
+
+.hb_display_none {
+  display: none;
+}
+
+
+/* 메인 */
+#main .container {
+  display: flex;
+  justify-content: space-between;
+}
+.main_left p{ 
+  font-size: 20px;
+  color: var(--sub-color);
+}
+.main_left h1 {
+  font-size: 64px;
+}
+
+/* 메인 슬라이더 */
+
+.main_right {
+  width: 40%;
+  overflow: hidden;
+  position: relative;
+}
+.slidebox {
+  /* 부모에게 */
+  position: relative;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.slide {
+  width: 100%;
+  font-size: 16px;
+  position: relative;
+  /* 자식에게 */
+  display: inline-block;
+}
+
+.slide img {
+  width: 100%;
+}
+.slide p {
+  position: absolute;
+  top: 50%;
+  /* left : 50% transform값하면 텍스트 중앙으로 배치됨 */
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 20px;
+  background-color: var(--sub-color);
+}
+
+#slidebtn i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  padding: 10px 15px;
+}
+
+#slidebtn i.left{
+  left: 20px;
+}
+
+#slidebtn i.right {
+  right: 20px;
+}
