@@ -8,9 +8,7 @@ let cnt = 0;
 function showSubList() {
   cnt++;
 
-  if(cnt % 2 == 1) {
-    sub.classList.remove("hb_display_none");
-  } else {
-    sub.classList.add("hb_display_none");
+  if (cnt % 2 == 1) {
+    sub.classList.toggle("hb_display_none");
   }
 }

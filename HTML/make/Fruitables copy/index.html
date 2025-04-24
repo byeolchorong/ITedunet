@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
   <link rel="stylesheet" href="./style.css">
   <script src="./dropdown.js" defer></script>
   <script src="./slider.js" defer></script>
-  <script src="./tab.js"></script>
+  <script src="./tab.js" defer></script>
   <title>Conan's favorite fruit</title>
 </head>
+
 <body>
   <!-- 헤더부분 -->
   <header>
@@ -73,32 +75,205 @@
       <div class="main_left">
         <p>100% Organic Foods</p>
         <h1>Organic Veggies & <br>
-        Fruits Foods</h1>
+          Fruits Foods</h1>
         <input type="text" placeholder="Search">
         <input type="submit" value="Submit Now">
       </div>
 
       <!-- 메인오른쪽 -->
       <div class="main_right">
+        <!-- 슬라이드 박스 -->
         <div class="slidebox">
-
+          <!-- 슬라이드 1 -->
           <div class="slide">
             <img src="./img/hero-img-1.png" alt="슬라이드이미지1">
             <p>conan's fruites</p>
           </div>
-
+          <!-- 슬라이드2 -->
           <div class="slide">
             <img src="./img/hero-img-2.jpg" alt="슬라이드이미지2">
             <p>conan's vesitables</p>
           </div>
+
+          <!-- 슬라이드 버튼 -->
+          <div id="slidebtn">
+            <i class="fa-solid fa-angle-left left"></i>
+            <i class="fa-solid fa-chevron-right right"></i>
+          </div>
         </div>
 
-        <div id="slidebtn">
-          <i class="fa-solid fa-angle-left left"></i>
-          <i class="fa-solid fa-chevron-right right"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- 탭 부분 -->
+  <section id="tab">
+    <div class="container">
+      <div class="tab_products">
+        <!-- 탭 제목 -->
+        <div class="tab_title">
+          <h1>Our Organic Products</h1>
         </div>
+        <!-- 탭 버튼  -->
+        <div class="tab_buttons">
+          <span id="all" class="tab">All Products</span>
+          <span id="vegetables" class="tab">Vegetables</span>
+          <span id="fruits" class="tab">Fruits</span>
+          <span id="bread" class="tab">Bread</span>
+          <span id="meat" class="tab">Meat</span>
+        </div>
+      </div>
+
+      <!-- 탭 콘텐츠 -->
+      <div class="tab_contents">
+
+        <!-- 탭 콘텐츠1 -->
+        <div class="tab_content all vegetables">
+          <div class="tab_img">
+            <img src="./img/fruite-item-5.jpg">
+            <div class="tab_img_text">Fruits</div>
+          </div>
+          <div class="tab_bottom">
+            <div class="tab_text">
+              <h4>Grapes</h4>
+              <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit sed do <br> eiusmod te incididunt</p>
+            </div>
+            <div class="tab_price">
+              <span>$4.99 / kg</span>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i>Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 탭 콘텐츠 2 -->
+        <div class="tab_content all fruits">
+          <div class="tab_img">
+            <img src="./img/fruite-item-5.jpg">
+            <div class="tab_img_text">Fruits</div>
+          </div>
+          <div class="tab_bottom">
+            <div class="tab_text">
+              <h4>Grapes</h4>
+              <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit sed do <br> eiusmod te incididunt</p>
+            </div>
+            <div class="tab_price">
+              <span>$4.99 / kg</span>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i>Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 탭 콘텐츠 3 -->
+        <div class="tab_content all vegetables meat">
+          <div class="tab_img">
+            <img src="./img/fruite-item-2.jpg">
+            <div class="tab_img_text">Fruits</div>
+          </div>
+          <div class="tab_bottom">
+            <div class="tab_text">
+              <h4>Raspberries</h4>
+              <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit sed do <br> eiusmod te incididunt</p>
+            </div>
+            <div class="tab_price">
+              <span>$4.99 / kg</span>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i>Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 탭 콘텐츠 4 -->
+        <div class="tab_content all bread">
+          <div class="tab_img">
+            <img src="./img/fruite-item-4.jpg">
+            <div class="tab_img_text">Fruits</div>
+          </div>
+          <div class="tab_bottom">
+            <div class="tab_text">
+              <h4>Apricots</h4>
+              <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit sed do <br> eiusmod te incididunt</p>
+            </div>
+            <div class="tab_price">
+              <span>$4.99 / kg</span>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i>Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 탭 콘텐츠 5 -->
+        <div class="tab_content all meat">
+          <div class="tab_img">
+            <img src="./img/fruite-item-3.jpg">
+            <div class="tab_img_text">Fruits</div>
+          </div>
+          <div class="tab_bottom">
+            <div class="tab_text">
+              <h4>Banana</h4>
+              <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit sed do <br> eiusmod te incididunt</p>
+            </div>
+            <div class="tab_price">
+              <span>$4.99 / kg</span>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i>Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 탭 콘텐츠 6 -->
+        <div class="tab_content all fruits meat">
+          <div class="tab_img">
+            <img src="./img/fruite-item-1.jpg">
+            <div class="tab_img_text">Fruits</div>
+          </div>
+          <div class="tab_bottom">
+            <div class="tab_text">
+              <h4>Orange</h4>
+              <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit sed do <br> eiusmod te incididunt</p>
+            </div>
+            <div class="tab_price">
+              <span>$4.99 / kg</span>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i>Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 탭 콘텐츠 7 -->
+        <div class="tab_content all fruits">
+          <div class="tab_img">
+            <img src="./img/fruite-item-6.jpg">
+            <div class="tab_img_text">Fruits</div>
+          </div>
+          <div class="tab_bottom">
+            <div class="tab_text">
+              <h4>Apple</h4>
+              <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit sed do <br> eiusmod te incididunt</p>
+            </div>
+            <div class="tab_price">
+              <span>$4.99 / kg</span>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i>Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 탭 콘텐츠 8 -->
+        <div class="tab_content all bread">
+          <div class="tab_img">
+            <img src="./img/fruite-item-5.jpg">
+            <div class="tab_img_text">Fruits</div>
+          </div>
+          <div class="tab_bottom">
+            <div class="tab_text">
+              <h4>Grapes</h4>
+              <p>Lorem ipsum dolor sit amet <br> consectetur adipisicing elit sed do <br> eiusmod te incididunt</p>
+            </div>
+            <div class="tab_price">
+              <span>$4.99 / kg</span>
+              <a href="#"><i class="fa-solid fa-bag-shopping"></i>Add to cart</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 </body>
+
 </html>

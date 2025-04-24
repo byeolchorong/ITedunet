@@ -8,9 +8,9 @@ right.addEventListener("click",rightsliding);
 let index = 0;
 
 function leftsliding() {
-  index --;
+  index--;
 
-  if (index < 0) {
+  if(index < 0) {
     index = slide.length -1;
   }
   sliding();
@@ -19,7 +19,7 @@ function leftsliding() {
 function rightsliding() {
   index++;
 
-  if(index >= slide.length) {
+  if (index >= slide.length) {
     index = 0;
   }
   sliding();
@@ -27,6 +27,6 @@ function rightsliding() {
 
 function sliding() {
   slide.forEach(function(slide) {
-    slide.style.transform = `translateX(${index*(-100)}%)`  
-  });
+    slide.style.transform = `translateX(${index * (-100)}%)`
+  })
 }

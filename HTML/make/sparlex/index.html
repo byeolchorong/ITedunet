@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/705381df09.js" crossorigin="anonymous"></script>
+  <script src="./JS/dropdown.js" defer></script>
+  <script src="./JS/slide.js" defer></script>
+  <script src="./JS/tab.js" defer></script>
+  <link rel="stylesheet" href="./style.css">
+  <title>Conan's sparlex</title>
+</head>
+
+<body>
+  <!-- 헤더 -->
+  <header>
+    <div class="container">
+      <div class="header_left">
+        <h1>sparlex</h1>
+      </div>
+
+      <div class="header_nav">
+        <ul class="header_menu">
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Price</li>
+          <li id="mainList">Pages<i class="fa-solid fa-angle-down"></i>
+            <ul id="subList" class="display_none">
+              <li>Team</li>
+              <li>Testimonial</li>
+              <li>Gallery</li>
+              <li>Appointment</li>
+              <li>404 page</li>
+            </ul>
+          </li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+
+      <div class="header_right">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <a href="#">Book Appointment</a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 메인 -->
+  <section id="main">
+      <div class="slidebox">
+        <div class="slides">
+          <!-- 슬라이드 1 -->
+          <div class="slide">
+            <div class="slide_img">
+              <img src="./img/carousel-1.jpg" alt="슬라이드 이미지 1">
+            </div>
+
+            <div class="slide_text">
+              <p class="slide_text01">SPA & BEAUTY CENTER</p>
+              <h1>Massage Treatment</h1>
+              <p class="slide_text02">Lorem rebum magna dolore amet lorem eirmod magna erat <br> 
+                diam stet. Sadips duo stet amet amet ndiam elitr ipsum</p>
+              <a href="#" class="slide_text_a01">Get Start</a>
+              <a href="#" class="slide_text_a02">Book Now</a>
+            </div>
+          </div>
+
+          <!-- 슬라이드 2 -->
+          <div class="slide">
+            <div class="slide_img">
+              <img src="./img/carousel-2.jpg" alt="슬라이드 이미지 1">
+            </div>
+
+            <div class="slide_text">
+              <p class="slide_text01">SPA & BEAUTY CENTER</p>
+              <h1>Massage Treatment</h1>
+              <p class="slide_text02">Lorem rebum magna dolore amet lorem eirmod magna erat <br> 
+                diam stet. Sadips duo stet amet amet ndiam elitr ipsum</p>
+              <a href="#" class="slide_text_a01">Get Start</a>
+              <a href="#" class="slide_text_a02">Book Now</a>
+            </div>
+          </div>
+
+          <!-- 슬라이드 3 -->
+          <div class="slide">
+            <div class="slide_img">
+              <img src="./img/carousel-3.jpg" alt="슬라이드 이미지 1">
+            </div>
+
+            <div class="slide_text">
+              <p class="slide_text01">SPA & BEAUTY CENTER</p>
+              <h1>Massage Treatment</h1>
+              <p class="slide_text02">Lorem rebum magna dolore amet lorem eirmod magna erat <br> 
+                diam stet. Sadips duo stet amet amet ndiam elitr ipsum</p>
+              <a href="#" class="slide_text_a01">Get Start</a>
+              <a href="#" class="slide_text_a02">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="slidebtn">
+          <i class="fa-solid fa-angle-left left"></i>
+          <i class="fa-solid fa-chevron-right right"></i>
+        </div>
+
+        <div id="slidebtns">
+          <label id="label0"></label>
+          <label id="label1"></label>
+          <label id="label2"></label>
+        </div>
+      </div>
+
+  </section>
+
+  <!-- 탭 -->
+  <section id="tab">
+    <div class="container">
+      <div class="tab_top">        
+        <div class="tab_sub_title">
+          <h4>OUR GALLERY</h4>
+        </div>
+
+        <div class="tab_title">
+          <h1>Let's See Our Gallery</h1>
+        </div>
+
+        <div class="tab_buttons">
+          <span id="all">All Gallery</span>
+          <span id="skin">Skin Care</span>
+          <span id="stream">Stream Bath</span>
+          <span id="stone">Stone Therapy</span>
+          <span id="face">Face Massage</span>
+        </div>
+      </div>
+
+      <div class="tab_bottom">
+        <div class="tab_product all skin">
+          <div class="tab_product_img">
+            <img src="./img/gallery-1.jpg">
+          </div>
+          <div class="tab_product_text">
+            <p>Skin Care</p>
+            <i class="fa-solid fa-magnifying-glass-plus plus"></i>
+          </div>
+        </div>
+
+        <div class="tab_product all stream">
+          <div class="tab_product_img">
+            <img src="./img/gallery-2.jpg">
+          </div>
+        </div>
+
+        <div class="tab_product all face">
+          <div class="tab_product_img">
+            <img src="./img/gallery-3.jpg">
+          </div>
+        </div>
+
+        <div class="tab_product all stone">
+          <div class="tab_product_img">
+            <img src="./img/gallery-4.jpg">
+          </div>
+        </div>
+
+        <div class="tab_product all face">
+          <div class="tab_product_img">
+            <img src="./img/gallery-5.jpg">
+          </div>
+        </div>
+
+        <div class="tab_product all skin">
+          <div class="tab_product_img">
+            <img src="./img/gallery-6.jpg">
+          </div>
+        </div>
+
+        <div class="tab_product all stone">
+          <div class="tab_product_img">
+            <img src="./img/gallery-7.jpg">
+          </div>
+        </div>
+
+        <div class="tab_product all face">
+          <div class="tab_product_img">
+            <img src="./img/gallery-8.jpg">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 호버 -->
+  <section id="hover">
+    <div class="container">
+      <div class="hover_top">
+        <div class="hover_sub_title">
+          SPA SPECIALIST
+        </div>
+        <div class="hover_title">
+          Spa & Beauty Specialist
+        </div>
+      </div>
+
+      <div class="hover_products">
+        <div class="hover_product">
+          <div class="hover_bg"></div>
+          <div class="hover_icons">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <div class="hover_img">
+            <img src="./img/team-1.png">
+          </div>
+          <div class="hover_text">
+            <h1>Oliva Mia</h1>
+            <p>Spa & Beauty Expert</p>
+          </div>
+        </div>
+
+        <div class="hover_product">
+          <div class="hover_bg"></div>
+          <div class="hover_icons">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <div class="hover_img">
+            <img src="./img/team-2.png">
+          </div>
+          <div class="hover_text">
+            <h1>Oliva Mia</h1>
+            <p>Spa & Beauty Expert</p>
+          </div>
+        </div>
+
+        <div class="hover_product">
+          <div class="hover_bg"></div>
+          <div class="hover_icons">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <div class="hover_img">
+            <img src="./img/team-3.png">
+          </div>
+          <div class="hover_text">
+            <h1>Oliva Mia</h1>
+            <p>Spa & Beauty Expert</p>
+          </div>
+        </div>
+
+        <div class="hover_product">
+          <div class="hover_bg"></div>
+          <div class="hover_icons">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+          <div class="hover_img">
+            <img src="./img/team-4.png">
+          </div>
+          <div class="hover_text">
+            <h1>Oliva Mia</h1>
+            <p>Spa & Beauty Expert</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="container">
+      <div class="footer_top">
+        <div class="footer_first">
+          <h2>Newsletter</h2>
+          <p>Dolor amet sit justo amet elitr clita <br> 
+            ipsum elitr est.Lorem ipsum dolor <br>
+            sit amet, consectetur adipiscing elit. <br> 
+            Nullam in tempor dui, non <br> 
+            consectetur enim.</p>
+            <input type="email" placeholder="Enter your email">
+            <input type="submit" value="SignUp">
+        </div>
+
+        <div class="footer_second">
+          <h2>Our Services</h2>
+          <ul>
+            <li><i class="fa-solid fa-chevron-right"></i>Facials</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Waxing</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Message</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Minarel baths</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Body treatments</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Aroma Therapy</li>
+            <li><i class="fa-solid fa-chevron-right"></i>Stone Spa</li>
+          </ul>
+        </div>
+
+        <div class="footer_third">
+          <div class="footer_third_top">
+            <h2>Schedule</h2>
+              <div>Monday : 09:00 am - 10:00 pm</div>
+              <div>Saturday : 09:00 am - 08:00 pm</div>
+              <div>Sunday : 09:00 am - 05:00 pm</div>
+          </div>
+          <div class="footer_third_bottom">
+            <h2>Address</h2>
+            <div><i class="fa-solid fa-location-dot"></i>123 ranking street North tower <br>
+            New York, USA</div>
+          </div>
+        </div>
+
+        <div class="footer_fourth">
+          <div class="footer_fourth_top">
+            <h2>Follow US</h2>
+            <ul>
+              <li><i class="fa-solid fa-chevron-right"></i>Fackbook</li>
+              <li><i class="fa-solid fa-chevron-right"></i>Instagram</li>
+              <li><i class="fa-solid fa-chevron-right"></i>Twitter</li>
+            </ul>
+          </div>
+          <div class="footer_fourth_bottom">
+            <h2>Contact Us</h2>
+            <div><i class="fa-solid fa-envelope"></i>info@example.com</div>
+            <div><i class="fa-solid fa-phone-flip"></i>+012 3456 7890</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer_bottom">
+        <div class="footer_bottom_first">
+          <p><a href="#">Your Site Name,</a>All right reserved.</p>
+        </div>
+        <div class="footer_bottom_second">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+        <div class="footer_bottom_third">
+          <p>Designed By <a href="#">HTML Codex</a> Distributed By <a href="#">ThemeWagon</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

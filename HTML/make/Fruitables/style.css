@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-/* font-family: "Open Sans", sans-serif; */
-/* font-family: "Raleway", sans-serif; */
 
 :root {
   --main-color: #81c408;
@@ -21,8 +19,8 @@
 }
 
 .container {
-width: 70%;
-margin: 0 auto;
+  width: 70%;
+  margin: 0 auto;
 }
 
 /* !header */
@@ -64,19 +62,23 @@ margin: 0 auto;
   top: 0;
   left: 0;
   position: sticky;
-  padding: 20px;
+  padding: 20px 0;
 }
+
+/* nav 제목 스타일 */
 #nav h1 {
   font-family: "Raleway", sans-serif;
   font-size: 40px;
   color: var(--main-color);
 }
+
 /* nav 가로정렬 */
 .nav_menu {
   display: flex;
 }
+
 /* nav 메뉴 마진으로 자리배치 */
-.nav_menu > li {
+.nav_menu>li {
   margin: 0 20px;
 }
 
@@ -89,13 +91,16 @@ margin: 0 auto;
 
   color: var(--main-color);
 }
-.h_icon .shopping, .h_icon .user{
+
+.h_icon .shopping,
+.h_icon .user {
   font-size: 30px;
   padding: 10px;
 
   color: var(--main-color);
 }
 
+/* 드롭다운 자리 고정 */
 #menuList_pages {
   position: relative;
 }
@@ -107,20 +112,31 @@ margin: 0 auto;
   border-radius: 10px;
   padding: 10px 30px 10px 20px;
   line-height: 1.8;
+
   background-color: var(--bg-color);
 }
 
+/* 서브메뉴 숨기기 */
 .display_none {
   display: none;
 }
 
 /* ! main slide */
+/* 메인 가로정렬 / 백그라운드이미지와 크기조정 */
 #main {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  background-image: url(./img/hero-img.jpg);
+  background-position: 10px;
 }
+
+/* 메인 왼쪽 텍스트 자리옮김 */
+.main_left {
+  margin: 120px 300px;
+}
+
 /* main 왼쪽 텍스트 스타일 */
-.main_left p{
+.main_left p {
   color: var(--sub-color);
   font-size: 24px;
 }
@@ -129,36 +145,236 @@ margin: 0 auto;
   color: var(--main-color);
   font-size: 64px;
 }
-.main_form {
-  
+
+/* input text 사이즈조정 / 스타일 */
+.main_text .text {
+  padding: 20px 350px;
+  /* width: 550px;
+  height: 55px; */
+  padding-left: 20px;
+  border: 2px solid var(--sub-color);
+  border-radius: 30px;
+  outline: none;
+}
+
+/* input submit 사이즈조정 / 스타일 */
+.main_text .submit {
+  border: 2px solid var(--sub-color);
+  padding: 20px 30px;
+  border-radius: 30px;
+  margin-top: 15px;
+  margin-left: -139px;
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+}
+
+.main_text .submit:hover {
+  background-color: var(--sub-color);
+  transition: all 1.2s ease;
 }
 
 /* 슬라이더박스 가로정렬 */
 .slidebox {
   display: flex;
   position: relative;
-  justify-content: space-between;
-  width: 200%;
+  overflow: hidden;
+  margin-left: -30px;
+  /* white-space: nowrap; */
+  /* justify-content: space-between; */
+  width: 26%;
 }
 
-.slide img {
-  width: 400px;
+/* 슬라이더 스타일 */
+.slide {
+  transition: all 1s;
 }
+
+/* 슬라이더 이미지 크기 / 자리조정정 */
+.slide img {
+  width: 500px;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+/* 슬라이드 첫번째 이미지 백그라운드 컬러 주기기 */
+.slide_img1 {
+  background-color: var(--sub-color);
+}
+
+
 /* 슬라이드 내에 있는 텍스트 스타일 */
-/* .slide p {
+.slide_p01 {
   position: absolute;
-  top: 190px;
-  margin-left: 240px;
+  top: 250px;
+  transform: translateX(150%);
   background-color: var(--sub-color);
   padding: 8px 24px;
   font-size: 25px;
   color: white;
   border-radius: 10px;
-} */
+}
 
-/* 슬라이드버튼 정렬 */
-/* #slidebtn {
+.slide_p02 {
   position: absolute;
-  top: 190px;
+  top: 250px;
+  transform: translateX(100%);
+  background-color: var(--sub-color);
+  padding: 8px 24px;
   font-size: 25px;
-} */
+  color: white;
+  border-radius: 10px;
+}
+
+/* 버튼 자리 조정 */
+#slidebtn {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  /*부모로 부터 50% 내려옴 중앙 아님*/
+  transform: translateY(-300%);
+  /*자신의 사이즈 만큼 50% 위로 올라감 , 중앙정렬됨*/
+  display: flex;
+  /*플렉스를 통하여 이미지 두개를 가로로 배치*/
+  justify-content: space-between;
+  /*가로로 배치된 이미지를 양끝정렬 시킴*/
+  font-size: 25px;
+  opacity: 0.6;
+}
+
+/* 버튼 아이콘 색상 */
+#slidebtn i {
+  cursor: pointer;
+  color: white;
+}
+
+/* 왼쪽 버튼 아이콘 스타일 */
+#slidebtn .left {
+  position: absolute;
+  left: 20px;
+  border-radius: 50%;
+  padding: 10px 15px;
+  background-color: var(--main-color);
+}
+
+/* 오른쪽 버튼 아이콘 스타일 */
+#slidebtn .right {
+  position: absolute;
+  right: 20px;
+  border-radius: 50%;
+  padding: 10px 15px;
+  background-color: var(--main-color);
+}
+
+
+/* tab */
+/* 탭 메뉴 스타일 */
+.tab_menu {
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+}
+/* 탭메뉴 타이틀 */
+.tab_menu h1 {
+  font-size: 40px;
+  margin-right: 150px;
+}
+/* 탭 버튼 스타일 */
+.tab {
+  background-color: var(--bg-color);
+  padding: 8px 35px;
+  border-radius: 25px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+
+
+/* tab content */
+/* 탭 컨텐츠 가로정렬 / wrap으로 다음줄로 옮김 */
+.card_content {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* 탭 컨텐츠 이미지 크기 */
+.tab-content img {
+  width: 306px;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s ease;
+}
+/* 이미지 호버했을때 1.2배 커지기  */
+.tab-content img:hover {
+  transform: scale(1.2);
+}
+/* 탭 컨텐츠 자리배치 */
+.tab-content {
+  font-size: 0;
+  margin: 10px 20px 10px 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+/* 탭 컨텐츠 호버했을때 그림자효과 */
+.tab-content:hover {
+  box-shadow: 0px 0px 20px 2px gray;
+}
+/* 탭 텍스트 스타일 */
+.tab_text {
+  border: 1px solid var(--sub-color);
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+}
+/* 탭 컨텐츠 제목 */
+.tab-content h4 {
+  font-size: 24px;
+}
+/* 탭 컨텐츠 span태그 폰트 사이즈 */
+.tab-content span {
+  font-size: 20px;
+}
+/* 탭 컨텐츠 p태그 패딩바텀 */
+.tab_text p {
+  padding-bottom: 10px;
+} 
+/* 탭 컨텐츠 a태그 스타일 */
+.tab_text a {
+  border: 1px solid var(--sub-color);
+  color: var(--main-color);
+  margin-left: 20px;
+  padding: 5px 20px;
+  border-radius: 30px;
+}
+/* 탭 텍스트 a태그 호버했을때 배경색 폰트색상 변경 */
+.tab_text a:hover {
+  background-color: var(--sub-color);
+  color: white;
+}
+/* 호버했을때 변경된 색상 다시 메인컬러로 적용 */
+.tab_price i {
+  color: var(--main-color);
+}
+
+.sub_text {
+  position: absolute;
+  top: 860px;
+  background-color: var(--sub-color);
+  padding: 5px 20px 0 20px;
+  font-size: 15px;
+  color: white;
+  border-radius: 12px;
+}
+
+.sub_text1 {
+  position: absolute;
+  top: 1280px;
+  background-color: var(--sub-color);
+  padding: 5px 20px 0 20px;
+  font-size: 15px;
+  color: white;
+  border-radius: 12px;
+}

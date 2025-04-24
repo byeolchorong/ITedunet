@@ -68,7 +68,7 @@
 #ht_mainList > li {
   position: relative;
   margin-top: 6px;
-  padding: 10px 13px;
+  padding: 10px 16px;
   border-radius: 5px;
   font-size: 14px;
   background-color: var(--main-color);
@@ -81,16 +81,20 @@
 #ht_subList {
   position: absolute;
   top: 50px;
-  left: -90px;
+  left: -100px;
   width: 340%;
-  padding: 10px 10px 10px 20px;
-  background-color: rgb(243, 241, 241);
-  border-radius: 10px;;
+  padding: 20px 10px 10px 20px;
+  background-color: white;
+  box-shadow: 0 0 3px ;
+  border-radius: 10px;
   color: black;
 }
 #ht_subList li {
   display: flex;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
+}
+#ht_subList img {
+  padding-right: 15px;
 }
 #ht_subList p {
   font-size: 11px;
@@ -98,5 +102,47 @@
 
 /* 헤더탑 드롭다운 서브리스트 숨기기 */
 .ht_display_none {
+  display: none;
+}
+
+
+/* 메뉴 네비부분 */
+/* 네비메뉴 숨기기 */
+#nav .container {
+  display: flex;
+}
+#nav .container > .nav_content02, 
+#nav .container > .nav_content03 {
+  display: none;
+}
+
+#nav .container > .nav_content01 span, 
+#nav .container > .nav_content02 span, 
+#nav .container > .nav_content03  span{
+  font-weight: bold;
+  padding-right: 15px;
+}
+.search_ranking {
+  margin-left: 50px;
+  position: relative;
+}
+#search_mainList {
+}
+#search_subList {
+  margin-top: 10px;
+  padding: 20px 30px;
+  background-color: white;
+  box-shadow: 0 0 5px 0.5px rgb(173, 171, 171);
+}
+.search_ranking
+#search_subList li {
+  padding-bottom: 10px;
+}
+#search_subList span {
+  padding: 0 10px;
+  font-size: 12px;
+  color: red;
+}
+.search_display_none {
   display: none;
 }
