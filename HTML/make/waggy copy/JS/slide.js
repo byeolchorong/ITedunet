@@ -26,7 +26,6 @@ function rightsliding() {
 }
 
 function sliding() {
-
   slide.forEach(function(slide) {
     slide.style.transform = `translateX(${index*(-100)}%)`;
   });

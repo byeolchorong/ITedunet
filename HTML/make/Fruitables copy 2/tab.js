@@ -1,8 +1,9 @@
-let tab = document.querySelectorAll(".tab_buttons span");
-let content = document.querySelectorAll(".tab_product");
+let tab = document.querySelectorAll(".tab_button span");
+let content = document.querySelectorAll(".tab_content");
 
 for (let i = 0; i < tab.length; i++) {
   tab[i].addEventListener("click",showTabContent);
+  tab[i].addEventListener("click",tabChangeColor);
 }
 
 function showTabContent() {
@@ -16,4 +17,11 @@ function showTabContent() {
       content.style.display = "none";
     }
   })
+}
+
+function tabChangeColor() {
+  tab.forEach(function(tab) {
+    tab.classList.remove("active");
+  })
+  this.classList.add("active");
 }

@@ -11,7 +11,7 @@ function leftsliding() {
   index--;
 
   if (index < 0) {
-    index = slide.length -1;
+    index = slide.length-1;
   }
   sliding();
 }
@@ -26,8 +26,7 @@ function rightsliding() {
 }
 
 function sliding() {
-
   slide.forEach(function(slide) {
-    slide.style.transform = `translateX(${index*(-100)}%)`;
+    slide.style.transform = `translateX(${index * (-100)}%)`;
   });
 }
