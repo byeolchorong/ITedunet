@@ -19,6 +19,4 @@ public class exam47_User {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
-
 }
