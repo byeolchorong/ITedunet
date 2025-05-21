@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    두부 사오라고 동생에게 심부름 시킬거야 
+    심부름값을 주고 구매하려는 두부 개수 n을 알려주면 
+    동생은 두부 몇 개를 샀는지 알려주고 잔돈을 돌려줄거야 
+    돈이 부족하면 부족해서 못 샀다고 알려주고 받은 돈을 돌려줄거야 
+    이 때 필요한 변수는 무엇이며, 
+    (심부름값, 두부의 원가, 두부 개수는 바뀔 수 있음)
+    이 때 필요한 함수를 구현하세요 (호출도 필요)
+    */
+
+// 기능 : 내 용돈이 두부가격 * 개수 보다 많으면 사고, 아니면 안산다. 
+// 필요한 재료(변수) : 내 용돈, 두부가격, 두부개수 
+let money = 5000; // 심부름값
+let tofuPrice = 1200; // 두부 한 개 가격
+let tofuCount = parseInt(prompt("두부의 개수는?"));
+
+function buyTofu(money, tofuPrice, tofuCount) {
+    // 총 두부 가격 계산
+    let totalCost = tofuPrice * tofuCount;
+
+    // 조건 확인
+    if (money >= totalCost) {
+        let change = money - totalCost; // 잔돈 계산
+        document.write(`두부를 ${tofuCount}개 샀고, 잔돈은 ${change}원 남았어<br>`);
+    } else {
+        document.write(`돈이 부족해서 두부를 못 샀어. 받은 돈 ${money}원을 돌려줄게.<br>`);
+    }
+}
+buyTofu(money, tofuPrice, tofuCount);
+
+  </script>
+  </script>
+</body>
+</html>

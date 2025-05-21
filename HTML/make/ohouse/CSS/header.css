@@ -1,0 +1,148 @@
+/* :root {
+  --main-color: #0AA5FF;
+} */
+
+/* 헤더 전체 좌우 자리 정렬 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+
+/* 헤더 왼쪽 자리 정렬 */
+.ht_left {
+  display: flex;
+}
+/* 헤더 왼쪽 메뉴 */
+.ht_left02 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 45px;
+}
+.ht_left02 > a {
+  padding-right: 20px;
+}
+
+
+/* 헤더 오른쪽 자리 정렬 */
+.ht_right {
+  display: flex;
+  width: 57%;
+}
+/* 헤더 오른쪽 검색창 스타일 */
+.ht_right01 input{
+  position: relative;
+  width: 266.172px;
+  height: 38px;
+  margin-top: 7px;
+  padding: 0 40px;
+  font-size: 16px;
+  border: 1px solid lightgray;
+}
+/* 헤더 오른쪽 검생창 내 아이콘 삽입 */
+.ht_right01 > i {
+  position: absolute;
+  z-index: 1;
+  padding-top: 16px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+/* 헤더탑 오른쪽 메뉴 자리조정 */
+.ht_right02 {
+  padding-left : 20px;
+}
+.ht_right02 i {
+  margin-top: 15px;
+  font-size: 20px;
+}
+.ht_right02 > a {
+  font-size: 14px;
+  padding: 0 10px;
+}
+.ht_a01, .ht_a02 {
+  border-right: 1px solid lightgray;
+}
+
+/* 헤더탑 드롭다운 */
+#ht_mainList > li {
+  position: relative;
+  margin-top: 6px;
+  padding: 10px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: var(--main-color);
+  color: white;
+}
+#ht_mainList .down{
+  padding-left: 7px;
+}
+/* 서브리스트 자리조정 */
+#ht_subList {
+  position: absolute;
+  top: 50px;
+  left: -100px;
+  width: 340%;
+  padding: 20px 10px 10px 20px;
+  background-color: white;
+  box-shadow: 0 0 3px ;
+  border-radius: 10px;
+  color: black;
+}
+#ht_subList li {
+  display: flex;
+  padding-bottom: 30px;
+}
+#ht_subList img {
+  padding-right: 15px;
+}
+#ht_subList p {
+  font-size: 11px;
+}
+
+/* 헤더탑 드롭다운 서브리스트 숨기기 */
+.ht_display_none {
+  display: none;
+}
+
+
+/* 메뉴 네비부분 */
+/* 네비메뉴 숨기기 */
+#nav .container {
+  display: flex;
+}
+#nav .container > .nav_content02, 
+#nav .container > .nav_content03 {
+  display: none;
+}
+
+#nav .container > .nav_content01 span, 
+#nav .container > .nav_content02 span, 
+#nav .container > .nav_content03  span{
+  font-weight: bold;
+  padding-right: 15px;
+}
+.search_ranking {
+  margin-left: 50px;
+  position: relative;
+}
+#search_mainList {
+}
+#search_subList {
+  margin-top: 10px;
+  padding: 20px 30px;
+  background-color: white;
+  box-shadow: 0 0 5px 0.5px rgb(173, 171, 171);
+}
+.search_ranking
+#search_subList li {
+  padding-bottom: 10px;
+}
+#search_subList span {
+  padding: 0 10px;
+  font-size: 12px;
+  color: red;
+}
+.search_display_none {
+  display: none;
+}

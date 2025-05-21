@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>JSPBook 실습리스트</h1>
+	<h3>chapter2</h3>
+	<ol>
+		<li><a href="declaration01">declaration01</a></li>
+		<li><a href="exam2_2">예제2-2</a></li>
+	</ol>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자손 선택자 사용하기</title>
+
+  <style>
+    body > div > h3 {
+      color: red;
+    }
+    body > p {
+      color: green;
+      background-color: yellow;
+    }
+    body > h3 > tel > home {
+      color: blue;
+    }
+  </style>
+
+</head>
+<body>
+  <div>
+    <h3>Child Selector_1</h3>
+  </div>
+  <p>자식 선택자</p>
+  <h3>
+    <sno>12345</sno>
+    <std>별초롱</std>
+    <tel>
+      <office>02-1235-3821</office>
+      <home>010-3802-1111</home>
+    </tel>
+  </h3>
+</body>
+</html>

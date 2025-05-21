@@ -1,0 +1,8 @@
+package chapter02;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+@WebServlet("/exam2_6")
+public class expression01 extends HttpServlet{
+
+}

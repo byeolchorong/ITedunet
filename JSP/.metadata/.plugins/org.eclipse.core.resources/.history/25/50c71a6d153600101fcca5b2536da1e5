@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<%@ page errorPage="page_errorPage_error.jsp" %>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		String str = null;
+		out.println(str.toString());
+		/* 참조주소가 null값인데 주소를 출력해달라해서 에러발생됨 */
+	%>
+</body>
+</html>

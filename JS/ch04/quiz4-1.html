@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // var age1 = prompt("아빠 나이를 입력하세요","나이 입력하세요");
+    // var age2 = prompt("엄마 나이를 입력하세요","나이 입력하세요");
+    // var age3 = prompt("오빠 나이를 입력하세요","나이 입력하세요");
+    // var age4 = prompt("본인 나이를 입력하세요","나이 입력하세요");
+    
+    // document.write((Number(age1) + Number(age2) + Number(age3) + Number(age4)) / 4);
+    
+    
+    /*  1. 변수는 뭐가 필요할까?
+          아빠나이 / 엄마나이 / 오빠나이 / 내 나이 
+        2. 어떤 동작을 해야할까?
+          (아빠나이 + 엄마나이 + 오빠나이 + 내 나이) / 4
+    */
+
+
+    var count = 0; 
+    var dad, mom, brother, me;
+
+    var dad = prompt("아빠 나이를 입력하세요","나이 입력하세요");
+    count = count + 1; // count++;
+    var mom = prompt("엄마 나이를 입력하세요","나이 입력하세요");
+    count = count + 1;
+    var brother = prompt("오빠 나이를 입력하세요","나이 입력하세요");
+    count = count + 1;
+    var me = prompt("본인 나이를 입력하세요","나이 입력하세요");
+    count = count + 1;
+
+    var ageFamily = parseInt(dad) + parseInt(mom) + parseInt(brother) + parseInt(me) ;    // parseInt 사용
+    var ageFamily = Number(dad) + Number(mom) + Number(brother) + Number(me) ;         // Number 사용
+    console.log(ageFamily);
+    document.write(parseInt(ageFamily/count));
+    document.write(`Number() : ${Number("30px")} `)
+    document.write(`parseInt() : ${parseInt("30px")} `)
+
+  </script>
+</head>
+<body>
+</body>
+</html>

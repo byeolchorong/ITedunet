@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="div1">
+    <p id="p1">this is a paragraph.</p>
+    <p id="p2">this is another paragraph</p>
+  </div>
+
+  <script>
+    let para = document.querySelector("#div1");
+    let node = document.querySelector("#p1");
+    para.removeChild(node);
+
+    // p태그로 인식
+    // para.innerHTML = `<p id="p2"> this is another paragraph</p>`;
+    
+    // 텍스트로 인식
+    // para.textContent = `<p id="p2"> this is another paragraph</p>`;
+    
+    // para.innerHTML = para.nodeValue;
+    // console.log(para.nodeValue);
+    // console.log(para.children);
+    console.log(para.children[0].childNodes[0].nodeValue);
+  </script>
+</body>
+</html>

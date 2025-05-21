@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="img/btob.jpg" alt="test01" width="200px" height="200px">
+  <img src="img/goo.jpg" alt="test02" width="200px" height="200px">
+  <img id="myimg" src="img/po.jpg" alt="test03" width="200px" height="200px">
+
+  <button onclick="myFunction()">Try it</button>
+  <p id="demo01"></p>
+  <p id="demo02"></p>
+  <p id="demo03"></p>
+
+  <script>
+    function myFunction() {
+      let x = document.images.length;
+      document.querySelector("#demo01").innerHTML = "images.length : " + x;
+
+      let y = document.images[0].src;
+      document.querySelector("#demo02").innerHTML = y;
+
+      let z = document.images.namedItem("myimg").src;
+      document.querySelector("#demo03").innerHTML = z;
+    }
+  </script>
+</body>
+</html>

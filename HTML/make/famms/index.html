@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/705381df09.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <title>famms-conan</title>
+</head>
+
+<body>
+  <header>
+    <!-- header top 영역 -->
+    <div class="h-top container">
+      <img src="./img/logo.png" alt="logo">
+      <nav>
+        <ul>
+          <li><a class="ul-color" href="#">HOME</a></li>
+          <li id="menuList_pages"><a href="#">PAGES</a>
+            <i class="fa-solid fa-caret-down down"></i>
+            <ul id="subList" class="display_none">
+              <li>About</li>
+              <li>Testimonial</li>
+            </ul>
+          </li>
+          <li><a href="#">PRODUCTS</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+
+        </ul>
+      </nav>
+    </div>
+
+    <!-- header slide 영역 -->
+    <section id="main">
+      <input type="radio" name="slider" id="slide01" checked>
+      <input type="radio" name="slider" id="slide02">
+      <input type="radio" name="slider" id="slide03">
+
+      <div class="slides">
+        <div class="slide">
+          <div class="text-box">
+            <h1>Sale 20% Off</h1>
+            <h1>On Everything</h1>
+            <p>Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid
+              error
+              repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi
+              impedit
+              sequi.</p>
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="text-box">
+            <h1>Sale 20% Off</h1>
+            <h1>On Everything</h1>
+            <p>Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid
+              error
+              repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi
+              impedit
+              sequi.</p>
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="text-box">
+            <h1>Sale 20% Off</h1>
+            <h1>On Everything</h1>
+            <p>Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid
+              error
+              repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi
+              impedit
+              sequi.</p>
+            <a href="#">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- 슬라이드 버튼 -->
+      <div class="slidebtn">
+        <label for="slide01" class="left"></label>
+        <label for="slide02" class="right"></label>
+        <!-- <label for="slide03"></label> -->
+      </div>
+      </div>
+
+    </section>
+
+  </header>
+  <!-- why shop with us 영역 -->
+  <section class="why-shop container">
+    <div class="why-shop-title">Why Sh<span>op </span>With Us</div>
+    <div class="why-shop-imgs">
+      <div class="why-shop-img"><img src="img/delivery.png">
+        <div>
+          <h1>Fast Delivery</h1>
+          variations of passages of Lorem <br>
+          lpsum available
+        </div>
+      </div>
+      <div class="why-shop-img"><img src="img/free.png">
+        <div>
+          <h1>Free Shopping</h1>
+          variations of passages of Lorem <br>
+          lpsum available
+        </div>
+      </div>
+      <div class="why-shop-img"><img src="img/good.png">
+        <div>
+          <h1>Best Quality</h1>
+          variations of passages of Lorem <br>
+          lpsum available
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrivals 영역 -->
+  <section class="new-arrivals">
+    <img src="img/2.png">
+    <div class="new-text-box">
+      <h1>#NewArrivals</h1>
+      <div>
+        Vitae fugiat laboriosam officia perferendis provident aliquid
+        voluptatibus dolorem, fugit ullam sit earum id eaque nisi hic?
+        Tenetur commodi, nisi rem vel, ea eaque ab ipsa, autem
+        similique ex unde!
+      </div>
+      <a href="#">Show Now</a>
+    </div>
+  </section>
+
+  <!-- our products 영역 -->
+  <section class="container">
+    <div class="title-color">Our&nbsp;<p>p<span>ro</span>ducts</p>
+    </div>
+    <div class="contents">
+
+      <div class="card">
+        <img src="img/3.png" alt="product01">
+        <div class="text-content">
+          <span>Men's Shirt</span>
+          <span>$75</span>
+        </div>
+        <div class="hover-content">
+          <button class="button add-to-cart">Add To Cart</button>
+          <button class="button buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/4.png" alt="product02">
+        <div class="text-content">
+          <span>Men's Shirt</span>
+          <span>$80</span>
+        </div>
+        <div class="hover-content">
+          <button class="button add-to-cart">Add To Cart</button>
+          <button class="button buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/5.png" alt="product03">
+        <div class="text-content">
+          <span>Women's Dress</span>
+          <span>$68</span>
+        </div>
+        <div class="hover-content">
+          <button class="button add-to-cart">Add To Cart</button>
+          <button class="button buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/6.png" alt="product04">
+        <div class="text-content">
+          <span>Women's Dress</span>
+          <span>$70</span>
+        </div>
+        <div class="hover-content">
+          <button class="button add-to-cart">Add To Cart</button>
+          <button class="button buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/7.png" alt="product05">
+        <div class="text-content">
+          <span>Women's Dress</span>
+          <span>$75</span>
+        </div>
+        <div class="hover-content">
+          <button class="button add-to-cart">Add To Cart</button>
+          <button class="button buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/8.png" alt="product06">
+        <div class="text-content">
+          <span>Women's Dress</span>
+          <span>$58</span>
+        </div>
+        <div class="hover-content">
+          <button class="button add-to-cart">Add To Cart</button>
+          <button class="button buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/9.png" alt="product07">
+        <div class="text-content">
+          <span>Women's Dress</span>
+          <span>$80</span>
+        </div>
+        <div class="hover-content">
+          <button class="button add-to-cart">Add To Cart</button>
+          <button class="button buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/10.png" alt="product08">
+        <div class="text-content">
+          <span>Men's Shirt</span>
+          <span>$65</span>
+        </div>
+        <div class="hover-content">
+          <button class="button add-to-cart">Add To Cart</button>
+          <button class="button buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/11.png" alt="product09">
+        <div class="text-content">
+          <span>Men's Shirt</span>
+          <span>$65</span>
+        </div>
+        <div class="hover-content">
+          <button class="button add-to-cart">Add To Cart</button>
+          <button class="button buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/12.png" alt="product10">
+        <div class="text-content">
+          <span>Men's Shirt</span>
+          <span>$65</span>
+        </div>
+        <div class="hover-content">
+          <button class="button add-to-cart">Add To Cart</button>
+          <button class="button buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/13.png" alt="product11">
+        <div class="text-content">
+          <span>Men's Shirt</span>
+          <span>$65</span>
+        </div>
+        <div class="hover-content">
+          <button class="button add-to-cart">Add To Cart</button>
+          <button class="button buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/14.png" alt="product12">
+        <div class="text-content">
+          <span>Women's Dress</span>
+          <span>$65</span>
+        </div>
+        <div class="hover-content">
+          <button class="button add-to-cart">Add To Cart</button>
+          <button class="button buy-now">Buy Now</button>
+        </div>
+      </div>
+
+      <a href="#">View All products</a>
+    </div>
+  </section>
+
+  <!-- Subscribe 영역-->
+  <section class="subscribe container">
+    <div>
+      <p>Subscribe To Get Discount Offers</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+    </div>
+    <div>
+      <form action="#">
+        <input type="email" name="email" placeholder="Enter Your Email">
+        <input type="submit" value="SUBSCRIBE">
+      </form>
+    </div>
+  </section>
+
+  <!-- customer 영역 -->
+  <section class="customer container">
+    <p>Customer'<span>s T</span>estimonial</p>
+
+    <div>
+      <i class="fa-solid fa-arrow-left left"></i>
+      <img src="img/last.jpg">
+      <i class="fa-solid fa-arrow-right right"></i>
+    </div>
+
+    <div>
+      <h3>Anna Trevor</h3>
+      <h4>Customer</h4>
+      <div class="customer-text">Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis
+        reprehenderit, et,
+        perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium
+        sapiente nam! Quaerat.
+      </div>
+    </div>
+  </section>
+
+  <!-- footer 영역 -->
+  <footer id="footer" class="container">
+    <section class="f-top">
+      <div class="f-top-information">
+        <div class="f-top01">
+          <img src="img/logo.png">
+          <div><strong>ADDRESS: </strong>28 White tower,Street Name New York City, USA</div>
+          <div><strong>TELEPHONE: </strong>+91 987 654 3210</div>
+          <div><strong>EMAIL: </strong>yourmain@gmail.com</div>
+        </div>
+
+        <div class="f-top02">
+          <h3>MENU</h3>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Testimonial</li>
+            <li>Blog</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+
+        <div class="f-top03">
+          <h3>Account</h3>
+          <ul>
+            <li>Account</li>
+            <li>Checkout</li>
+            <li>Login</li>
+            <li>Register</li>
+            <li>Shopping</li>
+            <li>Widget</li>
+          </ul>
+        </div>
+
+        <div class="f-top04">
+          <h3>NEWSLETTER</h3>
+          <p>Subscribe by our newsletter and get update protidin.</p>
+          <form action="#">
+            <input type="email" name="email" placeholder="Enter Your Mail">
+            <input type="submit" value="Subscribe">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="f-bottom container">
+      <p>©2025 All Rights Reserved By
+        <a href="#">Free Html Templates</a>
+      </p>
+      <p>Distributed By
+        <a href="#">ThemeWagon</a>
+      </p>
+    </section>
+
+  </footer>
+
+  <script src="famms_dropdown.js"></script>
+  <script src="famms_slide.js"></script>
+</body>
+
+</html>

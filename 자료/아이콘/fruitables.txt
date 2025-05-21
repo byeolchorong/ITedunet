@@ -1,0 +1,49 @@
+<script src="https://kit.fontawesome.com/705381df09.js" crossorigin="anonymous"></script>
+
+location
+<i class="fa-solid fa-location-dot"></i>
+
+phone
+<i class="fa-solid fa-phone"></i>
+
+mail
+<i class="fa-solid fa-envelope"></i>
+
+fackbook
+<i class="fa-brands fa-facebook-f"></i>
+
+twitter
+<i class="fa-brands fa-twitter"></i>
+
+instagram
+<i class="fa-brands fa-instagram"></i>
+
+linkedin
+<i class="fa-brands fa-linkedin-in"></i>
+
+search
+<i class="fa-solid fa-magnifying-glass"></i>
+
+search-plus
+<i class="fa-solid fa-magnifying-glass-plus"></i>
+
+angle-down 
+<i class="fa-solid fa-angle-down"></i>
+
+angle-right
+<i class="fa-solid fa-angle-right"></i>
+
+arrow-left
+<i class="fa-solid fa-arrow-left"></i>
+
+arrow-right
+<i class="fa-solid fa-arrow-right"></i>
+
+arrow-up
+<i class="fa-solid fa-arrow-up"></i>
+
+check
+<i class="fa-solid fa-check"></i>
+
+phone-flip
+<i class="fa-solid fa-phone-flip"></i>

@@ -1,0 +1,146 @@
+2;  // 값, 데이터 > 출력x, 연산기능x
+3;
+4;
+
+
+1. 변수
+✨개념 : 어떤 데이터를 담는 상자
+왜쓰나 : 담은 데이터를 나중에 꺼내 쓰려고, 의미부여
+어떻게 : 
+let grade; 변수선언
+grade = 2; // 변수 초기화 (할당)
+grade = 3; // 변수 재할당 
+
+
+** 자료형 : 데이트의 종류(형태)
+기본 : number(숫자), string(문자열), boolean(참/거짓여부)
+복합 : 객체 > 객체, 배열, 함수, ... 
+✨특수 : 변수 선언만 하고 초기화 x : undefined : 값을 아직 할당하지 않음
+      값이 진짜 없다고 명시 : null : 값이 없음을 명시
+	  
+확인 : document.write(typeof 변수명);
+
+number데이터타입,
+string데이터타입
+String(123); 	// "123"
+Number("123"); 	// 123
+Boolean("123"); // 1(true), 0(false)
+
+** 상수
+const PI = 3.141592;
+PI = 2; // error // PI의값을 2로 바꾸면 에러
+
+2. 연산자
+개념 : 특정 데이터를 연산하기 위한 기호
+왜 쓰나 : 특정 데이터를 연산하여 어떤 결과를 도출하기 위함
+어떻게 쓰나 : 
+
+
+산술연산자
+let num = 2 + 3;
+document.write(2 - 3);
+2 * 3;
+2 / 3;
+2 % 3/
+
+비교연산자 : true, false -> 프로그램 흐름을 분기할 때 쓰임
+2 > 3;	// false
+2 < 3;	// true
+2 == 3; // false
+.
+.
+.
+
+대입 연산자
+let a = 3;
++=, -=, *=, /=
+
+단항연산자
+a++;
+++a;
+a--;
+--a;
+!a : true/false 본인값의 반대결과값이 나온다 
+
+
+3. 조건문
+개념 : 프로그램의 흐름을 분기하기 위한 구문
+목적 : 프로그램의 흐름을 분기하기 위함 
+사용법 : 
+if(a > 3) {alert("true");} 
+else if (a > 0) {alert("false");}
+else {alert();}
+
+switch(a) {
+	case 1:
+	break;
+	case 2:
+	break;
+	case 3:
+	break;
+	default:
+	break;
+}
+
+4. 반복문
+개념 : 특정 규칙있는 코드를 반복 실행하기 위한 구문
+외쓰나 : 반복적인 코드를 줄여서 가독성 및 유지보수 향상 위함
+사용법
+for(let i = 0; i < 5; i++) {
+	반복 수행될 코드
+}
+
+while (a != "x") {
+	반복수행될 코드
+}
+
+do {
+	
+} while (a > 2)
+
+
+배열 기본 제공되는 메서드
+배열명.forEach(
+	
+);
+
+5. 객체
+개념 : 실생활 개념, 사물을 코드화한것 : 고유한 특징, 고유한 기능을 알려주는것이다. 
+목적 : 실생활의 문제를 해결하기 위해 먼저 개념을 알려주는것
+사용법 : 
+let obj = {
+	name : "abc";
+	age : 25,
+	break : function() {
+		alert();
+	}
+};
+
+class Car {
+	constructor(name, age) {
+		this.name = name; //  this : 객체가 만들어졌을때 본인의 속성
+		this.age = age;
+	}
+	
+	break() {
+		실행될 구문
+	}
+	
+}
+
+let myCar1 = new Car("bmw", 2020);
+let myCar2 = new Car("bmw", 2020);
+let myCar3 = new Car("bmw", 2020);
+
+document.write(myCar1.age)
+myCar1.break();
+
+6. 함수 (객체에서는 메서드)
+
+function 함수명 (재료를 담는 매개변수) {
+	실행될구문
+	return a;
+}
+
+함수명 (전달하려는 재료값);
+

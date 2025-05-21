@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/705381df09.js" crossorigin="anonymous"></script>
+  <script src="./JS/dropdown.js" defer></script>
+  <script src="./JS/slide.js" defer></script>
+  <script src="./JS/tab.js" defer></script>
+  <link rel="stylesheet" href="./style.css">
+  <title>Conan's sparlex</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header_nav">
+        <div class="header_title">
+          <h1>sparlex</h1>
+        </div>
+
+        <div class="header_menu">
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Price</li>
+            <li id="mainList">Pages<i class="fa-solid fa-angle-down down"></i>
+              <ul id="subList" class="display_none">
+                <li>Team</li>
+                <li>Testimonial</li>
+                <li>Gallery</li>
+                <li>Appointment</li>
+                <li>404 page</li>
+              </ul>
+            </li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+
+        <div class="header_search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <a href="#">Book Appointment</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- 메인 슬라이더 -->
+  <section id="main">
+    <div class="slidebox">
+      <div class="slides">
+
+        <div class="slide">
+          <div class="slide_img">
+            <img src="./img/carousel-1.jpg">
+          </div>
+          <div class="slide_text">
+            <h2>Spa & Beauty Center</h2>
+            <h1>Facial Treatment</h1>
+            <p>Lorem rebum magna dolore amet lorem eirmod magna erat <br>
+              diam stet. Sadips duo stet amet amet ndiam elitr ipsum</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide_img">
+            <img src="./img/carousel-2.jpg">
+          </div>
+          <div class="slide_text">
+            <h2>Spa & Beauty Center</h2>
+            <h1>Facial Treatment</h1>
+            <p>Lorem rebum magna dolore amet lorem eirmod magna erat <br>
+              diam stet. Sadips duo stet amet amet ndiam elitr ipsum</p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide_img">
+            <img src="./img/carousel-3.jpg">
+          </div>
+          <div class="slide_text">
+            <h2>Spa & Beauty Center</h2>
+            <h1>Facial Treatment</h1>
+            <p>Lorem rebum magna dolore amet lorem eirmod magna erat <br>
+              diam stet. Sadips duo stet amet amet ndiam elitr ipsum</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="slidebtn">
+        <i class="fa-solid fa-angle-left left"></i>
+        <i class="fa-solid fa-chevron-right right"></i>
+      </div>
+    </div>
+  </section>
+
+  <section id="tab"></section>
+
+  <section id="cards"></section>
+  <footer></footer>
+</body>
+
+</html>

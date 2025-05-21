@@ -1,0 +1,15 @@
+JS 짜는  순서
+
+Step1. 이벤트를 주 요소 선택하기 
+Step2. 이벤트 할당하기
+이벤트 줄 요소.addEventListener("click",changeColor);
+Step3. 실행할 이벤트 함수 선언하기
+function changeColor() {
+	Step4. 실행될 구문 작성
+	Step4-1. 함수의 최종기능을 주석으로 작성
+	Step4-2. 최종 기능을 최대한 자세하게, 순서에 맞게 작성
+}
+
+
+
+이벤트를 줄 요소 선택 ! 

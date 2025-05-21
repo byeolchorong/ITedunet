@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+.container {
+width: 70%;
+margin: 0 auto;
+}
+
+header {
+  margin: 20px 0;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+.header_nav > ul {
+  display: flex;
+}
+.header_nav > ul > li {
+  padding-right: 40px;
+}
+
+#mainList {
+  position: relative;
+}
+#subList {
+  position: absolute;
+}
+
+.display_none {
+  display: none;
+}
+
+
+/* 슬라이드 */
+.slidebox {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-image: url(./img/slider/background-img.png);
+}
+.slides {
+  font-size: 0;
+}
+.slide {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  font-size: 16px;
+}
+.slide img {
+  width: 30%;
+  margin-left: 10%;
+  margin-top: 50px;
+}
+.slide_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+.slide_text p {
+  color:#dead6f;
+  margin-bottom: 20px;
+}
+.slide_text h1 {
+  font-size: 70px;
+  font-weight: 300;
+  font-family: "Chilanka", cursive;
+  margin-bottom: 20px;
+}
+.slide_text a {
+  border: 1px solid gray;
+  font-family: "Chilanka", cursive;
+  padding: 15px 30px;
+  transition: all 1.2s ease;
+}
+.slide_text a:hover {
+  background-color: gray;
+  color: white;
+}
+
+#slidebtn i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 30px;
+  cursor: pointer;
+}
+#slidebtn .left {
+  left:  30px;
+}
+#slidebtn .right {
+  right: 30px;
+}
+
+.tab_top {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab_title h1 {
+  font-size: 65px;
+  font-family: "Chilanka", cursive;
+  font-weight: 200;
+}
+.tab_contents {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tab_content {
+  width: 25%;
+  margin-bottom: 20px;
+}
+.tab_buttons .active {
+  color: #dead6f;
+}

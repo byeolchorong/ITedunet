@@ -1,0 +1,75 @@
+/* 푸터 정렬 */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+/* 1번째 푸터 글자크기 */
+.f-top01 {
+  font-size: 15px;
+  line-height: 2.2;
+}
+/* 2번째 푸터 나란히 배치 */
+.f-top02 ul{
+  display: inline-block;
+  padding-right: 20px;
+  line-height: 2.5;
+  font-size: 13px;
+}
+/* 2번째 푸터 제목부 글자크기 */
+.f-top02 h6{
+  font-size: 16px;
+  line-height: 2;
+}
+/* 3번째 푸터 글자크기 */
+.f-top03 h6 {
+  font-size: 16px;
+  line-height: 2;
+}
+.f-top03 p {
+  font-size: 13px;
+}
+/* 폼태그 마진 */
+form {
+  margin: 30px 0;
+}
+/* 인풋 이메일타입 패딩/마진 */
+form input[type="email"] {
+  padding: 10px;
+  margin-right: -6px;
+  border: 1px solid #ededed;
+}
+/* 인풋 써밋타입 패딩/선없앰/ */
+form input[type="submit"] {
+  padding: 10px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+}
+.f-top03 {
+}
+.f-top03 i {
+  padding-right: 15px;
+}
+/* 호버시 배경/컬러변경 */
+.f-top-icon i:hover {
+  background-color: var(--main-color);
+  color: white;
+  padding: 12px 10px;
+  border-radius: 50%;
+}
+
+/* 푸터 하단 */
+/* 바텀 색상 사이즈 크기 위치조정 */
+.footer-bottom {
+  font-size: 14px;
+  padding: 20px;
+  display: flex;
+  color: #6f6f6f;
+  justify-content: space-between;
+}
+/* a태그 색상변경 */
+.footer-bottom a {
+  color: #007bff;
+}

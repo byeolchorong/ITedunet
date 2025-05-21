@@ -1,0 +1,130 @@
+.slidebox {
+  white-space: nowrap;
+  overflow-x: hidden;
+  position: relative;
+}
+.slides {
+  font-size: 0;
+}
+.slide {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  transition: all 1.2s ease;
+}
+#slidebtn i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 30px;
+}
+#slidebtn .left {
+  left: 20px;
+}
+#slidebtn .right {
+  right: 20px;
+}
+
+.slide_text {
+  position: absolute;
+  top: 60%;
+  left: 20%;
+  transform: translateY(-50%);
+}
+.slide_text h4 {
+  color: red;
+  margin-bottom: 30px;
+}
+.slide_text h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+.slide_text p {
+  margin-bottom: 50px;
+}
+.slide_text > a {
+  background-color: black;
+  color: white;
+  padding: 15px 40px;
+
+}
+.slide_icons {
+  padding-top: 250px;
+  color: rgb(73, 73, 73);
+}
+.slide_icons i {
+  padding-right: 30px;
+}
+
+
+
+
+
+
+/* tab */
+.tab_buttons {
+  text-align: center;
+  margin: 30px 0;
+}
+.tab_buttons span {
+  font-size: 25px;
+  font-weight: bold;
+  padding-right: 100px;
+  color: gray;
+}
+.tab_buttons span.active {
+  color: black;
+}
+.tab_contents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+}
+.tab_content {
+  flex: 0 1 calc((100% - 30px) / 4);
+  position: relative;
+  overflow: hidden;
+}
+.tab_content img {
+  width: 100%;
+}
+
+
+.sub_boxs {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateY(100%);
+}
+
+.sub_box_icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(750%, 30%);
+
+  display: flex;
+  flex-direction: column;
+}
+.sub_box_icons > i {
+  background-color: white;
+  margin-bottom: 30px;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+}
+
+.sub_box_text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(100%,100%);
+}
+.tab_content:hover .sub_boxs {
+  transform: translateY(0%);
+}

@@ -1,0 +1,61 @@
+
+Step1. 이벤트가 발생할 요소를 선택해서 변수에 담기
+Step2. 이벤트 핸들러 등록
+// 클릭할때마다 myFunction실행됨
+a.addEventListener("click",myFunction);
+
+listNode.innerHTML += `<ul></ul>`;
+
+Step3. 함수 선언하기
+function myFunction() {
+	Step4. 함수 구현하기
+	-> (클릭했을때)최종 동작할 기능을 정확하게 파악하기 : 주석으로 작성
+	-> 최대한 자세하고 순서있게, 육하원칙에 따라서 추가 작성
+	1. 인풋 박스의 value값을 가져오기
+	2. 가져온 value값 변수에 담기
+	-> let inputValue = document.querySelector("input").value;
+	3. 준비할 목록 div 선택하기
+	let listNode = document.querySelector("#myList");
+	4. div 안에 li 태그 요소 + 인풋박스 value값을 추가하기
+	1) innerHTML로 생성 및 추가하기
+	   listNode.childeren[1].innerHTML += `<li>${inputValue}<sppan>X</span></li>`;
+	   let spanNode = document.querySelector("span");
+	   1. spanNode.addEventListener("click", removeItem);
+	   
+	   2. for(let i = 0; i < spanNode; i++) {
+		  spanNode[i].addEventListener("click", removeItem);
+	   }
+	   
+	2) creatElement(), .textContent, appendChild()
+	   let liNode = document.creatElement("li");
+	   liNode.textContent = inputValue;
+	   
+	   let spanNode = document.creatElement("span");
+	   spanNode.textContent = "X";
+	   liNode.appendChild(spanNode);
+	   
+	   spanNode.addEventListener("click", removeItem);
+	   // 결과: <li>aaa<span>X</span></li>
+	   
+	   listNode.childeren[1].appendChild(liNode);
+	
+	실행될 구문 작성하기
+}
+
+/*
+최종 기능 : x버튼 클릭했을때, 해당 li태그를 제거 
+*/
+function removeItem() {
+	// removeChild(), this
+	// remove() : 본인을 삭제하겠다.
+	// this : 이벤트가 발생한 객체 : span태그(X)
+	// 방법1
+	let pNode = this.parentNode.parentNode;
+	let removeNode = this.parentNode;
+	
+	pNode.removeChild(removeNode);
+	
+	// 방법2
+	// 클릭한 요소의 li태그
+	this.parentNode.remove();
+}

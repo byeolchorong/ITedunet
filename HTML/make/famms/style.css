@@ -1,0 +1,690 @@
+body {
+  overflow-x: hidden;
+}
+
+
+:root {
+  --main-color : #f7444e;
+  --sub-color : #002c3e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* header top 영역 start */
+
+/* header top 부분 flex / space-between으로 
+   가로 균등하게 정렬하고 아이템 중앙배치 */
+.h-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* header top img 사이즈와 마진값 주기 */
+.h-top img {
+  width: 250px;
+  height: 43px;
+  margin: 15px 20px 15px 20px;
+}
+
+/* header top nav 영역 */
+
+/* flex 가로정렬하고 패딩, 마진값 주기 */
+header nav > ul {
+  display: flex;
+  padding: 5px;
+  margin: 10px
+}
+/* 폰트사이즈와 굵기설정 */
+header nav > ul > li{
+  font-weight: bold;
+  font-size: 13pt;
+  /* border: 1px solid red; */
+}
+/* a태그 패딩값주기 */
+header nav > ul a {
+  padding: 20px;
+}
+/* header nav 색상입히기 */
+.ul-color {
+  color: var(--main-color);
+}
+/* header nav li hover 줘서 커서 가져다갔을때 색상값주기 */
+header nav li:hover {
+  color: var(--main-color);
+}
+
+.hover-menu {
+  position: relative;
+}
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  padding: 20px;
+  display: none;
+}
+
+.hover-menu:hover .sub-menu {
+  display: block;
+  color: white;
+  border: 1px solid var(--main-color);
+  background-color: pink;
+  box-shadow: 5px 5px 20px 0 white;
+}
+
+
+/* down icon 위치조정 */
+.down {
+  font-size: 13px;
+  margin-left: -15px;
+}
+
+/* 서브 리스트 위치 고정 */
+#subList{
+  width: 180px;
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  z-index: 100;
+
+  border: 2px solid black;
+  background-color: white;
+  margin: 0 10px;
+  padding: 15px 25px;
+  line-height: 2;
+  box-shadow: 5px 5px;
+}
+
+/* 서브리스트 none값 주기 */
+.display_none {
+  display: none;
+}
+/* header top 영역 end */
+
+
+
+/* header slide 영역 start */
+
+/* header slide main position을 relative로 위치설정 */
+#main {
+  position: relative;
+  background-image: url(./img/main.jpg);
+  width: 1920px;
+  height: 1097px;
+  background-size: cover;
+}
+
+/* img width값 100%주면 
+#main 영역 크기만큼 설정됨 */
+#main img {
+  width: 100vw;
+}
+/* img 중간으로 text-box 넣기 */
+/* #main 영역 28% 크기, #main영역 기준으로
+요소 띄우고 위치 조정 */
+.text-box {
+  width: 28%;
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  transform: translateY(-50%);
+}
+/* text-box font */
+.text-box h1 {
+  font-size: 55pt;
+}
+/* text-box h1 first-child에 메인색상값주고 
+margin으로 아래 글자와 간격 좁혀줌 */
+.text-box h1:first-child {
+  color: var(--main-color);
+  margin: 0 0 -30px 0;
+}
+/* text-box p태그 font-size와 margin값 */
+.text-box p {
+  font-size: 13pt;
+  margin: 20px 0 50px 0;
+}
+/* text-box a태그에 background-color주고 
+color와 font 굵기와 size padding값 주기*/
+.text-box a {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  font-size: 13pt;
+  padding: 12px 40px;
+}
+/* a태그 커서 가져다가졌을때 배경색변경 */
+.text-box a:hover {
+  background-color: #d4ced0;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+/* 슬라이드를 위한 버튼 설정
+input:radio 버튼과 각각 연결된 label을 꾸밈
+크기 설정 및 테두리, 색상, 마진 설정
+*/
+#main label {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 8px;
+}
+/* 가운데 정렬 */
+#main .slidebtn {
+  position: absolute;
+  left: 388px;
+  top: 600px;
+  display: flex;
+  align-items: center;
+  /* cursor: pointer; */
+}
+
+.slidebtn label {
+  cursor: pointer;
+}
+/* 라벨을 클릭하면 연결된 첫번째radio버튼이 checked됨
+해당 radio버튼이 checked됐을 때 해당 라벨의 스타일 변경
+*/
+#main input[id="slide01"]:checked ~ .slidebtn label[for="slide01"] {
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-color);
+}
+#main input[id="slide02"]:checked ~ .slidebtn label[for="slide02"] {
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-color);
+}
+#main input[id="slide03"]:checked ~ .slidebtn label[for="slide03"] {
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-color);
+}
+/* 배치 및 꾸미기 완료되면 안보이게하기 */
+#main input {
+  display: none;
+}
+
+.slides {
+  width: 300vw;
+  height: 1097px;
+  
+  position: relative;
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  width: 100vw;
+  position: relative;
+  transition: all 1s;
+}
+
+/* #slide01:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#slide02:checked ~ .slides {
+  transform: translateX(-100vw);
+}
+
+#slide03:checked ~ .slides {
+  transform: translateX(-200vw);
+} */
+/* header slide 영역 end */
+
+
+/* why shop with us 영역 start */
+/* 폰트 사이즈와 중앙정렬 마진값주기 */
+.why-shop-title{
+  font-size: 45pt;
+  text-align: center;
+  margin: 50px 0;
+}
+/* 밑줄 메인컬러로 주고 밑줄 패딩값 */
+.why-shop-title span {
+  border-bottom: 5px solid var(--main-color);
+  padding-bottom: 10px;
+}
+/* div 3개 flex로 가로정렬후 텍스트 중앙정렬 */
+.why-shop-imgs {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+/* 이미지 사이즈와 서브컬러로 배경색주고 
+   둥글게 radius 주기 */
+.why-shop-img {
+  background-color: var(--sub-color);
+  color: white;
+  padding: 50px 60px;
+  border-radius: 5px;
+}
+/* img size */
+.why-shop-img img {
+  width: 55;
+  height: 55px;
+}
+/* 글자 패딩값 */
+.why-shop-img h1 {
+  padding: 10px;
+}
+/* why shop with us 영역 end */
+
+
+/* New Arrivals 영역 start */
+/* position relative값주고 top 마진 설정  */
+.new-arrivals {
+  position: relative;
+  margin-top: 60px;
+}
+/* img size */
+.new-arrivals img {
+  width: 100%;
+}
+/* 영역 35% 크키, 영역 기준으로 
+요소 띄우고 위치 조정 */
+.new-text-box {
+  position: absolute;
+  width: 25%;
+  top: 35%;
+  left: 50%;
+  transform: translateY(-30%);
+}
+/* h1글꼴 마진 조정 */
+.new-text-box h1 {
+  font-size: 48pt;
+  color: var(--sub-color);
+  margin: 10px;
+}
+/* new-text-box div bottom마진값 */
+.new-text-box div {
+  margin-bottom: 50px;
+}
+/* a태그 메인컬러로 배경설정 폰트사이즈와
+폰트색상 패딩값 주기 */
+.new-text-box a{
+  background-color: var(--main-color);
+  color: white;
+  font-size: 13pt;
+  padding: 12px 45px;
+}
+/* New Arrivals 영역 end */
+
+
+/* our products 영역 start */
+
+/* our products title */
+/* 제목 가로/중앙정렬 폰트 사이즈와 마진값 */
+.title-color {
+  display: flex;
+  justify-content: center;
+  font-size: 45pt;
+  margin: 50px;
+}
+/* p태그 메인색상 */
+.title-color p {
+  color: var(--main-color);
+}
+/* p태그 내 span 메인색상 밑줄과 bottom패딩값 */
+.title-color p span {
+  border-bottom: 4px solid var(--main-color);
+  padding-bottom: 8px;
+}
+
+/* our products contents */
+/* 컨텐츠영역 자리배치 */
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 사진 자리배치 / 액자처럼 보이게 하기 */
+.contents .card {
+  /* margin 10px 주니까 20px 마이너스해서
+   좌우margin값 빼야함 */
+  flex: 0 1 calc(33% - 20px);
+  /* flex: 0 1 calc((100% / 3) - 20px); */
+  margin: 10px;
+  padding: 50px;
+  text-align: center;
+  background-color: rgb(247, 248, 249);
+  border: 1px solid rgb(255, 255, 255);
+  border-width: 10px;
+  box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, .2);
+}
+
+/* div태그 정렬 */
+.contents .card div {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* img size */
+.contents img {
+  padding: 10px;
+  width: 140px;
+  height: 170px;
+  transition: 0.3s ease-in-out;
+}
+
+/* font 굵기/사이즈/top패딩값 */
+.contents span {
+  font-weight: bold;
+  font-size: 13pt;
+  padding-top: 20px;
+}
+
+/* a태그 메인컬러와 
+font 사이즈와 색상 패딩 마진값 */
+.contents a {
+  margin: 50px;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 13pt;
+  padding: 12px 45px;
+}
+
+/* a태그 커서 가져다가졌을때 배경색변경 */
+.contents a:hover {
+  background-color: white;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+/* 투명도 */
+.card:hover .hover-content {
+  opacity: 1;
+}
+
+.button {
+  margin: 5px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+/* 1번째 button 상하좌우 패딩 */
+.button:first-child {
+  padding: 13px 40px;
+}
+/* 2번째 button 상하좌우 패딩 */
+.button:last-child {
+  padding: 13px 50px;
+}
+/* add-to-cart의 배경색/글자색
+top마진값 줘서 button 아래로 내림 */
+.add-to-cart {
+  background: var(--main-color);
+  border: 1px solid var(--main-color);
+  color: white;
+  margin-top: 100px;
+}
+/* buy-now의 배경색/글자색
+bottom마진값 줘서 button 위로 올림 */
+.buy-now {
+  background: black;
+  color: white;
+  margin-bottom: 120px;
+}
+/* add-to-cart hover시 
+글자색상/배경색없음으로 변경 */
+.add-to-cart:hover {
+  background: none;
+  color: var(--main-color);
+}
+/* buy-now button hover시 
+글자색상/배경색없음으로 변경 */
+.buy-now:hover {
+  background: none;
+  color: black;
+  border: 1px solid black;
+}
+/* our products 영역 end */
+
+
+/* subscribe 영역 start */
+/* 크기 자리 설정 */
+.subscribe {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #d4ced0;
+}
+/* 첫번째 p태그에 색상과 사이즈 패딩값 */
+.subscribe p:first-child{
+  color: #002c3e;
+  font-size: 30pt;
+  padding: 50px 0 0 0;
+}
+/* 두번째 p태그의 패딩값 */
+.subscribe p:nth-child(2) {
+  padding: 20px;
+}
+/* input태그 flex값주기 */
+.subscribe form input{
+  display: flex;
+}
+/* input태그 subscribe버튼만 hover적용 */
+.subscribe form input:nth-child(2):hover {
+  background-color: #d4ced0;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+.subscribe input[type="email"]{
+  width: 50%;
+  padding: 20px 0 20px 20px;
+  margin: 0 auto;
+  background-color: white;
+  border-bottom: 1px solid white;
+  border-radius: 30px;
+  border: none;
+  outline: none; 
+}
+
+.subscribe input[type="submit"] {
+  display: inline-block;
+  margin: 40px 0 60px 0;
+  padding: 15px 100px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+/* subscribe 영역 end */
+
+
+/*! customer 영역 start */
+/* 텍스트 중앙정렬 */
+.customer {
+  text-align: center;
+}
+/* p태그 사이즈 top마진 */
+.customer p {
+  font-size: 45pt;
+  margin-top: 50px;
+}
+/* span태그 밑줄 메인색상값
+  bottom패딩값 */
+.customer span {
+  border-bottom: 5px solid var(--main-color);
+  padding-bottom: 10px;
+}
+/* img size */
+.customer img {
+  border-radius: 150px;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+/* h4 글자색상과 마진 */
+.customer h4 {
+  color: gray;
+  margin: 5px 0;
+}
+/* text 크기정렬 */
+.customer-text {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+/* customer i태그 색상/정렬 */
+.customer i{
+  position: absolute;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 30px;
+  padding: 16px;
+  font-size: 15px;
+  cursor: pointer;
+  transform: translateY(300%);
+}
+/* i태그 커서 가져가면 배경색상변경 */
+.customer i:hover {
+  background-color: black;
+}
+
+.customer i.left{
+  left: 700px;
+}
+
+.customer i.right {
+  right: 700px;
+}
+
+/* customer 영역 end */
+
+
+/*! footer 영역 start */
+/* footer 전체영역 */
+#footer {
+  width: 100%;
+}
+
+/* footer top 컬러와 사이즈 */
+.f-top {
+  background-color: #f8f8f8;
+  font-size: 13px;
+  padding: 5px 350px 20px 350px; 
+}
+/* 정렬 */
+.f-top-information{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70px;
+}
+/* famms logo size */
+.f-top img {
+  width: 210px;
+  height: 36px;
+  margin: 0 20px;
+}
+/* div태그들 자리배치 폰트사이즈 */
+.f-top div {
+  flex: 0 1 calc(25% - 40px);
+  font-size: 12pt;
+}
+/* f-top01 div의 사이즈와 마진
+   줄간격 */
+.f-top01 > div {
+  width: 100%;
+  margin: 20px;
+  line-height: 1.5;
+}
+/* f-top02,03,04 h3 bottom패딩값 */
+.f-top02 h3, .f-top03 h3, .f-top04 h3 {
+  margin-bottom: 20px;
+}
+.f-top03, .f-top04 {
+  margin-left: -130px;
+}
+/* li 줄간격 */
+.f-top li {
+  line-height: 1.6;
+}
+
+/* form태그 상하패딩 */
+.f-top04 form {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+.f-top input[type="email"]{
+  width: 60%;
+  padding: 15px;
+  margin-right: -4px;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+
+.f-top input[type="submit"] {
+  display: inline-block;
+  padding: 15px 15px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* footer bottom */
+/* 전체크기설정/조정 */
+.f-bottom {
+  background-color: #222;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+/* a태그 메인컬러설정 */
+.f-bottom a {
+  color: var(--main-color);
+}

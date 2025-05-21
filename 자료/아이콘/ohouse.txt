@@ -1,0 +1,17 @@
+search
+<i class="fa-solid fa-magnifying-glass"></i>
+
+cart
+<i class="fa-solid fa-cart-shopping"></i>
+
+chevron-down
+<i class="fa-solid fa-chevron-down"></i>
+
+chevron-left
+<i class="fa-solid fa-chevron-left"></i>
+
+chevron-right
+<i class="fa-solid fa-chevron-right"></i>
+
+arrow-right
+<i class="fa-solid fa-arrow-right"></i>

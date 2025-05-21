@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    1. 
+    하루 8시간
+    시급 12000원 일 때 
+    나의 하루 급여액을 출력하세요
+    
+    2.
+    위의 내용을 하루 급여액을 반환하는 함수를 정의하고 호출하세요
+
+    3. 
+    하루 8시간 -> 해당 값은 바뀔 수 있습니다. 
+    만약 하루 8시간 기준으로 초과 근무(overtime)를 했다면 
+    야근수당은 기존 시급의 1.5배 입니다. 
+    야근 수당을 포함한 하루 급여액을 반환하세요 
+    (함수로 정의하고 호출)
+
+    4. 주 5일 근무를 했고 다음과 같은 시간으로 근무했을 때 
+    let workTimes = [8, 9, 7, 10, 6];
+    정의해둔 함수를 호출하여 주간 급여를 출력하세요
+    */
+
+    let dailyTime = 8;
+    let wage = 12000;
+    let dailyPay = dailyTime * wage;
+    // 1
+    document.write("하루 급여액은 " + (dailyTime*wage) + "입니다." + "<br>");
+    // 2
+    function dailyWage(dailyTime,wage) {
+      return dailyTime*wage;
+    }
+    document.write("하루 급여액은 " + dailyWage(dailyTime,wage) + "입니다." + "<br>");
+    // 3
+    // function overTimeDay(dailyTime,wage) {
+      if (dailyTime > 8) {
+        let overtime = dailyTime * 1.5;
+        document.write(overtime);
+      }
+    // }
+    // overTimeDay(dailyTime,wage);
+
+  </script>
+</body>
+</html>

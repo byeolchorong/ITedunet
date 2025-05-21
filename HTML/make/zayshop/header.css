@@ -1,0 +1,68 @@
+@import url(./reset.css);
+
+/* ! header top */
+.h-top {
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 8px;
+}
+
+.h-top-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* padding으로 양옆 간격조절
+폰트 사이즈 조절 */
+.h-top-text a, .h-top-text i{
+  padding: 0 2px;
+  font-size: .7em;
+}
+/* padding으로 양옆 간격조절
+폰트 사이즈 조절 */
+.h-top-icon i{
+  padding: 0 5px;
+  font-size: .6em;
+}
+
+/* ! header bottom */
+.h-bottom {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+/* img size */
+.h-bottom img {
+  width: 78px;
+}
+/* nav width 넓이지정 */
+.h-bottom nav {
+  width: 40%;
+}
+
+
+.h-bottom nav ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+.h-bottom nav ul li {
+  font-size: 14pt;
+  font-weight: lighter;
+}
+
+.h-bottom-right i{
+  padding: 8px;
+  font-size: 20px;
+}
+
+.h-bottom li:first-child {
+  color: var(--main-color);
+}
+.h-bottom li:hover {
+  color: var(--main-color);
+}

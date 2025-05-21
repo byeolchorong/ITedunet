@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>click button</p>
+  <button onclick="removeHandler()" id="myBton">remove</button>
+  <button id="myDIV">mousemove</button>
+  <p id="demo"></p>
+
+  <script>
+    // let으로 변수선언해서 간단하게도 가능 
+    // let myDiv = document.querySelector("#myDIV");
+    document.querySelector("#myDIV").addEventListener("mouseover",myFunction);
+    function myFunction() {
+      document.querySelector("#demo").innerHTML = Math.random();
+    }
+    function removeHandler() {
+      document.querySelector("#myDIV").removeEventListener("mouseover",myFunction);
+    }
+  </script>
+</body>
+</html>

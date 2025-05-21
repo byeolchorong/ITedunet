@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      color: inherit;
+      text-decoration: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    div {
+      background-color: brown;
+      width: 80px;
+      height: 50px;
+      position: absolute;
+      transition-property: width, background-color, color;
+      transition-duration: 2s, 2s, 1s;
+      transition-timing-function: linear;
+      line-height: 50px;
+      color: white; 
+    }
+    div:hover { 
+      width: 200px;
+      font-size: 30pt;
+      text-align: center;
+      background-color: blue;
+      color: aqua
+    }
+  </style>
+</head>
+<body>
+  <div style="top: 50px;"><a href="#" target="new">HOME</a></div>
+  <div style="top: 100px;"><a href="#" target="new">ABOUT</a></div>
+  <div style="top: 150px;"><a href="#" target="new">NEWS</a></div>
+  <div style="top: 200px;"><a href="#" target="new">STUDY</a></div>
+  <div style="top: 250px;"><a href="#" target="new">CONTACT</a></div>
+</body>
+</html>

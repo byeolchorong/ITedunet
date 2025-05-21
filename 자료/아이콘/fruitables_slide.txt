@@ -1,0 +1,64 @@
+/* 메인 */
+#main .container {
+  display: flex;
+  justify-content: space-between;
+}
+.main_left p{ 
+  font-size: 20px;
+  color: var(--sub-color);
+}
+.main_left h1 {
+ 
+
+/* 메인 슬라이더 */
+
+.main_right {
+  width: 40%;
+  overflow: hidden;
+  position: relative;
+}
+.slidebox {
+  /* 부모에게 */
+  position: relative;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.slide {
+  width: 100%;
+  font-size: 16px;
+  position: relative;
+  /* 자식에게 */
+  display: inline-block;
+}
+
+.slide img {
+  width: 100%;
+}
+.slide p {
+  position: absolute;
+  top: 50%;
+  /* left : 50% transform값하면 텍스트 중앙으로 배치됨 */
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 20px;
+  background-color: var(--sub-color);
+}
+
+#slidebtn i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  padding: 10px 15px;
+}
+
+#slidebtn i.left{
+  left: 20px;
+}
+
+#slidebtn i.right {
+  right: 20px;
+}

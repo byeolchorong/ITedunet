@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/705381df09.js" crossorigin="anonymous"></script>
+  <script src="./js/dropdown.js" defer></script>
+  <script src="./js/slider.js" defer></script>
+  <script src="./js/tab.js" defer></script>
+  <link rel="stylesheet" href="./css/reset.css">
+  <title>코난의집</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header">
+        <!-- 헤더 왼쪽 -->
+        <div class="ht_left">
+          <!-- 헤더 왼쪽 로고 -->
+          <div class="ht_left01">
+            <a href="#"><img src="./img/logo.png" alt="오늘의집logo"></a>
+          </div>
+          <!-- 헤더 왼쪽 메뉴 -->
+          <div class="ht_left02">
+            <a href="#" class="nav_content01">커뮤니티</a>
+            <a href="https://store.ohou.se/" class="nav_content02">쇼핑</a>
+            <a href="https://ohou.se/experts" class="nav_content03">인테리어/생활</a>
+          </div>
+        </div>
+
+        <!-- 헤더 오른쪽 -->
+        <div class="ht_right">
+          <!-- 헤더 오른쪽 검색창 -->
+          <div class="ht_right01">
+            <i class="fa-solid fa-magnifying-glass glass"></i>
+            <input type="text" placeholder="통합검색">
+          </div>
+          <!-- 헤더 오른쪽 메뉴 -->
+          <div class="ht_right02">
+            <a href="https://ohou.se/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="https://ohou.se/users/sign_in?redirect_to=%2Fexperts" class="ht_a01">로그인</a>
+            <a href="https://ohou.se/normal_users/new" class="ht_a02">회원가입</a>
+            <a href="https://ohou.se/customer_center">고객센터</a>
+          </div>
+          <!-- 헤더 오른쪽 드롭다운 -->
+          <div class="ht_right03">
+            <ul id="ht_mainList">
+              <li>글쓰기<i class="fa-solid fa-chevron-down down"></i>
+                <ul id="ht_subList" class="ht_display_none">
+                  <li><img src="./img/dropicon01.png">
+                    <div>
+                      <h3>사진/동영상 올리기</h3>
+                      <p>우리집의 공간과 나의 일상을 기록해 보세요.</p>
+                    </div>
+                  </li>
+
+                  <li><img src="./img/dropicon02.png">
+                    <div>
+                      <h3>집들이 글쓰기</h3>
+                      <p>집에 관한 이야기를 글로 작성해 보세요.</p>
+                    </div>
+                  </li>
+
+                  <li><img src="./img/dropicon03.png">
+                    <div>
+                      <h3>노하우 글쓰기</h3>
+                      <p>다양한 인테리어 노하우를 공유해 주세요.</p>
+                    </div>
+                  </li>
+
+                  <li><img src="./img/dropicon04.png">
+                    <div>
+                      <h3>상품 리뷰 쓰기</h3>
+                      <p>상품 리뷰를 작성하고 포인트도 받아 보세요.</p>
+                    </div>
+                  </li>
+
+                  <li><img src="./img/dropicon05.png">
+                    <div>
+                      <h3>시공 전문가 리뷰쓰기</h3>
+                      <p>시공 전문가 리뷰룰 작성하고 포인트도 받아보세요.</p>
+                    </div>
+                  </li>
+                </ul>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- 메뉴 -->
+    <section id="nav">
+      <div class="container">
+        <div class="nav_content01">
+          <span>홈</span>
+          <span>추천</span>
+          <span>#채널</span>
+          <span>집들이</span>
+          <span>집사진</span>
+          <span>3D인테리어</span>
+          <span>살림수납</span>
+          <span>반려동물</span>
+          <span>육아</span>
+          <span>홈스토랑</span>
+          <span>플랜테리어</span>
+          <span>콜렉터블</span>
+          <span>캠핑</span>
+        </div>
+        <div class="nav_content02">
+          <span>쇼핑홈</span>
+          <span>카테고리</span>
+          <span>베스트</span>
+          <span>오늘의딜</span>
+          <span>단독상품</span>
+          <span>리퍼마켓</span>
+          <span>오마트</span>
+          <span>원하는날도착</span>
+          <span>오!쇼룸</span>
+          <span>기획전</span>
+        </div>
+        <div class="nav_content03">
+          <span>홈</span>
+          <span>주거공간시공</span>
+          <span>부분시공</span>
+          <span>시공자재랭킹</span>
+          <span>제품설치</span>
+          <span>이사</span>
+          <span>집보기체크리스트</span>
+          <span>아파트시공사례</span>
+        </div>
+
+
+        <!-- 검색순위 -->
+        <div class="search_ranking">
+          <ul>
+            <li id="search_mainList">1 <span>new</span>시라쿠스 뉴욕
+              <ul id="search_subList" class="search_display_none">
+                <li>인기검색어</li>
+                <li>1<span>new</span>시라쿠스 뉴욕</li>
+                <li>2<span>new</span>빈티지 커튼</li>
+                <li>3<span>new</span>침대 사이드 선반</li>
+                <li>4<span>new</span>무선 조명</li>
+                <li>5<span>new</span>코스타노바</li>
+                <li>6<span>new</span>미닉스 음식물처리기</li>
+                <li>7<span>new</span>호무로</li>
+                <li>8<span>new</span>호텔 수건</li>
+                <li>9<span>new</span>공기청정기</li>
+                <li>10<span>new</span>프로쉬</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </header>
+
+
+
+  <!-- 메인 -->
+  <section id="main">
+    <div class="container">
+
+    </div>
+
+  </section>
+
+  <!-- 서비스 -->
+  <section id="service">
+    <div class="container">
+
+    </div>
+  </section>
+
+
+  <section id="popular">
+    <div class="container">
+
+    </div>
+  </section>
+
+
+  <section id="recommend">
+    <div class="container">
+
+    </div>
+  </section>
+
+
+  <section id="category">
+    <div class="container">
+
+    </div>
+  </section>
+
+
+  <section id="deals">
+    <div class="container">
+
+    </div>
+  </section>
+
+
+  <section id="reviews">
+    <div class="container">
+
+    </div>
+  </section>
+
+
+  <section id="special">
+    <div class="container">
+
+    </div>
+  </section>
+
+
+  <section id="best">
+    <div class="container">
+
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">
+
+    </div>
+  </footer>
+
+</body>
+
+</html>

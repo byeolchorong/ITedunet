@@ -1,0 +1,8 @@
+package chapter02;
+
+import jakarta.servlet.annotation.WebServlet;
+
+@WebServlet ("/exam2_2")
+public class declaration02  {
+	
+}

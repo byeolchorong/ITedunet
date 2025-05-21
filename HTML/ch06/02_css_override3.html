@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 적용 우선순위 살펴보기3</title>
+</head>
+
+<style>
+  /* !important 우선순위1 */
+  p { color : blue !important;}
+  p { color : yellow; }
+  p { color :  red; }
+</style>
+  <!-- 외부 스타일 시트를 정의하는 위치가 중요(최종 적용) -->
+  <link type="text/css" rel="stylesheet" href="../../CSS/ch06/02_css_override.css">
+
+<body>
+  <p>CSS가 중복 정의된 경우 어떤 것이 적용될까? </p>
+</body>
+</html>

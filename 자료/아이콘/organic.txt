@@ -1,0 +1,56 @@
+mail
+<i class="fa-solid fa-envelope"></i>
+
+facebook
+<i class="fa-brands fa-facebook-f"></i>
+
+twitter
+<i class="fa-brands fa-twitter"></i>
+
+linkedin
+<i class="fa-brands fa-linkedin-in"></i>
+
+instagram
+<i class="fa-brands fa-instagram"></i>
+
+pinterest
+<i class="fa-brands fa-pinterest-p"></i>
+
+user
+<i class="fa-solid fa-user"></i>
+
+heart
+<i class="fa-solid fa-heart"></i>
+
+shopping bag
+<i class="fa-solid fa-bag-shopping"></i>
+
+menu bar
+<i class="fa-solid fa-bars"></i>
+
+arrow-down
+<i class="fa-solid fa-angle-down"></i>
+
+phone
+<i class="fa-solid fa-phone"></i>
+
+retweet
+<i class="fa-solid fa-retweet"></i>
+
+cart
+<i class="fa-solid fa-cart-shopping"></i>
+
+arrow-left
+<i class="fa-solid fa-angle-left"></i>
+
+arrow-right
+<i class="fa-solid fa-chevron-right"></i>
+
+search
+<i class="fa-solid fa-magnifying-glass"></i>
+
+location
+<i class="fa-solid fa-location-dot"></i>
+
+search_plus
+<i class="fa-solid fa-magnifying-glass-plus"></i>

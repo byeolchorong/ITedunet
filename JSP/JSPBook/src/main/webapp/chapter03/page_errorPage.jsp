@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<%@ page errorPage="page_errorPage_error.jsp" %>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		String str = null;
+		out.println(str.toString());
+		/* 
+		   str 변수는 null 값을 가지므로 객체를 참조하고 있지 않음
+		   따라서 str.toString()을 호출하면 NullPointerException이 발생함
+		   즉, null 값인 참조 변수로 메서드를 호출했기 때문에 에러 발생
+		*/
+	%>
+</body>
+</html>

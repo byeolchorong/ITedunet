@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  Enter your name : <input type="text" id="fname">
+
+  <script>
+    document.querySelector("#fname").addEventListener("click",myFunction);
+    function myFunction() {
+      document.querySelector("#fname").style.backgroundColor = "pink";
+      // this : 이벤트가 등록된 요소 (이벤트가 발생한 요소)
+    }
+  </script>
+</body>
+</html>                                                                                                                                                                                                                               

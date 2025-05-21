@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>점핑볼 만들기</title>
+  <style>
+    div {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      animation-name: bounce;
+      animation-iteration-count: infinite;
+    }
+    #b1 {
+      left: 10px;
+      background-color: red;
+      animation-duration: 5s;
+    }
+    #b2 {
+      left: 50px;
+      background-color: blue;
+      animation-duration: 10s;
+    }
+    #b3 {
+      left: 90px;
+      background-color: green;
+      animation-duration: 3s;
+    }
+    #b4 {
+      left: 130px;
+      background-color: silver;
+      animation-duration: 8s;
+    }
+    #b5 {
+      left: 170px;
+      background-color: black;
+      animation-duration: 1s;
+    }
+    @keyframes bounce {
+      0%, 100% {
+        bottom: 0px;
+        animation-timing-function: ease-out;
+      }
+      50% {
+        bottom: 200px;
+        animation-timing-function: ease-in;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="b1"></div>
+  <div id="b2"></div>
+  <div id="b3"></div>
+  <div id="b4"></div>
+  <div id="b5"></div>
+</body>
+</html>

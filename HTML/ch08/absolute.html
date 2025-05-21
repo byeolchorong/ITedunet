@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>absoulte</title>
+  <style>
+    .grand-parent {
+      width: 400px;
+      height: 300px;
+      border: 4px dashed red;
+      padding: 30px 100px 100px 30px;
+    }
+    .parent {
+      width: 400px;
+      height: 80px;
+      border: 4px dashed blue;
+    }
+    .child {
+      width: 120px;
+      height: 80px;
+      border: 4px dashed yellow;
+      background-color: tomato;
+    }
+    .absoulte {
+      position: absolute;
+      top: 80px;
+      left: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grand-parent">
+    <div class="parent">
+      <div class="child">1</div>
+      <div class=" child absoulte">2</div>
+      <div class="child">3</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+1. int a;
+2. float, double 자료형 키워드를 사용합니다.
+3. 참조변수를 말하며 대표적으로 String이 있습니다.
+4. char 입니다.
+5. boolean test = false;
+6. byte 데이터 타입
+7. float test=10.5f 혹은 double test = 10.5;
+8. char test='F';
+9. 변수의 값을 변환할 수 없다
+10. char
+11. double
+12. 모든 데이터 타입에서 형변환 불가능
+13. byte, short, char
+14. byte,shor 두가지 데이터는 char보다 작으므로 안된다.
+15. char c = (char) 65;
+16. int a = (int)3.14f;
+17. 데이터가 손실되며 값이 잘리거나 변형될 수 있음
+18. 11
+19. 2.5
+20. 1
+21. 3
+22. 증가 연산자 x++; 또는 ++x;를 사용합니다.
+23. 음수 곱셈 결과: -8
+24. 부호는 왼쪽 피연산자를 따르므로 결과는 -1
+25. x=6, y=5 후위 x++는 대입 후에 증가합니다.
+26. a=4, b=6a++는 3을 곱한 후 증가하여 b=6, a=4가 됩니다.
+27. a가 b보다 작기 때문에 false입니다.
+28. !(10 < 5) → !false → true, 5 < 7 → true, 최종 → true && true → true
+29. (x > 3) → true, z != 0 → false → (true || false) → true y == 10 → true → true && true → true
+30. x < 5 → false (y > 10 || x == 5) → false || true → true !true → false → false || false → false
+31. isAdmin && isLoggedIn → false, !false → true, true || true → true
+32. 12
+33. 1
+34. 7은 2로 나누어 떨어지지 않으므로 else 블록이 실행됩니다.
+35. username.equals("admin") && password.equals("1234")
+36. 
+int age = 15; 
+if (age > 18 ) { System.out.println("성인: 5000원"); } 
+else if ( age > 7 ) { System.out.println("청소년: 3,000원"); } 
+else { System.out.println("미취학: 무료"); }
+37. 4회
+38. i<=10 of i<11
+39. i = 1 ~ 5까지 1씩 증가하면서 더함 → 1 + 2 + 3 + 4 + 5 = 15
+40. num++
+41. break;
+42. continue;
+43. 현재 반복을 건너뛰고 다음 반복으로 넘어간다
+44. int[] scores
+45. fruits.length
+46. 일반 변수는 하나의 값만 저장할 수 있지만, 
+배열은 동일한 타입의 여러 값을 하나의 이름으로 연속적으로 저장할 수 있습니다. 
+배열은 반복문과 함께 사용하면 많은 데이터를 효율적으로 처리할 수 있습니다.
+47. nums[0] = 10, nums[1] = 20이므로, nums[2] = 10 + 20으로 30이 저장되고 출력됩니다.int[] a = new int[5];
+48. int[] a = new int[5];
+49. for (int i = 0; i < numbers.length; i++) { numbers[i] = sc.nextInt(); }
+50. i < scores.length scores[i]
+51. “인스턴스”는 어떤 클래스에 의해 생성된 구체적인 객체를 말할 때 사용합니다.
+52. test t = new test();
+53. 주소를 담는 변수 
+54. s.name = "철수";s.age = 20;
+55. 
+Dog d1 = new Dog(); 
+Dog d2 = new Dog(); 
+d1.breed = "푸들"; 
+d2.breed = "말티즈"; 
+System.out.println(d1.breed); 
+System.out.println(d2.breed);
+56. reset() 메서드는 static 메서드로 선언되어 있기 때문에 인스턴스 변수인 count에는 접근할 수 없음.
+57. static은 미리 생성되며, 1개만 존재한다.
+58. public int sum(int a, int b) { return a + b; }
+59. return a + b;
+60. 메서드나 함수가 호출될 때 전달받는 값(인자, argument)을 저장하기 위한 변수
+61. 전역변수와 지역변수는 변수가 선언된 위치에 따라 접근 가능 범위(scope) 가 달라지는 개념입니다. 
+자바에서는 기본적으로 메서드 안과 클래스 안에서의 선언 위치로 구분됩니다.
+62. public double add(double a, double b) { return a + b; }
+63. 메서드 이름과 매개변수 목록이 동일하고 반환 타입만 다른 경우는 오버로딩이 성립하지 않음.
+64. 생성자는 객체가 생성될 때 자동으로 호출되어 객체의 초기화를 담당하는 특수한 메서드이다.
+65. public Book(String t, int p) { title = t; price = p; }

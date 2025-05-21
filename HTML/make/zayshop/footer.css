@@ -1,0 +1,94 @@
+@import url(./reset.css);
+
+.f-top {
+  background-color: var(--bg-color);
+  color: white;
+}
+
+.f-top-content {
+  display: flex;
+  justify-content: space-between;
+}
+.f-top-content h1 {
+  border-bottom: 1px solid #2d343f;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  padding-bottom: 10px;
+  font-size: 30px;
+  font-weight: 100;
+  
+}
+.f-top-contents01 h1:first-child {
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+.f-top-contents01 {
+  line-height: 2;
+}
+
+.f-top-content01 {
+  padding-right: 100px;
+}
+
+.con {
+  display: flex;
+}
+
+.con i {
+  padding: 10px;
+}
+
+.f-top-content02, .f-top-content03 {
+  padding-right: 300px;
+  line-height: 2;
+}
+
+.f-top h1 {
+  padding-top: 30px;
+}
+
+.f-top-icon {
+  font-size: 25px;
+  border-top: 1px solid #2d343f;
+  margin-top: 20px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.f-top-icon i {
+  background-color: var(--bg-color);
+  margin: 7px;
+  font-size: 23px;
+  padding: 10px;
+  border: 1px solid #2d343f;
+  border-radius: 50px;
+}
+
+.f-top-icon input[type="email"] {
+  border: 1px solid #2d343f;;
+  background-color: var(--bg-color);
+  padding: 10px;
+  margin-right: -9px;
+  font-size: 16px;
+}
+
+.f-top-icon input[type="submit"] {
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+
+  background-color: var(--main-color);
+}
+
+.f-bottom {
+  background-color: #1d242d;
+  padding: 30px 0;
+  color: white;
+}
+
+.f-bottom a {
+  border-bottom: 1px solid ;
+}

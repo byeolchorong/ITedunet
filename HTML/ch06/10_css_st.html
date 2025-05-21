@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>구조적 가상 클래스 선택자 사용하기</title>
+
+  <style>
+    h4:last-of-type { /* 마지막 태그의 텍스트 색상 */
+      color: red;
+      font-size: 20px;
+    }
+    h4:nth-child(2n+1) {  /* 홀수 태그 */
+      background-color: lightblue;
+    }    
+    h4:first-child { /* 첫번째 태그의 텍스트 색상 */
+      color: blue;
+      background-color: yellow;
+      font-size: 20px;
+    }
+    h4:nth-last-of-type(2n) {  /* 짝수 태그 */
+      background-color: pink;
+    }
+    h4:nth-child(5) {
+      color: pink;
+      background-color: gray;
+      font-size: 20px;
+    }
+    h4:last-child {
+      color: yellow;
+      background-color: blue;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div>
+    <h4>웹 프로그래밍</h4>
+    <h4>웹 프로그래밍</h4>
+    <h4>웹 프로그래밍</h4>
+    <h4>웹 프로그래밍</h4>
+    <h4>웹 프로그래밍</h4>
+    <h4>웹 프로그래밍</h4>
+    <h4>웹 프로그래밍</h4>
+    <h4>웹 프로그래밍</h4>
+    <h4>웹 프로그래밍</h4>
+    <h4>웹 프로그래밍</h4>
+    <h4>웹 프로그래밍</h4>
+  </div>
+</body>
+
+</html>

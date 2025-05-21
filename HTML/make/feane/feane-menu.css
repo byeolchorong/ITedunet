@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+:root {
+  --main-color: #ffbe33;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* our-menu */
+.our-menu h2, #tab-button {
+  text-align: center;
+}
+.our-menu h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  line-height: 3;
+}
+input {
+  display: none;
+}
+
+
+/* tab box */
+#tab-box {
+}
+#tab-button {
+  font-size: 0;
+  padding-bottom: 30px;
+}
+#tab-button label {
+  font-size: 18px;
+  padding: 0 25px;
+  cursor: pointer;
+}
+
+
+
+/* tab content */
+.tab-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.content-img {
+  background-color: #f1f2f3;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.content-img img {
+  width: 152px;
+  height: 140px;
+  margin: 20px 0;
+  margin-left: 100px;
+}
+
+
+/* content 분배 */
+.tab-content .all {
+  background-color: #222831;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  margin: 10px;
+  color: white;
+  flex: 0 1 calc((100% / 3) - 20px);
+}
+
+.tab-taxt {
+  padding: 20px;
+}
+.tab-taxt h3 {
+  line-height: 2;
+}
+.tab-taxt p {
+  line-height: 1.5;
+  font-size: 15px;
+}
+.tab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 15px 10px 0 ;
+}
+.tab-icon i {
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #ffbe33;
+}
+
+#tab-box a {
+  background-color: #e69c00;
+  padding: 10px 55px;
+  border-radius: 45px;
+  color: white;
+  margin-left: 42%;
+}
+
+/* tab content 숨기기 */
+.all {
+  display: none;
+}
+
+/* tab content 나타내기 */
+#menu01:checked ~ #tab-box .tab-content .all,
+#menu02:checked ~ #tab-box .tab-content .burger,
+#menu03:checked ~ #tab-box .tab-content .pizza,
+#menu04:checked ~ #tab-box .tab-content .pasta,
+#menu05:checked ~ #tab-box .tab-content .fries {
+  display: block;
+}
+
+
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습1</title>
+</head>
+<body>
+  <table border="1">
+    <h3>강의 시간표</h3>
+    <tr>
+      <td>구분</td>
+      <td>월</td>
+      <td>화</td>
+      <td>수</td>
+      <td>목</td>
+      <td>금</td>
+    </tr>
+
+    <tr>
+      <td>1교시</td>
+      <td rowspan="2">웹 기획</td>
+      <td rowspan="2">웹 디자인</td>
+      <td rowspan="2">HTML</td>
+      <td rowspan="2">웹 디자인</td>
+      <td>영어</td>
+    </tr>
+
+    <tr>
+      <td>2교시</td>
+      <td rowspan="4">야외수업</td>
+    </tr>
+
+    <tr>
+      <td>3교시</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>4교시</td>
+      <td rowspan="2">UI 디자인</td>
+      <td rowspan="2">자바스크립트</td>
+      <td rowspan="2">모바일 디자인</td>
+      <td rowspan="2">HTML</td>
+    </tr>
+
+    <tr>
+      <td>5교시</td>
+    </tr>    
+
+  </table>
+
+  <form>
+    <h3>회원 가입 양식</h3>
+    <p>- 아이디 <input type="text" name="id"></p>
+    <p>- 비밀번호 <input type="password" name="pw"></p>
+    <p>- 비밀번호 확인 <input type="password" name="pwcheck"></p>
+    <p>- 이름 <input type="text" name="user"></p>
+
+    <p>- 성별 
+      <input type="radio" name="gender" value="female">여성 
+      <input type="radio" name="gender" value="male">남성
+    </p>
+
+    <p>- 전화번호 <select name="tel" >
+      <option>02</option>
+      <option>055</option>
+      <option>051</option>
+      <option>062</option>
+    </select> - <input type="text" name="tel second"> - <input type="text" name="tel third"></p>
+
+    <p>- 이메일 <input type="email" name="myemail"> @ 
+      <select name="emailaddress">
+        <option selected disabled>선택</option>
+        <option>naver.com</option>
+        <option>gmail.com</option>
+        <option>kakao.com</option>
+      </select></p>
+      
+      
+      <p>- 자기소개 <textarea rows="10" cols="30"></textarea> </p> 
+    </form>
+
+    <br><br><br>
+
+    <form>
+    <h3>회원가입 양식2</h3>
+      <table>
+        <tr>
+          <td>- 아이디 </td>
+          <td>
+            <input type="text" name="id">
+          </td>
+        </tr>
+          
+          <tr>
+            <td>- 비밀번호</td>
+          <td><input type="password" name="pw"></td>
+        </tr>
+        
+        <tr>
+          <td>- 비밀번호 확인</td>
+          <td><input type="password" name="pwcheck"></td>
+        </tr>
+        
+        <tr>
+          <!-- maxlength : 텍스트 길이 제한 -->
+          <td>- 이름</td>
+          <td><input type="text" name="user" maxlength="5"></td>
+        </tr>
+        
+        <tr>
+          <td>- 성별</td>
+          <td><input type="radio" name="gender" value="female" checked>여성 
+            <input type="radio" name="gender" value="male">남성</td>
+        </tr>
+          
+        <tr>
+          <td>- 전화번호</td>
+          <td><select name="tel" >
+            <option>02</option>
+            <option>055</option>
+            <option>051</option>
+            <option>062</option>
+          </select> - <input type="text" name="tel1" placeholder="1234"> - <input type="text" name="tel2" placeholder="5678"></td>
+        </tr>
+        
+        <tr>
+          <td>- 이메일</td>
+          <td><input type="email" name="myemail"> @ 
+            <select name="emailaddress">
+              <option selected disabled>선택하세요</option>
+              <option>naver.com</option>
+              <option>gmail.com</option>
+              <option>daum.net</option>
+              <option>kakao.com</option>
+            </select></td>
+          </tr>
+          
+          <tr>
+            <td>- 자기소개</td>
+            <td><textarea rows="5" cols="50"></textarea></td>
+          </tr>
+          
+      </table>
+    </form>
+</body>
+</html>

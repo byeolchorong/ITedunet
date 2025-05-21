@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="div1">
+    <p id="p1">this is a paragraph.</p>
+    <p id="p2">this is another paragraph</p>
+  </div>
+
+  <script>
+    let parent = document.querySelector("#div1");
+    // 바꾸려는 요소의 부모
+    let child = document.querySelector("#p1");
+    // 바꾸려고 하는 요소
+    let para = document.createElement("p");
+    let node = document.createTextNode("this is new.");
+    para.appendChild(node);
+    // 새로운 요소
+
+    parent.replaceChild(para, child);
+
+  </script>
+
+</body>
+</html>

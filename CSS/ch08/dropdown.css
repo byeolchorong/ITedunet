@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+.main_menu {
+  display: flex;
+}
+.main_menu > li {
+  background-color: yellow;
+  margin-right: 10px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.main_menu > li:nth-child(2) {
+  position: relative;
+}
+
+.sub_menu {
+  position: absolute;
+  background-color: pink;
+  top: 100%;
+  left: 0px;
+  padding: 7px;
+  display: none;
+}
+
+.main_menu li:hover .sub_menu {
+  display: block;
+}

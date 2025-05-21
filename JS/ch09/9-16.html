@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>호출2</title>
+  <script>
+    function area(x,y) {
+      let calculate = function (a,b) {
+        sum = (x * y) / 2;
+        return sum;
+      }
+      let result = calculate(x,y);
+      document.write("삼각형의 면적 : " + result);
+    }
+  </script>
+</head>
+<body>
+  <script>
+    area(100,200);
+    document.write("삼각형의 면적 : " + calculate(x,y)); // 호출되지 않는다. 
+  </script>
+
+</body>
+</html>

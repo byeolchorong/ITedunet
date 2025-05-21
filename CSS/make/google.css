@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+.top-menu{
+  display: flex;
+  flex-direction: row;
+  padding: 4px 4px 4px 8px;
+  margin-left: 750px;
+  justify-content: space-between;
+  align-items: center;
+}
+.lab img, .menu img {
+  width: 18px;
+}
+.profile img {
+  border-radius: 50px;
+}
+input {
+  width: 500px;
+  height: 50px;
+  border: 1px solid lightgray;
+  border-radius: 50px;
+  box-shadow: 5px 5px 30px lightgray;
+}
+input::placeholder {
+  padding-left: 20px;
+}
+

@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+i {
+  color: #015fc9;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  margin: 10px 10px 10px 5px;
+}
+
+.h-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* header top left */
+
+.h-top-left a {
+  color: gray;
+  font-size: 9pt;
+}
+
+.h-top-left a:first-child {
+  border-right: 1px solid #015fc9;
+  padding: 0 12px 0 0;
+}
+
+.h-top-left a i {
+  padding: 5px;
+}
+
+/* header top right */
+
+.h-top-right {
+  display: flex; 
+  align-items: center;
+  /* background-color: red; */
+}
+
+.h-top-right i {
+  padding: 0 10px;
+}
+
+.h-top-right i:nth-child(4) {
+  border-right: 1px solid #015fc9;
+}
+
+.h-top-right form select {
+  border: none;
+}
+
+/* header bottom nav left */
+
+.h-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menu ul li {
+  margin: 10px;
+  padding: 10px;
+}
+
+.h-bottom-left {
+  display: flex;
+  align-items: center;
+}
+
+.h-bottom-left form select {
+  border: none;
+}
+
+/* header bottom nav right */
+
+.h-bottom-right {
+  display: flex;
+  align-items: center;
+}
+
+.h-bottom-right i {
+  background-color: #015fc9;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.h-bottom-right a {
+  background-color: #015fc9;
+  color: white;
+  margin: 5px;
+  padding: 6px 20px;
+  border-radius: 20px;
+}
+
+.h-bottom-right img {
+  margin: 0 10px 0 20px;
+}
+
+.h-bottom-num {
+  display: flex;
+  flex-direction: column;
+}
+
+.h-bottom-num-name {
+  color: gray;
+}

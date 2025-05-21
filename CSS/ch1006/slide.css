@@ -1,0 +1,10 @@
+@import url(../reset.css);
+
+.slide label {
+  width: 20px;
+  height: 20px;
+  
+  background-color: red;
+  border: 1px solid pink;
+  border-radius: 10px;
+}

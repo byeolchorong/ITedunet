@@ -1,0 +1,41 @@
+1. 
+1) 1byte
+2) short
+3) 4byte
+4) long
+
+2. 
+1) 값이 작아야한다.
+2) 같은 타입이어야한다. 
+
+3. true
+4. true
+5. true
+6. if (a < 3)
+
+7. 
+1) age > 19
+2) 13 < age && age < 20
+3) 8 < age && age < 14
+4) age < 8
+
+8.
+1) 2
+2) i < 10
+3) 1
+4) j < 10
+
+9. 
+1) continue;
+2) break;
+
+10. String a = new String(3);
+11. 
+1) a[0] = "안녕";
+2) a[1] = "하세요";
+3) a[2] = "굿바이";
+
+12. 
+for (int i = 0; i < a.length; i++) {
+  System.out.println(a[i]);
+}

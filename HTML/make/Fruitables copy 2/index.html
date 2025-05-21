@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/705381df09.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./dropdown.js" defer></script>
+  <script src="./slider.js" defer></script>
+  <script src="./tab.js" defer></script>
+  <title>Conan's favorite fruit</title>
+</head>
+
+<body>
+  <!-- 헤더 -->
+  <header>
+    <div class="container">
+      <div class="header_left">
+        <span><i class="fa-solid fa-location-dot"></i> 123 Street, New York</span>
+        <span><i class="fa-solid fa-envelope"></i> Email@Example.com</span>
+      </div>
+
+      <div class="header_right">
+        <span>Privacy Policy / </span>
+        <span>Terms of Use</span>
+        <span>Sales and Refunds</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 내비 -->
+  <section id="nav">
+    <div class="container">
+      <div class="nav_title">
+        <h1>Fruitables</h1>
+      </div>
+
+      <div class="nav_menu">
+        <ul>
+          <li>Home</li>
+          <li>Shop</li>
+          <li>Shop Detail</li>
+          <li id="mainList">Pages<i class="fa-solid fa-angle-down"></i>
+            <ul id="subList" class="display_none">
+              <li>Cart</li>
+              <li>Checkout</li>
+              <li>Testimonial</li>
+              <li>404 Page</li>
+            </ul>
+          </li>
+          <li>Contact</li>
+        </ul>
+      </div>
+
+      <div class="nav_icons">
+        <i class="fa-solid fa-magnifying-glass glass"></i>
+        <i class="fa-solid fa-bag-shopping shopping"></i>
+        <i class="fa-solid fa-user user"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- 메인 슬라이더 -->
+  <section id="main">
+    <div class="container">
+      <div class="main_text">
+        <p>100% Organic Foods</p>
+        <h1>Organic Veggies & <br>
+        Fruits Foods</h1>
+        <input type="text" placeholder="Search" class="main_search">
+        <input type="submit" value="submit Now" class="main_submit">
+      </div>
+
+      <div class="slidebox">
+        <div class="slides">
+          <div class="slide">
+
+            <div class="slide_img">
+              <img src="./img/hero-img-1.png" alt="">
+            </div>
+            <div class="slide_text">
+              <p>Fruites</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide_img">
+              <img src="./img/hero-img-2.jpg" alt="">
+            </div>
+            <div class="slide_text">
+              <p>Fruites</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="slidebtn">
+          <i class="fa-solid fa-angle-left left"></i>
+          <i class="fa-solid fa-chevron-right right"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 탭 -->
+  <section id="tab">
+    <div class="container">
+      <div class="tab_menu">
+
+        <div class="tab_title">
+          <h1>Our Organic Products</h1>
+        </div>
+        
+        <div class="tab_button">
+          <span id="tab1">All Products</span>
+          <span id="tab2">Vegetables</span>
+          <span id="tab3">Fruits</span>
+          <span id="tab4">Bread</span>
+          <span id="tab5">Meat</span>
+        </div>
+      </div>
+
+      <div class="tab_contents">
+        
+        <div class="tab_content tab1 tab2">
+          <div class="tab_img">
+            <img src="./img/fruite-item-1.jpg">
+          </div>
+          <div class="tab_text">
+            <h2>Grapes</h2>
+            <p>Lorem ipsum dolor sit amet <br>
+              consectetur adipisicing elit sed do <br>
+              eiusmod te incididunt</p>
+            <span>$4.99 / kg</span>
+            <a href="#"><i class="fa-solid fa-bag-shopping"></i> Add to cart</a>
+          </div>
+        </div>
+
+        <div class="tab_content tab1 tab3">
+          <div class="tab_img">
+            <img src="./img/fruite-item-1.jpg">
+          </div>
+          <div class="tab_text">
+            <h2>Grapes</h2>
+            <p>Lorem ipsum dolor sit amet <br>
+              consectetur adipisicing elit sed do <br>
+              eiusmod te incididunt</p>
+            <span>$4.99 / kg</span>
+            <a href="#"><i class="fa-solid fa-bag-shopping"></i> Add to cart</a>
+          </div>
+        </div>
+
+        <div class="tab_content tab1 tab4">
+          <div class="tab_img">
+            <img src="./img/fruite-item-3.jpg">
+          </div>
+          <div class="tab_text">
+            <h2>Grapes</h2>
+            <p>Lorem ipsum dolor sit amet <br>
+              consectetur adipisicing elit sed do <br>
+              eiusmod te incididunt</p>
+            <span>$4.99 / kg</span>
+            <a href="#"><i class="fa-solid fa-bag-shopping"></i> Add to cart</a>
+          </div>
+        </div>
+
+        <div class="tab_content tab1 tab5">
+          <div class="tab_img">
+            <img src="./img/fruite-item-4.jpg">
+          </div>
+          <div class="tab_text">
+            <h2>Grapes</h2>
+            <p>Lorem ipsum dolor sit amet <br>
+              consectetur adipisicing elit sed do <br>
+              eiusmod te incididunt</p>
+            <span>$4.99 / kg</span>
+            <a href="#"><i class="fa-solid fa-bag-shopping shopping"></i> Add to cart</a>
+          </div>
+        </div>
+
+        <div class="tab_content tab1 tab6">
+          <div class="tab_img">
+            <img src="./img/fruite-item-5.jpg">
+          </div>
+          <div class="tab_text">
+            <h2>Grapes</h2>
+            <p>Lorem ipsum dolor sit amet <br>
+              consectetur adipisicing elit sed do <br>
+              eiusmod te incididunt</p>
+            <span>$4.99 / kg</span>
+            <a href="#"><i class="fa-solid fa-bag-shopping"></i> Add to cart</a>
+          </div>
+        </div>
+
+        <div class="tab_content tab1 tab5">
+          <div class="tab_img">
+            <img src="./img/fruite-item-6.jpg">
+          </div>
+          <div class="tab_text">
+            <h2>Grapes</h2>
+            <p>Lorem ipsum dolor sit amet <br>
+              consectetur adipisicing elit sed do <br>
+              eiusmod te incididunt</p>
+            <span>$4.99 / kg</span>
+            <a href="#"><i class="fa-solid fa-bag-shopping"></i> Add to cart</a>
+          </div>
+        </div>
+
+        <div class="tab_content tab1 tab3">
+          <div class="tab_img">
+            <img src="./img/fruite-item-7.jpg">
+          </div>
+          <div class="tab_text">
+            <h2>Grapes</h2>
+            <p>Lorem ipsum dolor sit amet <br>
+              consectetur adipisicing elit sed do <br>
+              eiusmod te incididunt</p>
+            <span>$4.99 / kg</span>
+            <a href="#"><i class="fa-solid fa-bag-shopping"></i> Add to cart</a>
+          </div>
+        </div>
+
+        <div class="tab_content tab1 tab">
+          <div class="tab_img">
+            <img src="./img/fruite-item-1.jpg">
+          </div>
+          <div class="tab_text">
+            <h2>Grapes</h2>
+            <p>Lorem ipsum dolor sit amet <br>
+              consectetur adipisicing elit sed do <br>
+              eiusmod te incididunt</p>
+            <span>$4.99 / kg</span>
+            <a href="#"><i class="fa-solid fa-bag-shopping"></i> Add to cart</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
