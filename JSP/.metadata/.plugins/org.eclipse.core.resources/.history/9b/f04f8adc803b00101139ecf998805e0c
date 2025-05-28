@@ -37,7 +37,7 @@
 		<div class="col-md-4">
 			<div class="h-100 p-2">
 			<!-- width=330px height=420px -->  
-				<img src="./resources/images/<%= book.getFileName()%>" style="width:250px; height:350px"/>
+				<img src="./resources/images/<%= book.getFileName()%>" style="width:250; height:350"/>
 				<h5><b><%=book.getName() %></b></h5>
 				<p> <%=book.getAuthor() %>
 				<br><%=book.getPublisher() %> | <%=book.getReleaseDate() %>
