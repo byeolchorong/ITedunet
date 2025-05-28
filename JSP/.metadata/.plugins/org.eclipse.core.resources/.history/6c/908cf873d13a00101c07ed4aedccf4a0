@@ -1,0 +1,61 @@
+package chapter07;
+
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
+
+import org.apache.commons.fileupload.DiskFileUpload;
+import org.apache.commons.fileupload.FileItem;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+@WebServlet("/exam7_4")
+public class fileupload04 extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("exam7_4 doget 입장");
+		
+		RequestDispatcher ds = req.getRequestDispatcher("chapter07/fileupload04.jsp");
+		ds.forward(req, resp);	
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("exam7_4 dopost 입장");
+		
+		String path = req.getServletContext().getRealPath("resources/images");
+		
+		DiskFileUpload upload = new DiskFileUpload();
+		
+		upload.setSizeMax(1000000);
+		upload.setSizeThreshold(4096);
+		upload.setRepositoryPath(path);
+		
+		List items = upload.parseRequest(req);
+		Iterator params = items.iterator();
+		
+		while (params.hasNext()) {
+			FileItem item = (FileItem) params.next();
+			
+			if(item.isFormField()) {
+				String name = item.getFieldName();
+				String value = item.getString("utf-8");
+				System.out.println(name + " = " + value + "<br>");
+			}
+			else {
+				String fileFieldName = item.getFieldName();
+				String fileName = item.getName();
+				String contentType = item.getContentType();
+				
+				fileName = fileName.substring(fileName.lastIndexOf("\\")+1);
+			}
+		}
+		
+	}
+
+}

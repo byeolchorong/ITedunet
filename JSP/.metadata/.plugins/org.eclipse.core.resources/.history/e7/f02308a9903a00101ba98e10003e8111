@@ -1,0 +1,8 @@
+package chapter06;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+@WebServlet("/form2")
+public class form2_1 extends HttpServlet{
+
+}

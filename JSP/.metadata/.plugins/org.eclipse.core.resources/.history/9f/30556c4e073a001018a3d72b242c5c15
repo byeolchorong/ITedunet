@@ -1,0 +1,32 @@
+package chapter06;
+
+import java.io.IOException;
+import java.util.Enumeration;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+@WebServlet("/exam6")
+public class form02 extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		Enumeration paramNames = req.getParameterNames();
+		while(paramNames.hasMoreElements()) {
+			String name=(String) paramNames.nextElement();
+			String paramValue = req.getParameter(name);
+		}
+		
+		RequestDispatcher ds = req.getRequestDispatcher("chapter06/form06_process.jsp");
+		ds.forward(req, resp);	
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+	}
+
+}

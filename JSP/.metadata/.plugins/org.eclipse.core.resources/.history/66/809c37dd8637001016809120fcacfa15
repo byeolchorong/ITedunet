@@ -1,0 +1,16 @@
+<%@page import="java.util.Enumeration"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.HashMap"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		HashMap<String,String> data = HashMap<String,String>request.getAttribute("mapdate");
+	%>
+</body>
+</html>

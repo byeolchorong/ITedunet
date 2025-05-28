@@ -1,0 +1,74 @@
+package chapter07;
+
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.HashMap;
+
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/exam7_1")
+public class fileupload01 extends HttpServlet {
+	// 폼을 제공
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("exam7_1 doget 입장");
+		
+		RequestDispatcher ds = req.getRequestDispatcher("chapter07/fileupload01.jsp");
+		ds.forward(req, resp);	
+	}
+	
+	// 폼을 처리
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("exam7_1 dopost 입장");
+		
+		// Step2. 전처리
+		// 멀티파트리퀘스트는 파라미터 5개를 줘야한다 (리퀘스트,저장폴더,사이즈,인코딩,이름관련객체)
+		                 //컴파일 된 JSPBook
+		String save = req.getServletContext().getRealPath("resources/images");
+		System.out.println(save);
+		int max = 1024*1024*5; // 5MB
+		String encoding = "utf-8";
+		DefaultFileRenamePolicy rename = new DefaultFileRenamePolicy();
+		MultipartRequest multi = new MultipartRequest(req,save,max,encoding,rename);
+		
+		// text 가져오기 = case 1
+		String name = multi.getParameter("name");
+		String subject = multi.getParameter("subject");
+		System.out.println(name);
+		System.out.println(subject);
+		// text 가져오기 case 2
+		// 이미지 이름 가져오기
+		Enumeration keys = multi.getParameterNames();
+		HashMap<String, String> hm = new HashMap<String, String>();
+		while(keys.hasMoreElements()) {
+			String key =(String) keys.nextElement();
+			String value = multi.getParameter(key);
+			System.out.println("key값은 : " + keys + "value값은 : " + value);
+		}
+		
+		String imageName1 = multi.getOriginalFileName("filename"); 	// 저장 전 파일이름
+		String imageName2 = multi.getFilesystemName("filename");	// 저장 후 파일이름
+		System.out.println(imageName1);
+		System.out.println(imageName2);
+		
+		// Step3. 모델이동
+		
+		
+		// Step4. 뷰이동
+		req.setAttribute(imageName1, imageName2);
+		req.setAttribute(imageName1, imageName2);
+		req.setAttribute(imageName1, imageName2);
+		RequestDispatcher ds = req.getRequestDispatcher("chapter07/fileupload01_process.jsp");
+		ds.forward(req, resp);
+	}
+
+}

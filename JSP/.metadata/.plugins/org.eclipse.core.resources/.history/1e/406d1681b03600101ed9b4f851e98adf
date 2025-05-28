@@ -1,0 +1,8 @@
+package chapter03;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+@WebServlet("/exam4_1")
+public class forward extends HttpServlet{
+
+}
