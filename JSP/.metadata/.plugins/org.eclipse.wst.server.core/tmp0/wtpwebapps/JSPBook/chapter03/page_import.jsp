@@ -1,0 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<%@ page import="java.util.Date" %>
+<meta charset="UTF-8">
+<title>Directives Tag</title>
+</head>
+<body>
+	Today is <%= new Date() %>
+</body>
+</html>

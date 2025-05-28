@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		String name = (String)request.getAttribute("name");
+		String subject = (String)request.getAttribute("subject");
+		String image1 = (String)request.getAttribute("image1");
+		String image2 = (String)request.getAttribute("image2");
+		String image3 = (String)request.getAttribute("image3");
+	%>
+	
+	<h3>이 름 : <%=name %></h3>
+	<h3>제 목 : <%=subject %></h3>
+	<!-- 상대경로는 현재 url의 영향을 받는다  -->
+	<img src="resources/images/<%=image1%>" width="300" height="300">
+	<img src="resources/images/<%=image2%>" width="300" height="300">
+	<img src="resources/images/<%=image3%>" width="250" height="300">
+</body>
+</html>

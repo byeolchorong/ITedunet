@@ -1,0 +1,4 @@
+function CheckAddBook() {
+	
+	let bookId = document.getElementById("byId");
+}
