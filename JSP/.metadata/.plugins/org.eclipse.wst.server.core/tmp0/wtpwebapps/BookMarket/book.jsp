@@ -2,13 +2,25 @@
     pageEncoding="UTF-8"%>
 <%@ page import="dto.Book" %>
 <%@ page import="dao.BookRepository" %>
+<%@ page errorPage = "exceptionNoBookId.jsp" %>
 <%System.out.println("입장"); %>
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://kit.fontawesome.com/705381df09.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="./resources/css/bootstrap.min.css"/>
 <meta charset="UTF-8">
 <title>도서 상세 정보</title>
+<script type="text/javascript">
+	function addToCart() {
+		if (confirm("도서를 장바구니에 추가하시겠습니까?")) {
+			document.addForm.submit();
+		} else {
+			document.addForm.reset();
+		}
+	}
+</script>
 </head>
 <body>
 <div class="container py-4">
@@ -42,8 +54,11 @@
 			<p> <b>분류</b> : <%=book.getCategory() %>
 			<p> <b>재고수</b> : <%=book.getUnitsInStock() %>
 			<h4><%=book.getUnitPrice() %>원</h4>
-			<p> <a href="#" class="btn btn-info">도서주문 &raquo;</a>
-			<a href="books.jsp" class="btn btn-secondary">도서 목록 &raquo;</a>
+			<p> <form name="addForm" action="./addCart.jsp?id=<%=book.getBookId()%>" method="post">
+				<p> <a href="#" class="btn btn-info" onclick="addToCart()">도서주문 &raquo;</a>
+				<a href="cart.jsp" class="btn btn-warning">장바구니 &raquo;</a>
+				<a href="books.jsp" class="btn btn-secondary">도서 목록 &raquo;</a>
+			</form>
 		</div>
 	</div>
 	<jsp:include page="footer.jsp" />

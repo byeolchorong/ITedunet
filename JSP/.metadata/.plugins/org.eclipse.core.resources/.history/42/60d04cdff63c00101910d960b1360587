@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+	<security-role>
+		<role-name>role1</role-name>
+	</security-role>
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>JSPBook</web-resource-name>
+			<url-pattern>/chapter10/security02.jsp</url-pattern>
+			<http-method>GET</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<description></description>
+			<role-name>role1</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/chapter10/login.jsp</form-login-page>
+			<form-error-page>/chapter10/login_failed.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+	
+	<filter>
+		<filter-name>Filter01</filter-name>
+		<filter-class>chapter12.AuthenFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Filter01</filter-name>
+		<url-pattern>/chapter12/filter01_process.jsp</url-pattern>
+	</filter-mapping>
+</web-app>

@@ -1,0 +1,8 @@
+package chapter12;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+@WebServlet("/exam12_1")
+public class exam12_1 extends HttpServlet{
+	
+}

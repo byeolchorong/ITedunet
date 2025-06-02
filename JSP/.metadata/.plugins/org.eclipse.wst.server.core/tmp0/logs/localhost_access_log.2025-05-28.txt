@@ -260,3 +260,14 @@
 0:0:0:0:0:0:0:1 - - [28/May/2025:17:11:43 +0900] "GET /JSPBook/chapter09/jstl_fmt01.jsp HTTP/1.1" 200 336
 0:0:0:0:0:0:0:1 - - [28/May/2025:17:16:04 +0900] "GET /JSPBook/chapter08/validation01.jsp HTTP/1.1" 200 809
 0:0:0:0:0:0:0:1 - - [28/May/2025:17:16:16 +0900] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 864
+127.0.0.1 - - [28/May/2025:17:23:29 +0900] "GET / HTTP/1.1" 404 808
+0:0:0:0:0:0:0:1 - - [28/May/2025:17:23:30 +0900] "GET /BookMarket/addBook.jsp HTTP/1.1" 200 3855
+0:0:0:0:0:0:0:1 - - [28/May/2025:17:23:30 +0900] "GET /BookMarket/resources/js/validation.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/May/2025:17:26:48 +0900] "POST /BookMarket/processAddBook.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [28/May/2025:17:26:49 +0900] "GET /BookMarket/books.jsp HTTP/1.1" 200 4183
+0:0:0:0:0:0:0:1 - - [28/May/2025:17:26:49 +0900] "GET /BookMarket/resources/images/ISBN1234.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/May/2025:17:26:49 +0900] "GET /BookMarket/resources/images/ISBN1235.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/May/2025:17:26:49 +0900] "GET /BookMarket/resources/images/ISBN1236.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/May/2025:17:26:49 +0900] "GET /BookMarket/resources/images/co.png HTTP/1.1" 200 396617
+0:0:0:0:0:0:0:1 - - [28/May/2025:17:27:11 +0900] "GET /BookMarket/book.jsp?id=ISBN12345 HTTP/1.1" 200 1955
+0:0:0:0:0:0:0:1 - - [28/May/2025:17:27:11 +0900] "GET /BookMarket/resources/images/co.png HTTP/1.1" 304 -

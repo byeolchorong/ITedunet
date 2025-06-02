@@ -12,9 +12,7 @@
 
 <body>
 	<div class="container py-4">
-		<header>
 
-		</header>
 		<%@ include file="menu.jsp" %>
 		<%! String greeting = "도서 쇼핑몰에 오신 것을 환영합니다";
 		String tagline = "Welcome to Web Market!";%>

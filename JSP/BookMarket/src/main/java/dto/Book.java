@@ -12,6 +12,7 @@ public class Book {
 	private String releaseDate;
 	private String condition;
 	private String fileName;
+	private int quantity;
 	
 	public Book() {
 		super();
@@ -110,6 +111,14 @@ public class Book {
 
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 	@Override
