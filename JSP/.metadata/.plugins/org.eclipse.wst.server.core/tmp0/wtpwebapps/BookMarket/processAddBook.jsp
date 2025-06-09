@@ -4,6 +4,9 @@
 <%@ page import="dao.BookRepository" %>
 <%@ page import="com.oreilly.servlet.*" %>
 <%@ page import="com.oreilly.servlet.multipart.*" %>
+<%@ page import="java.sql.*" %>
+<%@ include file="dbconn.jsp" %>
+<%System.out.println("processAddBook 입장"); %>
 
 <%
 	System.out.println("입장");
@@ -58,27 +61,40 @@
 		stock = Long.valueOf(unitsInStock);
 	}
 	
-
-	Book newBook = new Book();
-	newBook.setBookId(bookId);
-	newBook.setName(name);
-	newBook.setUnitPrice(price);
-	newBook.setAuthor(author);
-	newBook.setPublisher(publisher);
-	newBook.setReleaseDate(releaseDate);
-	newBook.setDescription(description);
-	newBook.setCategory(category);
-	newBook.setUnitsInStock(stock);
-	newBook.setCondition(condition);
-	newBook.setFileName(fileName);
-	// 전처리 마지막 묶음 검증
-	System.out.println(newBook);
+	PreparedStatement pstmt = null;
 	
-	BookRepository dao = BookRepository.getInstance();
-	System.out.println(dao.getClass().getMethods());
-	dao.addBook(newBook);
+	String sql = "insert into book values(?,?,?,?,?,?,?,?,?,?,?)";
+	
+	pstmt = conn.prepareStatement(sql);
+	pstmt.setString(1, bookId);
+	System.out.println("bookId");
+	pstmt.setString(2, name);
+	System.out.println("name");
+	pstmt.setInt(3, price);
+	System.out.println("price");
+	pstmt.setString(4, author);
+	System.out.println("author");
+	pstmt.setString(5, description);
+	System.out.println("description");
+	pstmt.setString(6, publisher);
+	System.out.println("publisher");
+	pstmt.setString(7, category);
+	System.out.println("category");
+	pstmt.setLong(8, stock);
+	System.out.println("stock");
+	pstmt.setString(9, releaseDate);
+	System.out.println("releaseDate");
+	pstmt.setString(10, condition);
+	System.out.println("condition");
+	pstmt.setString(11, fileName);
+	System.out.println("fileName");
+	pstmt.executeUpdate();
+	System.out.println("이미지 저장 경로: " + realFolder);
+	System.out.println("파일명: " + fileName);
+	if (pstmt != null) {pstmt.close();}
+	if (conn != null) {conn.close();}
+	
 	response.sendRedirect("books.jsp");
-
 
 
 %>

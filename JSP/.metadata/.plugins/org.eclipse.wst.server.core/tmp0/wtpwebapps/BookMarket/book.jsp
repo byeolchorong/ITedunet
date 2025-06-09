@@ -3,7 +3,7 @@
 <%@ page import="dto.Book" %>
 <%@ page import="dao.BookRepository" %>
 <%@ page errorPage = "exceptionNoBookId.jsp" %>
-<%System.out.println("입장"); %>
+<%System.out.println("book 입장"); %>
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,8 +1,0 @@
-package filter;
-
-import jakarta.servlet.Filter;
-import jakarta.servlet.ServletException;
-
-public class LogFilter implements Filter {
-	
-}
