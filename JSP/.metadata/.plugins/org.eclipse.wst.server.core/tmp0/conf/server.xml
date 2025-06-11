@@ -142,7 +142,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\pay\JSP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\pay\JSP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\bookboard" path="/bookboard" reloadable="true" source="org.eclipse.jst.jee.server:bookboard"/><Context docBase="D:\pay\JSP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\BookMarket" path="/BookMarket" reloadable="true" source="org.eclipse.jst.jee.server:BookMarket"/></Host>
+      <Context docBase="D:\pay\JSP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\pay\JSP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\CRUD" path="/CRUD" reloadable="true" source="org.eclipse.jst.jee.server:CRUD"/><Context docBase="D:\pay\JSP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\testCRUD1" path="/testCRUD1" reloadable="true" source="org.eclipse.jst.jee.server:testCRUD1"/></Host>
     </Engine>
   </Service>
 </Server>

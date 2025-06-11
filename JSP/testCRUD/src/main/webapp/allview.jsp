@@ -30,8 +30,10 @@
              member mb = allmember.get(i);
         %>
         <tr>
-        <td><%=mb.getId() %></td><td><%=mb.getPw() %></td>
-        <td><a role="button" href="update?id=<%=mb.getId()%>">수정</a></td><td><a href="delete?id=<%=mb.getId()%>">삭제</a></td>
+	        <td><%=mb.getId() %></td>
+	        <td><%=mb.getPw() %></td>
+	        <td><a role="button" href="update?id=<%=mb.getId()%>">수정</a></td>
+	        <td><a href="delete?id=<%=mb.getId()%>">삭제</a></td>
         </tr>    
         <%
         } 

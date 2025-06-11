@@ -15,7 +15,7 @@ public class member_repository {
 	public static member_repository getInstance() {
 		return repository;
 	}
-	
+
 	//create
 	public void save(member mb) {
 		System.out.println(mb.toString());
@@ -32,14 +32,14 @@ public class member_repository {
 		}catch(Exception e) {}
 		
 		//PreparedStatement 객체생성 : 쿼리 전송 
-		PreparedStatement pstmt =null;
+		PreparedStatement pstmt = null;
 		String sql = "insert into member values(?,?)";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, mb.getId());
 			pstmt.setString(2, mb.getPw());
 			pstmt.executeUpdate();
-		}catch(Exception e) {}
+		} catch (Exception e) {}
 	}
 	
 	//read_all
