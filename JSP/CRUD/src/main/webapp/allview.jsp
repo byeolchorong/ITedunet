@@ -16,6 +16,7 @@
        ArrayList<member> allmember = (ArrayList<member>)request.getAttribute("allmember");
     %>
     
+    
     <h1>전체멤버 출력</h1>
     <table>
         <tr><td>아이디</td><td>패스워드</td><td>수정</td><td>삭제</td></tr>

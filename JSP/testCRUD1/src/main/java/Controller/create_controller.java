@@ -28,16 +28,12 @@ public class create_controller extends HttpServlet {
 		System.out.println("create post");
 		String id = req.getParameter("id");
 		String pw = req.getParameter("pw");
-		System.out.println(id);
-		System.out.println(pw);
-		
+		// 전처리 묶음
 		member mb = new member();
 		mb.setId(id);
 		mb.setPw(pw);
 		
 		repository.save(mb);
-		
-		resp.sendRedirect("read_all");
 	}
 
 }
