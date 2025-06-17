@@ -40,5 +40,6 @@
 	
 	 -->
 	
-	
+	<annotation-driven enable-matrix-variables="true" />
+	<resources mapping="/resources/**" location="/resources/" />
 </beans:beans>

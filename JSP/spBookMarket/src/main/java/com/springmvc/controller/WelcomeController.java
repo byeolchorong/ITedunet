@@ -13,7 +13,7 @@ public class WelcomeController {
 	
 	@RequestMapping(value="/home", method=RequestMethod.GET)
 	public String welcome(Model model) {
-		System.out.println("WelcomeController : welcome() 입짱~");
+		System.out.println("👉 welcome 입짱~");
 		model.addAttribute("greeting", "Welcome to BookMarket");
 		model.addAttribute("strapline", "Welcome to Web Shopping Mall!");
 		return "welcome";
