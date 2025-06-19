@@ -1,32 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	<form name="loginForm" action="#" method="post" id="login">
-		<p> 아 이 디 : <input type="text" name="id" id="txt">
-		<p> 비밀번호 : <input type="password" name="passwd" id="pw">
-		<p> <input type="button" value="전송" id="btn" >
-	</form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+  </head>
+  <body>
+    <form name="loginForm" action="#" method="post" id="login">
+      <p>아 이 디 : <input type="text" name="id" id="txt" /></p>
+      <p>비밀번호 : <input type="password" name="passwd" id="pw" /></p>
+      <p><input type="button" value="전송" id="btn" /></p>
+    </form>
+  </body>
 
-<script type="text/javascript">
-	// 1. 셀렉트
-	let btn = document.querySelector("#btn");
-	console.log(btn);
-	
-	// 2. 이벤트 할당
-	btn.addEventListener("click", checkForm);
-	
-	function checkForm() {
-		console.log("checkForm입장");
-		let id = document.querySelector("#txt").value;
-		let pw = document.querySelector("#pw").value;
-		alert("아이디 : " + id + "\n" + "비밀번호 : " + pw);
-	}
-</script>
+  <script type="text/javascript">
+    // 1. 셀렉트
+    let btn = document.querySelector("#btn");
+    console.log(btn);
+
+    // 2. 이벤트 할당
+    btn.addEventListener("click", checkForm);
+
+    function checkForm() {
+      console.log("checkForm입장");
+      let id = document.querySelector("#txt").value;
+      let pw = document.querySelector("#pw").value;
+      alert("아이디 : " + id + "\n" + "비밀번호 : " + pw);
+    }
+  </script>
 </html>

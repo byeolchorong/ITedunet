@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%System.out.println("👉 book 입짱~"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +28,17 @@
 	
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-4">
+				<c:choose>
+					<c:when test="${book.getBookImage() == null}">
+						<img src="<c:url value="/resources/images/${book.getBookId()}.png"/>" style="width:100%"/>
+					</c:when>
+					<c:otherwise>
+						<img src="<c:url value="/resources/images/${book.getBookImage().getOriginalFilename()}"/>" style="width:100%"/>
+					</c:otherwise>
+				</c:choose>
+			</div>
+			<div class="col-md-8">
 				<h3>${book.name}</h3>
 				<p>${book.description}</p>
 				<br>

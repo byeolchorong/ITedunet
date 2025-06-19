@@ -19,6 +19,7 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public List<Book> getBookListByCategory(String category) {
+		System.out.println("📡 [Service] getAllBookList 호출됨!");
 		List<Book> booksByCategory = bookRepository.getBookListByCategory(category);
 		return booksByCategory;
 	}
@@ -34,6 +35,10 @@ public class BookServiceImpl implements BookService {
 		Book bookById = bookRepository.getBookById(bookId);
 		return bookById;
 	}
-	
+
+	@Override
+	public void setNewBook(Book book) {
+		bookRepository.setNewBook(book);
+	}
 	
 }
