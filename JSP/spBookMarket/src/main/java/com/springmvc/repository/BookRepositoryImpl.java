@@ -6,13 +6,19 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
+import com.springmvc.controller.BookController;
 import com.springmvc.domain.Book;
 import com.springmvc.exception.BookIdException;
 
 @Repository
 public class BookRepositoryImpl implements BookRepository {
+	
+	public static Logger logger = LoggerFactory.getLogger(BookRepositoryImpl.class);
+	
 	private List<Book> listOfBooks = new ArrayList<Book>();
 	
 	public BookRepositoryImpl() {
@@ -55,6 +61,7 @@ public class BookRepositoryImpl implements BookRepository {
 
 	@Override
 	public List<Book> getBookListByCategory(String category) {
+		logger.info("getBookListByCategory : " + category);
 		List<Book> booksByCategory = new ArrayList<Book>();
 		for(int i=0; i<listOfBooks.size(); i++) {
 			Book book = listOfBooks.get(i);
@@ -66,6 +73,7 @@ public class BookRepositoryImpl implements BookRepository {
 
 	@Override
 	public Set<Book> getBookListByFilter(Map<String, List<String>> filter) {
+		logger.info("getBookListByFilter : " + filter);
 		Set<Book> booksByPublisher = new HashSet<Book>();
 		Set<Book> booksByCategory = new HashSet<Book>();
 		
@@ -94,11 +102,12 @@ public class BookRepositoryImpl implements BookRepository {
 		}
 		
 		booksByCategory.retainAll(booksByPublisher);
-		System.out.println("👉 booksByCategory값:"+booksByCategory);
+		logger.info("👉 booksByCategory값:"+booksByCategory);
 		return booksByCategory;
 	}
 	
 	public Book getBookById(String bookId) {
+		logger.info("📥 [getBookById] 도서 ID: {}", bookId);
 		Book bookInfo = null;
 		for (int i=0; i<listOfBooks.size(); i++) {
 			Book book = listOfBooks.get(i);
@@ -115,6 +124,7 @@ public class BookRepositoryImpl implements BookRepository {
 
 	@Override
 	public void setNewBook(Book book) {
+		logger.info("📤 [setNewBook] 신규 도서 등록: {}", book);
 		listOfBooks.add(book);
 	}
 	

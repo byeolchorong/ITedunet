@@ -15,7 +15,7 @@
 	<!-- 1.핸들러매핑과 핸들러아답터를 자동으로 객체생성함
 	     2.@annotation을 사용할 수있게 설정해줌
 	 -->
-	<annotation-driven />
+	 <annotation-driven enable-matrix-variables="true" />
 
 	<!-- css,image,js와 같은 공유되는 파일의 위치를 정하고 MVC외 처리를 실시함
 	     디스페쳐서블리은 관여하지말고 그냥 통과시켜~
@@ -36,14 +36,26 @@
 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		 <beans:property name="maxUploadSize" value="10240000"/>
 	</beans:bean>
+	
+	<interceptors>
+		<beans:bean class="com.springmvc.interceptor.MonitoringInterceptor"/>
+		<beans:bean class="com.springmvc.interceptor.AuditionInterceptor"/>
+		<beans:bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<beans:property name="paramName" value="language"/>
+		</beans:bean>
+	</interceptors>
+	
+	<beans:bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+		<beans:property name="defaultLocale" value="ko"/>
+	</beans:bean>
+	
+	<beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<beans:property name="basename" value="messages"/>
+		<beans:property name="defaultEncoding" value="UTF-8"/>
+	</beans:bean>
 	<!-- 
 	     1. 핸들러매핑
 	     2. 뷰리졸브
 	     3. com.springmvc.controller.HomeController : @Controller
-	
-	
 	 -->
-	
-	<annotation-driven enable-matrix-variables="true" />
-	<resources mapping="/resources/**" location="/resources/" />
 </beans:beans>
