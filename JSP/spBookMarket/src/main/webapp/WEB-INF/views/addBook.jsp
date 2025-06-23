@@ -125,6 +125,9 @@
 					<div class="col-sm-3">
 						<form:input path="unitsInStock" class="form-control" />
 					</div>
+					<div class="col-sm-6">
+						<form:errors path="unitsInStock" cssClass="text-danger" />
+					</div>
 				</div>
 				
 				<div class="form-group row">
@@ -152,10 +155,9 @@
 						<spring:message code="addBook.form.bookImage.label" />
 					</label>
 					<div class="col-sm-7">
-						<form:input path="bookImage" type="file" class="form-control" />
+						<form:input path="bookImage" type="file" class="form-control-file" />
 					</div>
 				</div>
-				
 				
 				<div class="form-group row">
 					<div class="col-sm-offset-2 col-sm-10">
