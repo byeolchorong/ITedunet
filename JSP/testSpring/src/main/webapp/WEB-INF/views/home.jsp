@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	🎉여긴 홈이야🎉
+	<h1>🎉여긴 홈이야🎉</h1>
 </body>
 </html>
