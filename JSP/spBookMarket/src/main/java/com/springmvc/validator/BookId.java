@@ -7,15 +7,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
-import javax.validation.Payload;
 
 @Constraint(validatedBy=BookIdValidator.class)
 @Target({ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-
 public @interface BookId {
 	String message() default "{BookId.NewBook.bookId}";
-	Class<?>[] groups() default {};
-	public abstract Class<? extends Payload>[] payload() default {};
+	Class<?>[] groups() default {};	
+	Class<?>[] payload() default {};
 }

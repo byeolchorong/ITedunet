@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -43,8 +42,8 @@ public class BookController {
 	private BookService bookService;
 	
 	@Autowired
-	private BookValidator bookValidator;
-	
+	private BookValidator bookValidator; //BookValidator 인스턴스 선언
+		
 	@GetMapping
 	public String requestBookList(Model model) {
 		System.out.println("📥 [GET] /books 진입");
@@ -103,17 +102,17 @@ public class BookController {
 	}
 	
 	@GetMapping("/add") 
-	public String requestAddBookForm(@ModelAttribute("NewBook") Book book) {
+	public String AddBookForm(@ModelAttribute("NewBook") Book book) {
 		logger.info("📥 [GET] /books/add 진입 - 도서 등록 폼 요청");
 		return "addBook";
 	}
 	@PostMapping("/add")
-	public String submitAddNewBook(@Valid @ModelAttribute("NewBook") Book book, BindingResult result, HttpServletRequest request) {
+	public String submitAddNewBook(@Valid @ModelAttribute("NewBook") Book book,  BindingResult result,HttpServletRequest request) {
 		logger.info("📤 [POST] /books/add 진입 - 등록할 도서 정보: " + book.toString());
-		if (result.hasErrors()) {
-			logger.warn("⚠ 유효성 검사 실패: " + result.toString());
+		if(result.hasErrors()) {
 			return "addBook";
 		}
+		
 		MultipartFile bookImage = book.getBookImage();
 		String saveName = bookImage.getOriginalFilename();
 		String path = request.getRealPath("resources/images");
@@ -142,9 +141,9 @@ public class BookController {
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
 		logger.info("🛠 InitBinder 동작 - 허용 필드 설정");
+		// binder.setValidator(unitsInStockValidator); //생성한 unitsInStockValidator 설정
 		binder.setValidator(bookValidator);
-		binder.setAllowedFields("bookId", "name", "unitPrice", "author", "description", "publisher", 
-				"category", "unitsInStock", "totalPages", "releaseDate", "condition", "bookImage");
+		binder.setAllowedFields("bookId", "name", "unitPrice", "author", "description", "publisher", "category", "unitsInStock", "totalPages", "releaseDate", "condition", "bookImage");
 	}
 	
 	@ExceptionHandler(value= {BookIdException.class})

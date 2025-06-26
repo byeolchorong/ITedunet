@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.springmvc.domain.Cart;
 
 @Repository
-public class CartRepositoryImpl implements CartRepository {
+public class CartRepositoryImpl implements CartRepository{
 	private Map<String, Cart> listOfCarts;
 	
 	public CartRepositoryImpl() {
@@ -16,29 +16,37 @@ public class CartRepositoryImpl implements CartRepository {
 	}
 	
 	public Cart create(Cart cart) {
-		if (listOfCarts.keySet().contains(cart.getCartId())) {
-			throw new IllegalArgumentException(String.format("장바구니를 생성할 수 없습니다. 장바구니 id(%)가 존재합니다.", cart.getCartId()));
+		if (listOfCarts.keySet().contains(cart.getCartid())) {
+			throw new IllegalArgumentException(String.format("장바구니를  생성할 수 없습니다. 장바구니 Id(%)가 존재합니다", cart.getCartid()));
 		}
 		
-		listOfCarts.put(cart.getCartId(), cart);
+		listOfCarts.put(cart.getCartid(), cart);
 		return cart;
 	}
 	
 	public Cart read(String cartId) {
 		return listOfCarts.get(cartId);
 	}
+
 	
 	public void update(String cartId, Cart cart) {
 		if(!listOfCarts.keySet().contains(cartId)) {
-			throw new IllegalArgumentException(String.format("장바구니 목록을 갱신할 수 없습니다. 장바구니 id(%)가 존재하지 않습니다", cartId));
+				//장바구니 ID가 존재하지 않은 경우 예외처리
+			throw new IllegalArgumentException(String.format("장바구니 목록을 갱신할 수 없습니다. 장바구니에 ID(%)가 존재하지 않습니다.", cartId));
 		}
 		listOfCarts.put(cartId, cart);
 	}
-	
+
+	@Override
 	public void delete(String cartId) {
-		if (!listOfCarts.keySet().contains(cartId)) {
-			throw new IllegalArgumentException(String.format("장바구니 목록을 삭제할 수 없습니다. 장바구니 id(%)가 존재하지 않습니다",cartId));
+		if(!listOfCarts.keySet().contains(cartId)) {
+			//장바구니 ID가 존재하지 않으면 예외처리
+			throw new IllegalArgumentException(String.format("장바구니 목록을 삭제할 수 없습니다. 장바구니 ID(%)가 존재하지 않습니다.", cartId));
 		}
 		listOfCarts.remove(cartId);
+		
 	}
+	
+	
+	
 }

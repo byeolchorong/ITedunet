@@ -7,8 +7,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="${pageContext.request.contextPath}/resources/controllers.js"></script>
 <link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet">
-<script src="${pageContext.request.contextPath}/resources/js/controllers.js"></script>
 <meta charset="UTF-8">
 <title>도서 상세 정보</title>
 </head>
@@ -52,9 +52,12 @@
 				<p><b>재고수 : </b>${book.unitsInStock}</p>
 				<h4>${book.unitPrice}원</h4>
 				<br>
-				<form:form name="addForm" method="put">					
+				<form:form name="addForm" method="put">
+					<%
+						System.out.println("book.jsp Form 태그 입장");
+					%>
 					<p><a href="javascript:addToCart('../cart/add/${book.bookId}')" class="btn btn-primary">도서주문 &raquo;</a>
-					<a href="<c:url value="/cart"/>" class="btn btn-warning">장바구니 &raquo;</a>
+					<a href="<c:url value="/cart" />" class="btn btn-warning">장바구니 &raquo;</a>
 					<a href="<c:url value="/books"/>" class="btn btn-secondary">도서목록 &raquo;</a>
 				</form:form>
 			</div>
