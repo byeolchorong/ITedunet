@@ -1,27 +1,27 @@
 package com.springmvc.domain;
 
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Cart {
-	
+public class Cart implements Serializable {
+	private static final long serialVersionUID = 2155125089108199199L;
 	private String cartId; //사용자 세션 ID (장바구니 식별자)
 	private Map<String, CartItem> cartItems; // 장바구니에 담긴 도서 목록
 	private int grandTotal; // 장바구니 전체 금액
-	
 	
 	public Cart(String cartId) {
 		this.cartId = cartId;
 		this.cartItems = new HashMap<>();
 	}
-
-	public String getCartid() {
+	
+	public String getCartId() {
 		return cartId;
 	}
 
-	public void setCartid(String cartid) {
-		this.cartId = cartid;
+	public void setCartId(String cartId) {
+		this.cartId = cartId;
 	}
 
 	public Map<String, CartItem> getCartItems() {
@@ -46,7 +46,6 @@ public class Cart {
 			grandTotal = grandTotal + item.getTotalPrice();
 		}
 	}
-	
 
 	@Override
 	public int hashCode() {
@@ -114,6 +113,5 @@ public class Cart {
 	public String toString() {
 		return "Cart [cartId=" + cartId + ", cartItems=" + cartItems + ", grandTotal=" + grandTotal + "]";
 	}
-	
 	
 }

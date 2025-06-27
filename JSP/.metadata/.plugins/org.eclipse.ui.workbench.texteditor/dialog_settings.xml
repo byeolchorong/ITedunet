@@ -9,6 +9,9 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="flow-lo"/>
+			<item value="alue"/>
+			<item value="cal"/>
 			<item value="validator"/>
 			<item value="context path"/>
 			<item value="language"/>

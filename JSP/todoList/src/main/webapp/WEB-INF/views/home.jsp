@@ -6,6 +6,7 @@
 <title>Home</title>
 </head>
 <body>
-	<h1>hi</h1>
+	<jsp:include page="include/nav.jsp" />
+	<h1>홈</h1>
 </body>
 </html>

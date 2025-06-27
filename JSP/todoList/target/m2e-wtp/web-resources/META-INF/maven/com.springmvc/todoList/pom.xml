@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.springmvc</groupId>
   <!-- artifactId / finalName 변경해주기 -->
-  <artifactId>teamProject</artifactId>
+  <artifactId>todoList</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>testSpring Maven Webapp</name>
@@ -57,7 +57,7 @@
   </dependencies>
   
 	<build>
-		<finalName>teamProject</finalName>
+		<finalName>todoList</finalName>
         <!--빌드시 필요한 확장 기능을 추가-->
         <plugins>
             <!--스프링 배포를 위한 이클립스 플러긴을 도입 -->
