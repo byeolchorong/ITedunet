@@ -3,13 +3,13 @@ package com.springmvc.domain;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Order implements Serializable {
+public class Order implements Serializable{
 	private static final long serialVersionUID = 2659461092139119863L;
 	
-	private Long orderId;		// 주문ID
-	private Cart cart;			// 장바구니 객체
-	private Customer customer;	// 고객 객체
-	private Shipping shipping;	// 배송지 객체
+	private Long orderId; //주문 ID
+	private Cart cart; // 장바구니 객체
+	private Customer customer; //고객 객체
+	private Shipping shipping; //배송지 객체
 	
 	public Order() {
 		this.customer = new Customer();
@@ -65,11 +65,14 @@ public class Order implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Order other = (Order) obj;
-		if (orderId == null) {
-			if (other.orderId != null) return false;
-		} else if (!orderId.equals(other.orderId)) return false;
+		if(orderId == null) {
+			if(other.orderId != null)
+				return false;
+		}else if(!orderId.equals(other.orderId))
+			return false;
 		return true;
 	}
+	
 	
 
 }

@@ -121,6 +121,8 @@ public class BookController {
 		if (bookImage != null && !bookImage.isEmpty()) {
 			try {
 				bookImage.transferTo(saveFile);
+				book.setFileName(saveName);
+				System.out.println("path : "+path);
 				logger.info("✅ 이미지 업로드 성공");
 			} catch(Exception e) {
 				logger.info("❌ 이미지 업로드 실패: " + e.getMessage());
@@ -158,5 +160,42 @@ public class BookController {
 		mav.addObject("url", req.getRequestURL() + "?" + req.getQueryString());
 		mav.setViewName("errorBook");
 		return mav;
+	}
+	
+	@GetMapping("/update")
+	public String getUpdateBookForm(@ModelAttribute("updateBook") Book book, @RequestParam("id") String bookId, Model model) {
+		System.out.println("📥 [GET /update] 수정할 도서 ID: " + bookId);
+		Book bookById = bookService.getBookById(bookId);
+		model.addAttribute("book",bookById);
+		return "updateForm";
+	}
+	
+	@PostMapping("/update")
+	public String submitUpdateBookForm(@ModelAttribute("updateBook") Book book) {
+		System.out.println("📤 [POST /update] 수정된 도서 정보: " + book);
+		MultipartFile bookImage = book.getBookImage();
+		String rootDirectory = "/resources/images";
+		if (bookImage != null && !bookImage.isEmpty()) {
+			try {
+				String fname = bookImage.getOriginalFilename();
+				System.out.println("🖼️ 업로드된 이미지 파일명: " + fname);
+				bookImage.transferTo(new File("/resources/images" + fname));
+				System.out.println("✅ 이미지 저장 완료: " + rootDirectory + fname);
+			} catch (Exception e) {
+				System.out.println("❌ 이미지 저장 실패");
+				throw new RuntimeException("Book Image saving failed", e);
+			}
+		}
+		bookService.setUpdate(book);
+		System.out.println("✅ 도서 수정 완료: " + book.getBookId());
+		return "redirect:/books";
+	}
+	
+	@RequestMapping("/delete")
+	public String getDeleteBookForm(Model model, @RequestParam("id") String bookId) {
+		System.out.println("🗑️ [DELETE] 도서 삭제 요청 ID: " + bookId);
+		bookService.setDeleteBook(bookId);
+		System.out.println("✅ 도서 삭제 완료: " + bookId);
+		return "redirect:/books";
 	}
 }

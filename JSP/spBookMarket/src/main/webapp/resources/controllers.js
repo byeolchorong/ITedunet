@@ -14,10 +14,15 @@ function removeFromCart(action){
 	alert("도서 개별 삭제 !");
 }
 
-
-
 function clearCart(){
 	console.log("clear들어옴");
 	document.clearForm.submit();
 	alert("도서 전체 삭제 !");
+}
+
+function deleteConfirm(id) {
+	console.log("📌 bookId:", bookId);
+	console.log("delete들어옴");
+	if (confirm("삭제합니다!!") == true) location.href = "./delete?id=" + id;
+	else return;
 }

@@ -16,11 +16,11 @@ public class CartRepositoryImpl implements CartRepository{
 	}
 	
 	public Cart create(Cart cart) {
-		if (listOfCarts.keySet().contains(cart.getCartId())) {
-			throw new IllegalArgumentException(String.format("장바구니를  생성할 수 없습니다. 장바구니 Id(%)가 존재합니다", cart.getCartId()));
+		if (listOfCarts.keySet().contains(cart.getCartid())) {
+			throw new IllegalArgumentException(String.format("장바구니를  생성할 수 없습니다. 장바구니 Id(%)가 존재합니다", cart.getCartid()));
 		}
 		
-		listOfCarts.put(cart.getCartId(), cart);
+		listOfCarts.put(cart.getCartid(), cart);
 		return cart;
 	}
 	

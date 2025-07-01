@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* ✅ 커스터마이징 스타일 */
+body {
+	background-color: #ffeef1; /* 연분홍 배경 */
+}
+
+h2 {
+	color: black;
+	font-weight: bold;
+}
+
+.btn-pink {
+	background-color: #ff8fa3;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	
+	min-width: 80px; /* ✅ 최소 너비 설정 */
+	white-space: nowrap; /* ✅ 줄바꿈 방지 */
+	padding: 8px 16px; /* ✅ 여백 조정 */
+}
+
+.btn-pink:hover {
+	background-color: #ff6b8a;
+	color: white;
+}
+
+.card {
+	background-color: white;
+	border: none;
+	border-radius: 12px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/*.text-done {
+	text-decoration: line-through;
+	color: gray;
+} */

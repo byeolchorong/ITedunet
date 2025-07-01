@@ -19,6 +19,10 @@ public class MonitoringInterceptor implements HandlerInterceptor{
 	
 	public Logger logger = LoggerFactory.getLogger(this.getClass());
 	
+	public MonitoringInterceptor() {
+		System.out.println("MonitoringInterceptor 생성자 호출됨!!");
+	}
+	
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 		StopWatch stopWatch = new StopWatch(handler.toString());
 		stopWatch.start(handler.toString());

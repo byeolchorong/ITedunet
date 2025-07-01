@@ -9,6 +9,13 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="mvc"/>
+			<item value="trans"/>
+			<item value="en"/>
+			<item value="enctype"/>
+			<item value="books"/>
+			<item value="update"/>
+			<item value="security"/>
 			<item value="flow-lo"/>
 			<item value="alue"/>
 			<item value="cal"/>
@@ -17,7 +24,6 @@
 			<item value="language"/>
 			<item value="su"/>
 			<item value="success"/>
-			<item value="locate"/>
 		</list>
 		<list key="replacehistory">
 		</list>

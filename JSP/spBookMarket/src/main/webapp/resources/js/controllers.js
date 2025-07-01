@@ -1,12 +1,12 @@
 function addToCart(action){
-   console.log("들어옴");
+   console.log("addToCart 들어옴");
    document.addForm.action = action;
    document.addForm.submit();
    alert("도서가 장바구니에 추가되었습니다!!");
 }
 
 function removeFromCart(action){
-   console.log("delete들어옴");
+   console.log("removeFromCart 들어옴");
    document.removeForm.action = action;
    document.removeForm.submit();
    console.log("remove submit함");
@@ -15,7 +15,13 @@ function removeFromCart(action){
 }
 
 function clearCart(){
-   console.log("clear들어옴");
+   console.log("clear 들어옴");
    document.clearForm.submit();
    alert("도서 전체 삭제 !");
+}
+
+function deleteConfirm(id) {
+	console.log("delete들어옴");
+	if (confirm("삭제합니다!!") == true) location.href = "./delete?id=" + id;
+	else return;
 }

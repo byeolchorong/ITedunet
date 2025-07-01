@@ -31,14 +31,23 @@ public class CartServiceImpl implements CartService{
 		cartRepository.delete(cartId);
 		
 	}
-	
+
+	@Override
 	public Cart validateCart(String cartId) {
-		Cart cart = cartRepository.read(cartId);
-		if (cart == null || cart.getCartItems().size() == 0) {
-			throw new CartException(cartId);
-		}
-		return cart;
+	    System.out.println("🛒 cartId: " + cartId);
+
+	    Cart cart = cartRepository.read(cartId); // 📌 먼저 선언해야 함
+
+	    System.out.println("🧺 장바구니 아이템 수: " + (cart != null ? cart.getCartItems().size() : "null"));
+
+	    if(cart == null || cart.getCartItems().size() == 0) {
+	        throw new CartException(cartId);
+	    }
+	    return cart;
 	}
+
+	
+	
 	
 	
 }

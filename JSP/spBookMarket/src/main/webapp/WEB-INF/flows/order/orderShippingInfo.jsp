@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,25 +10,11 @@
 <title>Shipping</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand navbar-dark bg-dark">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="<c:url value="/home"/>">Home</a>
-				<a class="navbar-brand" href="<c:url value="/books/all"/>">books</a>
-			</div>
-		</div>
-	</nav>
-	
-	<div class="jumbotron">
-		<div class="container">
-			<h1 class="display-3">배송정보</h1>
-		</div>
-	</div>
-	
 	<div class="container">
 		<form:form modelAttribute="order.shipping" class="form-horizontal">
 			<fieldset>
 				<legend>배송 세부 사항</legend>
+				
 				<div class="form-group row">
 					<label class="col-sm-2 control-label">성명</label>
 					<div class="col-sm-3">
@@ -39,10 +25,10 @@
 				<div class="form-group row">
 					<label class="col-sm-2 control-label">배송일</label>
 					<div class="col-sm-3">
-						<form:input path="date" class="form-control"/> (yyyy/mm/dd)
+						<form:input path="date" class="form-control"/>(yyyy/mm/dd)
 					</div>
 					<div class="col-sm-6">
-						<form:errors path="date" cssClass="text-danger"/>
+						<form:errors path="date" cssClass="text-danger"/> 
 					</div>
 				</div>
 				
@@ -54,7 +40,7 @@
 				</div>
 				
 				<div class="form-group row">
-					<label class="col-sm-2 control-label">우편번호</label>
+					<label class="col-sm-2 control-label">우편 번호</label>
 					<div class="col-sm-3">
 						<form:input path="address.zipCode" class="form-control"/>
 					</div>
@@ -62,7 +48,7 @@
 				
 				<div class="form-group row">
 					<label class="col-sm-2 control-label">주소</label>
-					<div class="col-sm-3">
+					<div class="col-sm-5">
 						<form:input path="address.addressName" class="form-control"/>
 					</div>
 				</div>
@@ -74,16 +60,15 @@
 					</div>
 				</div>
 				
-				<input type="hidden" name="_flowExecutionKey" value="${flowExecutionKey}" />
+				<input type="hidden" name="_flowExecutionKey" value="${flowExecutionKey}"/>
 				
 				<div class="form-group row">
-					<div class="col-sm-offset-2 col-sm-10">
-					<button class="btn btn-default" name="_eventId_backToCustomerInfo">이전</button>
-					<input type="submit" class="btn btn-primary" value="등록" name="_eventId_shippingInfo"/>
-					<button class="btn btn-default" name="_eventId_cancel">취소</button>
+					<div class="col-sm-offser-2 col-sm-10">
+						<button class="btn btn-default" name="_eventId_backToCustomerInfo">이전</button>
+						<input type="submit" class="btn btn-primary" value="등록" name="_eventId_shippingInfo"/>
+						<button class="btn btn-default" name="_eventId_cancel">취소</button>
 					</div>
 				</div>
-				
 			</fieldset>
 		</form:form>
 	</div>

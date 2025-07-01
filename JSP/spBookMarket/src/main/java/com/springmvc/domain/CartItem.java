@@ -2,8 +2,8 @@ package com.springmvc.domain;
 
 import java.io.Serializable;
 
-public class CartItem implements Serializable {
-	private static final long serialVersionUID = 3636831123198280235L;
+public class CartItem implements Serializable{
+	private static final long serialVersionUID = 3636831123198290235L;
 	private Book book;
 	private int quantity;
 	private int totalPrice;
@@ -54,12 +54,13 @@ public class CartItem implements Serializable {
 		return result;
 	}
 	
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {
 			return true;
 		}
-		if (this == null) {
+		if (obj == null) {
 			return false;
 		}
 		if (getClass() != obj.getClass()) {
@@ -77,4 +78,7 @@ public class CartItem implements Serializable {
 			}
 		return true;
 	}
+	
+	
+	
 }

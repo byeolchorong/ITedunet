@@ -3,7 +3,6 @@ package com.springmvc.domain;
 import java.io.Serializable;
 
 import javax.validation.constraints.Digits;
-
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -13,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.springmvc.validator.BookId;
 
-public class Book implements Serializable {
+public class Book implements Serializable{
 	private static final long serialVersionUID = -7715651009026349175L;
 	
 	@BookId
@@ -35,6 +34,7 @@ public class Book implements Serializable {
 	private String releaseDate;		// 출판일(월/년)
 	private String condition;		// 신규 도서 또는 중고 도서 또는 전자책
 	private MultipartFile bookImage; // 도서 이미지
+	private String fileName;
 	
 	public Book() {
 		super();
@@ -137,11 +137,20 @@ public class Book implements Serializable {
 		this.bookImage = bookImage;
 	}
 
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
 	@Override
 	public String toString() {
 		return "Book [bookId=" + bookId + ", name=" + name + ", unitPrice=" + unitPrice + ", author=" + author
 				+ ", description=" + description + ", publisher=" + publisher + ", category=" + category
 				+ ", unitsInStock=" + unitsInStock + ", releaseDate=" + releaseDate + ", condition=" + condition
-				+ ", bookImage=" + bookImage + "]";
+				+ ", bookImage=" + bookImage + ", fileName=" + fileName + "]";
 	}
+
 }

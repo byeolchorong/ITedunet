@@ -14,7 +14,7 @@ public class OrderController {
 
     @RequestMapping("/order/ISBN1234/2")
     public String process() {
-    	System.out.println("OrderController 입장");
+       System.out.println("OrderController 입장");
         orderService.confirmOrder("ISBN1234", 2);
         return "redirect:/books";
     }

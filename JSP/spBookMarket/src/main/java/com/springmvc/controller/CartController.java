@@ -1,3 +1,4 @@
+
 package com.springmvc.controller;
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,6 +27,7 @@ import com.springmvc.service.CartService;
 @Controller
 @RequestMapping(value="/cart")
 public class CartController {
+	
 
     private final BookController bookController;
 	
@@ -71,6 +73,9 @@ public class CartController {
 		if(book == null)
 			throw new IllegalArgumentException(new BookIdException(bookId));
 		//bookId에 대한 도서 정보를 장바구니에서 삭제하기
+		
+		
+		
 		cart.removeCartItem(new CartItem(book));
 		System.out.println("삭제한거 갱신하고 cart컨트롤러 다시왔다");
 		cartService.update(sessionId, cart); // 세션ID에 대한 장바구니 갱신하기
@@ -109,4 +114,6 @@ public class CartController {
 		
 		return "redirect:/cart";
 	}
+	
+	
 }
